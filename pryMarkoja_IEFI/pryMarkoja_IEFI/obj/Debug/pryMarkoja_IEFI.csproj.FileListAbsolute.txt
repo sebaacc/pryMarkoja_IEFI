@@ -1,0 +1,13 @@
+D:\Escritorio\pryMarkoja_IEFI\pryMarkoja_IEFI\pryMarkoja_IEFI\bin\Debug\pryMarkoja_IEFI.exe.config
+D:\Escritorio\pryMarkoja_IEFI\pryMarkoja_IEFI\pryMarkoja_IEFI\bin\Debug\pryMarkoja_IEFI.exe
+D:\Escritorio\pryMarkoja_IEFI\pryMarkoja_IEFI\pryMarkoja_IEFI\bin\Debug\pryMarkoja_IEFI.pdb
+D:\Escritorio\pryMarkoja_IEFI\pryMarkoja_IEFI\pryMarkoja_IEFI\obj\Debug\pryMarkoja_IEFI.csproj.AssemblyReference.cache
+D:\Escritorio\pryMarkoja_IEFI\pryMarkoja_IEFI\pryMarkoja_IEFI\obj\Debug\pryMarkoja_IEFI.frmGestionDeUsuario.resources
+D:\Escritorio\pryMarkoja_IEFI\pryMarkoja_IEFI\pryMarkoja_IEFI\obj\Debug\pryMarkoja_IEFI.frmLogin.resources
+D:\Escritorio\pryMarkoja_IEFI\pryMarkoja_IEFI\pryMarkoja_IEFI\obj\Debug\pryMarkoja_IEFI.frmAuditoria.resources
+D:\Escritorio\pryMarkoja_IEFI\pryMarkoja_IEFI\pryMarkoja_IEFI\obj\Debug\pryMarkoja_IEFI.frmPrincipal.resources
+D:\Escritorio\pryMarkoja_IEFI\pryMarkoja_IEFI\pryMarkoja_IEFI\obj\Debug\pryMarkoja_IEFI.Properties.Resources.resources
+D:\Escritorio\pryMarkoja_IEFI\pryMarkoja_IEFI\pryMarkoja_IEFI\obj\Debug\pryMarkoja_IEFI.csproj.GenerateResource.cache
+D:\Escritorio\pryMarkoja_IEFI\pryMarkoja_IEFI\pryMarkoja_IEFI\obj\Debug\pryMarkoja_IEFI.csproj.CoreCompileInputs.cache
+D:\Escritorio\pryMarkoja_IEFI\pryMarkoja_IEFI\pryMarkoja_IEFI\obj\Debug\pryMarkoja_IEFI.exe
+D:\Escritorio\pryMarkoja_IEFI\pryMarkoja_IEFI\pryMarkoja_IEFI\obj\Debug\pryMarkoja_IEFI.pdb
