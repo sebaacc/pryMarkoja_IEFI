@@ -28,15 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pControles = new System.Windows.Forms.Panel();
+            this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.pPrincipal = new System.Windows.Forms.Panel();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.btnCerrarSesion = new System.Windows.Forms.Button();
+            this.tSessionTimer = new System.Windows.Forms.Timer(this.components);
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.lblTiempoTitulo = new System.Windows.Forms.ToolStripStatusLabel();
+            this.lblTiempoStatus = new System.Windows.Forms.ToolStripStatusLabel();
             this.pControles.SuspendLayout();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pControles
             // 
+            this.pControles.Controls.Add(this.statusStrip1);
             this.pControles.Controls.Add(this.btnCerrarSesion);
             this.pControles.Controls.Add(this.pPrincipal);
             this.pControles.Controls.Add(this.btnSalir);
@@ -46,6 +53,18 @@
             this.pControles.Name = "pControles";
             this.pControles.Size = new System.Drawing.Size(1067, 554);
             this.pControles.TabIndex = 2;
+            // 
+            // btnCerrarSesion
+            // 
+            this.btnCerrarSesion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCerrarSesion.Location = new System.Drawing.Point(907, 444);
+            this.btnCerrarSesion.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCerrarSesion.Name = "btnCerrarSesion";
+            this.btnCerrarSesion.Size = new System.Drawing.Size(136, 28);
+            this.btnCerrarSesion.TabIndex = 3;
+            this.btnCerrarSesion.Text = "Cerrar sesión";
+            this.btnCerrarSesion.UseVisualStyleBackColor = true;
+            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
             // 
             // pPrincipal
             // 
@@ -68,17 +87,34 @@
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // btnCerrarSesion
+            // tSessionTimer
             // 
-            this.btnCerrarSesion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCerrarSesion.Location = new System.Drawing.Point(907, 444);
-            this.btnCerrarSesion.Margin = new System.Windows.Forms.Padding(4);
-            this.btnCerrarSesion.Name = "btnCerrarSesion";
-            this.btnCerrarSesion.Size = new System.Drawing.Size(136, 28);
-            this.btnCerrarSesion.TabIndex = 3;
-            this.btnCerrarSesion.Text = "Cerrar sesión";
-            this.btnCerrarSesion.UseVisualStyleBackColor = true;
-            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
+            this.tSessionTimer.Interval = 1000;
+            this.tSessionTimer.Tick += new System.EventHandler(this.tSessionTimer_Tick);
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lblTiempoTitulo,
+            this.lblTiempoStatus});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 528);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(1067, 26);
+            this.statusStrip1.TabIndex = 5;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // lblTiempoTitulo
+            // 
+            this.lblTiempoTitulo.Name = "lblTiempoTitulo";
+            this.lblTiempoTitulo.Size = new System.Drawing.Size(146, 20);
+            this.lblTiempoTitulo.Text = "Tiempo transcurrido:";
+            // 
+            // lblTiempoStatus
+            // 
+            this.lblTiempoStatus.Name = "lblTiempoStatus";
+            this.lblTiempoStatus.Size = new System.Drawing.Size(15, 20);
+            this.lblTiempoStatus.Text = "-";
             // 
             // frmPrincipal
             // 
@@ -90,7 +126,11 @@
             this.Name = "frmPrincipal";
             this.Text = "Menú principal";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmPrincipal_Load);
             this.pControles.ResumeLayout(false);
+            this.pControles.PerformLayout();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -101,5 +141,9 @@
         private System.Windows.Forms.Panel pPrincipal;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnCerrarSesion;
+        private System.Windows.Forms.Timer tSessionTimer;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel lblTiempoTitulo;
+        private System.Windows.Forms.ToolStripStatusLabel lblTiempoStatus;
     }
 }
