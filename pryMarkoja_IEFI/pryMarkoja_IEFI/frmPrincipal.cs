@@ -16,5 +16,17 @@ namespace pryMarkoja_IEFI
         {
             InitializeComponent();
         }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            frmLogin v = new frmLogin();
+            v.ShowDialog();
+        }
     }
 }
