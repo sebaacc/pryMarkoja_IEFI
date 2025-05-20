@@ -1,0 +1,41 @@
+CREATE DATABASE Auditoria;
+GO
+
+USE Auditoria;
+GO
+
+CREATE TABLE [dbo].[Usuario]( 
+    Id INT IDENTITY(1,1) PRIMARY KEY,
+    NombreUsuario NVARCHAR(50) NOT NULL,
+    ContraseñaHash NVARCHAR(64) NOT NULL,
+    Nombre NVARCHAR(50) NOT NULL,
+    Apellido NVARCHAR(50) NOT NULL,
+    FechaNacimiento DATE,
+    PuestoTrabajo NVARCHAR(100),
+    Activo BIT NOT NULL DEFAULT 1,
+	EsAdministrador BIT NOT NULL DEFAULT 0
+);
+GO
+
+CREATE TABLE [dbo].[SesionTrabajo] (
+    Id INT IDENTITY(1,1) PRIMARY KEY,
+    UsuarioId INT NOT NULL,
+    FechaInicio DATETIME NOT NULL,
+    FechaFin DATETIME NULL, -- NULL si la sesión aún está abierta
+    CONSTRAINT FK_SesionTrabajo_Usuario FOREIGN KEY (UsuarioId)
+        REFERENCES [dbo].[Usuario](Id)
+        ON DELETE CASCADE
+);
+GO
+
+-- Este es un usuario común. Usuario: sebaacc. Contraseña: seba123
+
+INSERT INTO dbo.Usuario (NombreUsuario, ContraseñaHash, Nombre, Apellido, FechaNacimiento, PuestoTrabajo, Activo, EsAdministrador)
+VALUES ('sebaacc', '5419c560ba0de8c40366cc1691cf77d62db80d820745bca3f4548dc476b4e8db', 'Sebastián Alejo', 'Markoja', '2000-11-21', 'Frontend Developer', 1, 0);
+
+
+-- Este es un usuario ADMINISTRADOR. Usuario: admin. Contraseña: admin
+INSERT INTO Usuario 
+(NombreUsuario, ContraseñaHash, Nombre, Apellido, FechaNacimiento, PuestoTrabajo, Activo, EsAdministrador)
+VALUES 
+('admin', '8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918', 'Admin', 'Root', '1980-01-01', 'Administrador del sistema', 1, 1);
