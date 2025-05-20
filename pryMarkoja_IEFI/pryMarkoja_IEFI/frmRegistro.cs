@@ -110,5 +110,12 @@ namespace pryMarkoja_IEFI
             if (fechaNacimiento.Date > hoy.AddYears(-edad)) edad--;
             return edad;
         }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            frmLogin v = new frmLogin();
+            v.ShowDialog();
+        }
     }
 }

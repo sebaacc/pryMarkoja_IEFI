@@ -1,22 +1,18 @@
 {
   "Version": 1,
-<<<<<<< HEAD
-  "WorkspaceRootPath": "D:\\Escritorio\\pryMarkoja_IEFI\\pryMarkoja_IEFI\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{939D6AA0-8536-43A5-8113-5568498D6E12}|pryMarkoja_IEFI\\pryMarkoja_IEFI.csproj|d:\\escritorio\\prymarkoja_iefi\\prymarkoja_iefi\\prymarkoja_iefi\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{939D6AA0-8536-43A5-8113-5568498D6E12}|pryMarkoja_IEFI\\pryMarkoja_IEFI.csproj|solutionrelative:prymarkoja_iefi\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-=======
   "WorkspaceRootPath": "D:\\Seba\\weas\\Documentso\\Estudios\\IES\\semestre3\\lab3\\pryMarkoja_IEFI\\pryMarkoja_IEFI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{939D6AA0-8536-43A5-8113-5568498D6E12}|pryMarkoja_IEFI\\pryMarkoja_IEFI.csproj|d:\\seba\\weas\\documentso\\estudios\\ies\\semestre3\\lab3\\prymarkoja_iefi\\prymarkoja_iefi\\prymarkoja_iefi\\frmadminpanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{939D6AA0-8536-43A5-8113-5568498D6E12}|pryMarkoja_IEFI\\pryMarkoja_IEFI.csproj|solutionrelative:prymarkoja_iefi\\frmadminpanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{939D6AA0-8536-43A5-8113-5568498D6E12}|pryMarkoja_IEFI\\pryMarkoja_IEFI.csproj|d:\\seba\\weas\\documentso\\estudios\\ies\\semestre3\\lab3\\prymarkoja_iefi\\prymarkoja_iefi\\prymarkoja_iefi\\frmregistro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{939D6AA0-8536-43A5-8113-5568498D6E12}|pryMarkoja_IEFI\\pryMarkoja_IEFI.csproj|solutionrelative:prymarkoja_iefi\\frmregistro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{939D6AA0-8536-43A5-8113-5568498D6E12}|pryMarkoja_IEFI\\pryMarkoja_IEFI.csproj|d:\\seba\\weas\\documentso\\estudios\\ies\\semestre3\\lab3\\prymarkoja_iefi\\prymarkoja_iefi\\prymarkoja_iefi\\frmadminpanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{939D6AA0-8536-43A5-8113-5568498D6E12}|pryMarkoja_IEFI\\pryMarkoja_IEFI.csproj|solutionrelative:prymarkoja_iefi\\frmadminpanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
->>>>>>> 43645fd92089e608aca22ea386516b36a4c0e91c
+      "AbsoluteMoniker": "D:0:0:{939D6AA0-8536-43A5-8113-5568498D6E12}|pryMarkoja_IEFI\\pryMarkoja_IEFI.csproj|d:\\seba\\weas\\documentso\\estudios\\ies\\semestre3\\lab3\\prymarkoja_iefi\\prymarkoja_iefi\\prymarkoja_iefi\\frmregistro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{939D6AA0-8536-43A5-8113-5568498D6E12}|pryMarkoja_IEFI\\pryMarkoja_IEFI.csproj|solutionrelative:prymarkoja_iefi\\frmregistro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{939D6AA0-8536-43A5-8113-5568498D6E12}|pryMarkoja_IEFI\\pryMarkoja_IEFI.csproj|d:\\seba\\weas\\documentso\\estudios\\ies\\semestre3\\lab3\\prymarkoja_iefi\\prymarkoja_iefi\\prymarkoja_iefi\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{939D6AA0-8536-43A5-8113-5568498D6E12}|pryMarkoja_IEFI\\pryMarkoja_IEFI.csproj|solutionrelative:prymarkoja_iefi\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,21 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-<<<<<<< HEAD
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "frmPrincipal.cs [Dise\u00F1o]",
-              "DocumentMoniker": "D:\\Escritorio\\pryMarkoja_IEFI\\pryMarkoja_IEFI\\pryMarkoja_IEFI\\frmPrincipal.cs",
-              "RelativeDocumentMoniker": "pryMarkoja_IEFI\\frmPrincipal.cs",
-              "ToolTip": "D:\\Escritorio\\pryMarkoja_IEFI\\pryMarkoja_IEFI\\pryMarkoja_IEFI\\frmPrincipal.cs [Dise\u00F1o]",
-              "RelativeToolTip": "pryMarkoja_IEFI\\frmPrincipal.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T15:04:16.81Z",
-=======
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -56,28 +38,39 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "frmAdminPanel.cs",
-              "DocumentMoniker": "D:\\Seba\\weas\\Documentso\\Estudios\\IES\\semestre3\\lab3\\pryMarkoja_IEFI\\pryMarkoja_IEFI\\pryMarkoja_IEFI\\frmAdminPanel.cs",
-              "RelativeDocumentMoniker": "pryMarkoja_IEFI\\frmAdminPanel.cs",
-              "ToolTip": "D:\\Seba\\weas\\Documentso\\Estudios\\IES\\semestre3\\lab3\\pryMarkoja_IEFI\\pryMarkoja_IEFI\\pryMarkoja_IEFI\\frmAdminPanel.cs",
-              "RelativeToolTip": "pryMarkoja_IEFI\\frmAdminPanel.cs",
-              "ViewState": "AgIAAEcAAAAAAAAAAIAwwFYAAAAMAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "frmRegistro.cs",
+              "DocumentMoniker": "D:\\Seba\\weas\\Documentso\\Estudios\\IES\\semestre3\\lab3\\pryMarkoja_IEFI\\pryMarkoja_IEFI\\pryMarkoja_IEFI\\frmRegistro.cs",
+              "RelativeDocumentMoniker": "pryMarkoja_IEFI\\frmRegistro.cs",
+              "ToolTip": "D:\\Seba\\weas\\Documentso\\Estudios\\IES\\semestre3\\lab3\\pryMarkoja_IEFI\\pryMarkoja_IEFI\\pryMarkoja_IEFI\\frmRegistro.cs",
+              "RelativeToolTip": "pryMarkoja_IEFI\\frmRegistro.cs",
+              "ViewState": "AgIAAGQAAAAAAAAAAAAAAHUAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T02:08:39.187Z",
+              "WhenOpened": "2025-05-20T02:50:32.299Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "frmAdminPanel.cs [Dise\u00F1o]",
-              "DocumentMoniker": "D:\\Seba\\weas\\Documentso\\Estudios\\IES\\semestre3\\lab3\\pryMarkoja_IEFI\\pryMarkoja_IEFI\\pryMarkoja_IEFI\\frmAdminPanel.cs",
-              "RelativeDocumentMoniker": "pryMarkoja_IEFI\\frmAdminPanel.cs",
-              "ToolTip": "D:\\Seba\\weas\\Documentso\\Estudios\\IES\\semestre3\\lab3\\pryMarkoja_IEFI\\pryMarkoja_IEFI\\pryMarkoja_IEFI\\frmAdminPanel.cs [Dise\u00F1o]",
-              "RelativeToolTip": "pryMarkoja_IEFI\\frmAdminPanel.cs [Dise\u00F1o]",
+              "DocumentIndex": 1,
+              "Title": "frmRegistro.cs [Dise\u00F1o]",
+              "DocumentMoniker": "D:\\Seba\\weas\\Documentso\\Estudios\\IES\\semestre3\\lab3\\pryMarkoja_IEFI\\pryMarkoja_IEFI\\pryMarkoja_IEFI\\frmRegistro.cs",
+              "RelativeDocumentMoniker": "pryMarkoja_IEFI\\frmRegistro.cs",
+              "ToolTip": "D:\\Seba\\weas\\Documentso\\Estudios\\IES\\semestre3\\lab3\\pryMarkoja_IEFI\\pryMarkoja_IEFI\\pryMarkoja_IEFI\\frmRegistro.cs [Dise\u00F1o]",
+              "RelativeToolTip": "pryMarkoja_IEFI\\frmRegistro.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T02:08:07.458Z",
->>>>>>> 43645fd92089e608aca22ea386516b36a4c0e91c
+              "WhenOpened": "2025-05-20T02:49:58.091Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "frmLogin.cs [Dise\u00F1o]",
+              "DocumentMoniker": "D:\\Seba\\weas\\Documentso\\Estudios\\IES\\semestre3\\lab3\\pryMarkoja_IEFI\\pryMarkoja_IEFI\\pryMarkoja_IEFI\\frmLogin.cs",
+              "RelativeDocumentMoniker": "pryMarkoja_IEFI\\frmLogin.cs",
+              "ToolTip": "D:\\Seba\\weas\\Documentso\\Estudios\\IES\\semestre3\\lab3\\pryMarkoja_IEFI\\pryMarkoja_IEFI\\pryMarkoja_IEFI\\frmLogin.cs [Dise\u00F1o]",
+              "RelativeToolTip": "pryMarkoja_IEFI\\frmLogin.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T02:49:53.106Z",
               "EditorCaption": " [Dise\u00F1o]"
             }
           ]

@@ -30,6 +30,14 @@
         {
             this.pControles = new System.Windows.Forms.Panel();
             this.pLogin = new System.Windows.Forms.Panel();
+            this.dtpFechaNacimiento = new System.Windows.Forms.DateTimePicker();
+            this.lblFechaNacimiento = new System.Windows.Forms.Label();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.txtApellido = new System.Windows.Forms.TextBox();
+            this.lblApellido = new System.Windows.Forms.Label();
+            this.txtPuesto = new System.Windows.Forms.TextBox();
+            this.lblPuesto = new System.Windows.Forms.Label();
             this.pbLogo = new System.Windows.Forms.PictureBox();
             this.btnRegistro = new System.Windows.Forms.Button();
             this.lblBienvenidaLogin2 = new System.Windows.Forms.Label();
@@ -38,14 +46,7 @@
             this.lblUsuario = new System.Windows.Forms.Label();
             this.lblContraseña = new System.Windows.Forms.Label();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.txtPuesto = new System.Windows.Forms.TextBox();
-            this.lblPuesto = new System.Windows.Forms.Label();
-            this.txtApellido = new System.Windows.Forms.TextBox();
-            this.lblApellido = new System.Windows.Forms.Label();
-            this.txtNombre = new System.Windows.Forms.TextBox();
-            this.lblNombre = new System.Windows.Forms.Label();
-            this.lblFechaNacimiento = new System.Windows.Forms.Label();
-            this.dtpFechaNacimiento = new System.Windows.Forms.DateTimePicker();
+            this.btnVolver = new System.Windows.Forms.Button();
             this.pControles.SuspendLayout();
             this.pLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
@@ -53,6 +54,7 @@
             // 
             // pControles
             // 
+            this.pControles.Controls.Add(this.btnVolver);
             this.pControles.Controls.Add(this.pLogin);
             this.pControles.Controls.Add(this.btnSalir);
             this.pControles.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -86,6 +88,74 @@
             this.pLogin.Name = "pLogin";
             this.pLogin.Size = new System.Drawing.Size(469, 590);
             this.pLogin.TabIndex = 1;
+            // 
+            // dtpFechaNacimiento
+            // 
+            this.dtpFechaNacimiento.Location = new System.Drawing.Point(102, 369);
+            this.dtpFechaNacimiento.MaxDate = new System.DateTime(9950, 12, 25, 0, 0, 0, 0);
+            this.dtpFechaNacimiento.Name = "dtpFechaNacimiento";
+            this.dtpFechaNacimiento.Size = new System.Drawing.Size(267, 22);
+            this.dtpFechaNacimiento.TabIndex = 18;
+            // 
+            // lblFechaNacimiento
+            // 
+            this.lblFechaNacimiento.AutoSize = true;
+            this.lblFechaNacimiento.Location = new System.Drawing.Point(99, 340);
+            this.lblFechaNacimiento.Name = "lblFechaNacimiento";
+            this.lblFechaNacimiento.Size = new System.Drawing.Size(132, 16);
+            this.lblFechaNacimiento.TabIndex = 17;
+            this.lblFechaNacimiento.Text = "Fecha de nacimiento";
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.Location = new System.Drawing.Point(102, 188);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(267, 22);
+            this.txtNombre.TabIndex = 14;
+            // 
+            // lblNombre
+            // 
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Location = new System.Drawing.Point(99, 158);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(56, 16);
+            this.lblNombre.TabIndex = 15;
+            this.lblNombre.Text = "Nombre";
+            // 
+            // txtApellido
+            // 
+            this.txtApellido.Location = new System.Drawing.Point(102, 248);
+            this.txtApellido.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtApellido.Name = "txtApellido";
+            this.txtApellido.Size = new System.Drawing.Size(267, 22);
+            this.txtApellido.TabIndex = 12;
+            // 
+            // lblApellido
+            // 
+            this.lblApellido.AutoSize = true;
+            this.lblApellido.Location = new System.Drawing.Point(99, 222);
+            this.lblApellido.Name = "lblApellido";
+            this.lblApellido.Size = new System.Drawing.Size(57, 16);
+            this.lblApellido.TabIndex = 13;
+            this.lblApellido.Text = "Apellido";
+            // 
+            // txtPuesto
+            // 
+            this.txtPuesto.Location = new System.Drawing.Point(102, 308);
+            this.txtPuesto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtPuesto.Name = "txtPuesto";
+            this.txtPuesto.Size = new System.Drawing.Size(267, 22);
+            this.txtPuesto.TabIndex = 10;
+            // 
+            // lblPuesto
+            // 
+            this.lblPuesto.AutoSize = true;
+            this.lblPuesto.Location = new System.Drawing.Point(99, 282);
+            this.lblPuesto.Name = "lblPuesto";
+            this.lblPuesto.Size = new System.Drawing.Size(49, 16);
+            this.lblPuesto.TabIndex = 11;
+            this.lblPuesto.Text = "Puesto";
             // 
             // pbLogo
             // 
@@ -165,73 +235,17 @@
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
             // 
-            // txtPuesto
+            // btnVolver
             // 
-            this.txtPuesto.Location = new System.Drawing.Point(102, 308);
-            this.txtPuesto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtPuesto.Name = "txtPuesto";
-            this.txtPuesto.Size = new System.Drawing.Size(267, 22);
-            this.txtPuesto.TabIndex = 10;
-            // 
-            // lblPuesto
-            // 
-            this.lblPuesto.AutoSize = true;
-            this.lblPuesto.Location = new System.Drawing.Point(99, 282);
-            this.lblPuesto.Name = "lblPuesto";
-            this.lblPuesto.Size = new System.Drawing.Size(49, 16);
-            this.lblPuesto.TabIndex = 11;
-            this.lblPuesto.Text = "Puesto";
-            // 
-            // txtApellido
-            // 
-            this.txtApellido.Location = new System.Drawing.Point(102, 248);
-            this.txtApellido.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(267, 22);
-            this.txtApellido.TabIndex = 12;
-            // 
-            // lblApellido
-            // 
-            this.lblApellido.AutoSize = true;
-            this.lblApellido.Location = new System.Drawing.Point(99, 222);
-            this.lblApellido.Name = "lblApellido";
-            this.lblApellido.Size = new System.Drawing.Size(57, 16);
-            this.lblApellido.TabIndex = 13;
-            this.lblApellido.Text = "Apellido";
-            // 
-            // txtNombre
-            // 
-            this.txtNombre.Location = new System.Drawing.Point(102, 188);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(267, 22);
-            this.txtNombre.TabIndex = 14;
-            // 
-            // lblNombre
-            // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(99, 158);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(56, 16);
-            this.lblNombre.TabIndex = 15;
-            this.lblNombre.Text = "Nombre";
-            // 
-            // lblFechaNacimiento
-            // 
-            this.lblFechaNacimiento.AutoSize = true;
-            this.lblFechaNacimiento.Location = new System.Drawing.Point(99, 340);
-            this.lblFechaNacimiento.Name = "lblFechaNacimiento";
-            this.lblFechaNacimiento.Size = new System.Drawing.Size(132, 16);
-            this.lblFechaNacimiento.TabIndex = 17;
-            this.lblFechaNacimiento.Text = "Fecha de nacimiento";
-            // 
-            // dtpFechaNacimiento
-            // 
-            this.dtpFechaNacimiento.Location = new System.Drawing.Point(102, 369);
-            this.dtpFechaNacimiento.MaxDate = new System.DateTime(9950, 12, 25, 0, 0, 0, 0);
-            this.dtpFechaNacimiento.Name = "dtpFechaNacimiento";
-            this.dtpFechaNacimiento.Size = new System.Drawing.Size(267, 22);
-            this.dtpFechaNacimiento.TabIndex = 18;
+            this.btnVolver.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnVolver.Location = new System.Drawing.Point(35, 616);
+            this.btnVolver.Margin = new System.Windows.Forms.Padding(4);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(100, 28);
+            this.btnVolver.TabIndex = 2;
+            this.btnVolver.Text = "Volver";
+            this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // frmRegistro
             // 
@@ -270,5 +284,6 @@
         private System.Windows.Forms.Label lblPuesto;
         private System.Windows.Forms.DateTimePicker dtpFechaNacimiento;
         private System.Windows.Forms.Label lblFechaNacimiento;
+        private System.Windows.Forms.Button btnVolver;
     }
 }
