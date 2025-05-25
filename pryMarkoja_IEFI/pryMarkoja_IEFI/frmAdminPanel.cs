@@ -88,5 +88,10 @@ namespace pryMarkoja_IEFI
             frmLogin v = new frmLogin();
             v.ShowDialog();
         }
+
+        private void TiempoSistema_Tick(object sender, EventArgs e)
+        {
+            lblFechaHoraSistema.Text = DateTime.Now.ToString();
+        }
     }
 }
