@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.pControles = new System.Windows.Forms.Panel();
-            this.btnCerrarSesion = new System.Windows.Forms.Button();
+            this.btnVolver = new System.Windows.Forms.Button();
             this.pPrincipal = new System.Windows.Forms.Panel();
             this.btnDesactivar = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
@@ -38,7 +38,6 @@
             this.lblNombreU = new System.Windows.Forms.Label();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.dgvUsuarios = new System.Windows.Forms.DataGridView();
-            this.btnSalir = new System.Windows.Forms.Button();
             this.barraEstadoInf = new System.Windows.Forms.StatusStrip();
             this.lblUsuarioAdmin = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
@@ -52,9 +51,8 @@
             // 
             // pControles
             // 
-            this.pControles.Controls.Add(this.btnCerrarSesion);
+            this.pControles.Controls.Add(this.btnVolver);
             this.pControles.Controls.Add(this.pPrincipal);
-            this.pControles.Controls.Add(this.btnSalir);
             this.pControles.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pControles.Location = new System.Drawing.Point(0, 0);
             this.pControles.Margin = new System.Windows.Forms.Padding(4);
@@ -62,17 +60,17 @@
             this.pControles.Size = new System.Drawing.Size(1389, 827);
             this.pControles.TabIndex = 3;
             // 
-            // btnCerrarSesion
+            // btnVolver
             // 
-            this.btnCerrarSesion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCerrarSesion.Location = new System.Drawing.Point(1225, 683);
-            this.btnCerrarSesion.Margin = new System.Windows.Forms.Padding(4);
-            this.btnCerrarSesion.Name = "btnCerrarSesion";
-            this.btnCerrarSesion.Size = new System.Drawing.Size(136, 28);
-            this.btnCerrarSesion.TabIndex = 2;
-            this.btnCerrarSesion.Text = "Cerrar sesión";
-            this.btnCerrarSesion.UseVisualStyleBackColor = true;
-            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
+            this.btnVolver.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnVolver.Location = new System.Drawing.Point(1224, 723);
+            this.btnVolver.Margin = new System.Windows.Forms.Padding(4);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(136, 28);
+            this.btnVolver.TabIndex = 2;
+            this.btnVolver.Text = "← Volver";
+            this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.Click += new System.EventHandler(this.btnCerrarSesion_Click);
             // 
             // pPrincipal
             // 
@@ -146,18 +144,6 @@
             this.dgvUsuarios.Size = new System.Drawing.Size(1177, 463);
             this.dgvUsuarios.TabIndex = 0;
             // 
-            // btnSalir
-            // 
-            this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSalir.Location = new System.Drawing.Point(1225, 743);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(4);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(136, 28);
-            this.btnSalir.TabIndex = 0;
-            this.btnSalir.Text = "Salir";
-            this.btnSalir.UseVisualStyleBackColor = true;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
-            // 
             // barraEstadoInf
             // 
             this.barraEstadoInf.ImageScalingSize = new System.Drawing.Size(20, 20);
@@ -224,14 +210,13 @@
 
         private System.Windows.Forms.Panel pControles;
         private System.Windows.Forms.Panel pPrincipal;
-        private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnDesactivar;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Label lblNombreU;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.DataGridView dgvUsuarios;
-        private System.Windows.Forms.Button btnCerrarSesion;
+        private System.Windows.Forms.Button btnVolver;
         private System.Windows.Forms.StatusStrip barraEstadoInf;
         private System.Windows.Forms.ToolStripStatusLabel lblUsuarioAdmin;
         private System.Windows.Forms.ToolStripStatusLabel lblFechaHoraSistema;

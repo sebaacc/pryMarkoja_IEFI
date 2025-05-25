@@ -52,12 +52,6 @@
     <Compile Include="frmUsuarios.Designer.cs">
       <DependentUpon>frmUsuarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmGestionDeUsuario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmGestionDeUsuario.Designer.cs">
-      <DependentUpon>frmGestionDeUsuario.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,9 +87,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmUsuarios.resx">
       <DependentUpon>frmUsuarios.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmGestionDeUsuario.resx">
-      <DependentUpon>frmGestionDeUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>

@@ -85,8 +85,6 @@ namespace pryMarkoja_IEFI
         private void btnCerrarSesion_Click(object sender, EventArgs e)
         {
             this.Close();
-            frmLogin v = new frmLogin();
-            v.ShowDialog();
         }
 
         private void TiempoSistema_Tick(object sender, EventArgs e)

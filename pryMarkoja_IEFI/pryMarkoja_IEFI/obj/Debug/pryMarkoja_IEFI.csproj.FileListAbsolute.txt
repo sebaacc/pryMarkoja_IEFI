@@ -16,7 +16,6 @@ D:\Seba\weas\Documentso\Estudios\IES\semestre3\lab3\pryMarkoja_IEFI\pryMarkoja_I
 D:\Seba\weas\Documentso\Estudios\IES\semestre3\lab3\pryMarkoja_IEFI\pryMarkoja_IEFI\pryMarkoja_IEFI\bin\Debug\pryMarkoja_IEFI.pdb
 D:\Seba\weas\Documentso\Estudios\IES\semestre3\lab3\pryMarkoja_IEFI\pryMarkoja_IEFI\pryMarkoja_IEFI\obj\Debug\pryMarkoja_IEFI.csproj.AssemblyReference.cache
 D:\Seba\weas\Documentso\Estudios\IES\semestre3\lab3\pryMarkoja_IEFI\pryMarkoja_IEFI\pryMarkoja_IEFI\obj\Debug\pryMarkoja_IEFI.exe.config
-D:\Seba\weas\Documentso\Estudios\IES\semestre3\lab3\pryMarkoja_IEFI\pryMarkoja_IEFI\pryMarkoja_IEFI\obj\Debug\pryMarkoja_IEFI.frmGestionDeUsuario.resources
 D:\Seba\weas\Documentso\Estudios\IES\semestre3\lab3\pryMarkoja_IEFI\pryMarkoja_IEFI\pryMarkoja_IEFI\obj\Debug\pryMarkoja_IEFI.frmLogin.resources
 D:\Seba\weas\Documentso\Estudios\IES\semestre3\lab3\pryMarkoja_IEFI\pryMarkoja_IEFI\pryMarkoja_IEFI\obj\Debug\pryMarkoja_IEFI.frmAuditoria.resources
 D:\Seba\weas\Documentso\Estudios\IES\semestre3\lab3\pryMarkoja_IEFI\pryMarkoja_IEFI\pryMarkoja_IEFI\obj\Debug\pryMarkoja_IEFI.frmPrincipal.resources

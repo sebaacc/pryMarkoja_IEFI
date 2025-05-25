@@ -22,5 +22,18 @@ namespace pryMarkoja_IEFI
             frmUsuarios v = new frmUsuarios();
             v.ShowDialog();
         }
+
+        private void btnAuditoria_Click(object sender, EventArgs e)
+        {
+            frmAuditoria v = new frmAuditoria();
+            v.ShowDialog();
+        }
+
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            frmLogin v = new frmLogin();
+            v.ShowDialog();
+        }
     }
 }

@@ -35,6 +35,7 @@
             this.pControles = new System.Windows.Forms.Panel();
             this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.pPrincipal = new System.Windows.Forms.Panel();
+            this.btnAuditoria = new System.Windows.Forms.Button();
             this.btnUsuarios = new System.Windows.Forms.Button();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.btnSalir = new System.Windows.Forms.Button();
@@ -99,10 +100,12 @@
             this.btnCerrarSesion.TabIndex = 2;
             this.btnCerrarSesion.Text = "Cerrar sesión";
             this.btnCerrarSesion.UseVisualStyleBackColor = true;
+            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
             // 
             // pPrincipal
             // 
             this.pPrincipal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.pPrincipal.Controls.Add(this.btnAuditoria);
             this.pPrincipal.Controls.Add(this.btnUsuarios);
             this.pPrincipal.Controls.Add(this.lblTitulo);
             this.pPrincipal.Location = new System.Drawing.Point(100, 45);
@@ -111,9 +114,19 @@
             this.pPrincipal.Size = new System.Drawing.Size(756, 506);
             this.pPrincipal.TabIndex = 1;
             // 
+            // btnAuditoria
+            // 
+            this.btnAuditoria.Location = new System.Drawing.Point(273, 307);
+            this.btnAuditoria.Name = "btnAuditoria";
+            this.btnAuditoria.Size = new System.Drawing.Size(207, 45);
+            this.btnAuditoria.TabIndex = 5;
+            this.btnAuditoria.Text = "Auditoría";
+            this.btnAuditoria.UseVisualStyleBackColor = true;
+            this.btnAuditoria.Click += new System.EventHandler(this.btnAuditoria_Click);
+            // 
             // btnUsuarios
             // 
-            this.btnUsuarios.Location = new System.Drawing.Point(506, 94);
+            this.btnUsuarios.Location = new System.Drawing.Point(273, 163);
             this.btnUsuarios.Name = "btnUsuarios";
             this.btnUsuarios.Size = new System.Drawing.Size(207, 45);
             this.btnUsuarios.TabIndex = 4;
@@ -127,9 +140,9 @@
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.Location = new System.Drawing.Point(30, 15);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(227, 25);
+            this.lblTitulo.Size = new System.Drawing.Size(242, 25);
             this.lblTitulo.TabIndex = 3;
-            this.lblTitulo.Text = "Búsqueda de usuarios";
+            this.lblTitulo.Text = "Panel de administración";
             // 
             // btnSalir
             // 
@@ -150,7 +163,7 @@
             this.Controls.Add(this.barraEstadoInf);
             this.Controls.Add(this.pControles);
             this.Name = "frmPrincipalAdmin";
-            this.Text = "frmPrincipalAdmin";
+            this.Text = "Panel Principal";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.barraEstadoInf.ResumeLayout(false);
             this.barraEstadoInf.PerformLayout();
@@ -174,5 +187,6 @@
         private System.Windows.Forms.Button btnUsuarios;
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Button btnAuditoria;
     }
 }
