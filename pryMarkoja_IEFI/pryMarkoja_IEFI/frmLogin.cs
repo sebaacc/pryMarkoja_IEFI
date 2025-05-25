@@ -37,7 +37,7 @@ namespace pryMarkoja_IEFI
             {
                 if (usuarioLogueado.EsAdministrador)
                 {
-                    frmAdminPanel admin = new frmAdminPanel();
+                    frmPrincipalAdmin admin = new frmPrincipalAdmin();
                     admin.Show();
                 }
                 else

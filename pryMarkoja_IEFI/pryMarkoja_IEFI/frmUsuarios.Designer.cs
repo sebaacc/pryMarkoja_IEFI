@@ -1,6 +1,6 @@
 ﻿namespace pryMarkoja_IEFI
 {
-    partial class frmAdminPanel
+    partial class frmUsuarios
     {
         /// <summary>
         /// Required designer variable.
@@ -41,9 +41,9 @@
             this.btnSalir = new System.Windows.Forms.Button();
             this.barraEstadoInf = new System.Windows.Forms.StatusStrip();
             this.lblUsuarioAdmin = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.lblFechaHoraSistema = new System.Windows.Forms.ToolStripStatusLabel();
             this.TiempoSistema = new System.Windows.Forms.Timer(this.components);
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.pControles.SuspendLayout();
             this.pPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
@@ -59,13 +59,13 @@
             this.pControles.Location = new System.Drawing.Point(0, 0);
             this.pControles.Margin = new System.Windows.Forms.Padding(4);
             this.pControles.Name = "pControles";
-            this.pControles.Size = new System.Drawing.Size(1061, 607);
+            this.pControles.Size = new System.Drawing.Size(1389, 827);
             this.pControles.TabIndex = 3;
             // 
             // btnCerrarSesion
             // 
             this.btnCerrarSesion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCerrarSesion.Location = new System.Drawing.Point(897, 463);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(1225, 683);
             this.btnCerrarSesion.Margin = new System.Windows.Forms.Padding(4);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
             this.btnCerrarSesion.Size = new System.Drawing.Size(136, 28);
@@ -83,18 +83,18 @@
             this.pPrincipal.Controls.Add(this.lblNombreU);
             this.pPrincipal.Controls.Add(this.txtBuscar);
             this.pPrincipal.Controls.Add(this.dgvUsuarios);
-            this.pPrincipal.Location = new System.Drawing.Point(100, 45);
+            this.pPrincipal.Location = new System.Drawing.Point(12, 45);
             this.pPrincipal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pPrincipal.Name = "pPrincipal";
-            this.pPrincipal.Size = new System.Drawing.Size(756, 506);
+            this.pPrincipal.Size = new System.Drawing.Size(1253, 632);
             this.pPrincipal.TabIndex = 1;
             // 
             // btnDesactivar
             // 
             this.btnDesactivar.BackColor = System.Drawing.Color.IndianRed;
-            this.btnDesactivar.Location = new System.Drawing.Point(563, 55);
+            this.btnDesactivar.Location = new System.Drawing.Point(384, 93);
             this.btnDesactivar.Name = "btnDesactivar";
-            this.btnDesactivar.Size = new System.Drawing.Size(150, 33);
+            this.btnDesactivar.Size = new System.Drawing.Size(207, 33);
             this.btnDesactivar.TabIndex = 5;
             this.btnDesactivar.Text = "Desactivar Usuario";
             this.btnDesactivar.UseVisualStyleBackColor = false;
@@ -102,9 +102,9 @@
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(115, 98);
+            this.btnBuscar.Location = new System.Drawing.Point(115, 93);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(207, 23);
+            this.btnBuscar.Size = new System.Drawing.Size(207, 33);
             this.btnBuscar.TabIndex = 4;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
@@ -143,13 +143,13 @@
             this.dgvUsuarios.Name = "dgvUsuarios";
             this.dgvUsuarios.RowHeadersWidth = 51;
             this.dgvUsuarios.RowTemplate.Height = 24;
-            this.dgvUsuarios.Size = new System.Drawing.Size(673, 352);
+            this.dgvUsuarios.Size = new System.Drawing.Size(1177, 463);
             this.dgvUsuarios.TabIndex = 0;
             // 
             // btnSalir
             // 
             this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSalir.Location = new System.Drawing.Point(897, 523);
+            this.btnSalir.Location = new System.Drawing.Point(1225, 743);
             this.btnSalir.Margin = new System.Windows.Forms.Padding(4);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(136, 28);
@@ -165,10 +165,10 @@
             this.lblUsuarioAdmin,
             this.toolStripStatusLabel1,
             this.lblFechaHoraSistema});
-            this.barraEstadoInf.Location = new System.Drawing.Point(0, 581);
+            this.barraEstadoInf.Location = new System.Drawing.Point(0, 801);
             this.barraEstadoInf.Name = "barraEstadoInf";
             this.barraEstadoInf.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.barraEstadoInf.Size = new System.Drawing.Size(1061, 26);
+            this.barraEstadoInf.Size = new System.Drawing.Size(1389, 26);
             this.barraEstadoInf.TabIndex = 4;
             this.barraEstadoInf.Text = "Barra de estado";
             // 
@@ -178,6 +178,12 @@
             this.lblUsuarioAdmin.Name = "lblUsuarioAdmin";
             this.lblUsuarioAdmin.Size = new System.Drawing.Size(104, 20);
             this.lblUsuarioAdmin.Text = "Administrador";
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(1213, 20);
+            this.toolStripStatusLabel1.Spring = true;
             // 
             // lblFechaHoraSistema
             // 
@@ -192,21 +198,15 @@
             this.TiempoSistema.Interval = 1000;
             this.TiempoSistema.Tick += new System.EventHandler(this.TiempoSistema_Tick);
             // 
-            // toolStripStatusLabel1
-            // 
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(740, 20);
-            this.toolStripStatusLabel1.Spring = true;
-            // 
-            // frmAdminPanel
+            // frmUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1061, 607);
+            this.ClientSize = new System.Drawing.Size(1389, 827);
             this.Controls.Add(this.barraEstadoInf);
             this.Controls.Add(this.pControles);
-            this.Name = "frmAdminPanel";
-            this.Text = "Panel de administrador";
+            this.Name = "frmUsuarios";
+            this.Text = "Panel de administración de usuarios";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmAdminPanel_Load);
             this.pControles.ResumeLayout(false);

@@ -46,11 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmAdminPanel.cs">
+    <Compile Include="frmUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAdminPanel.Designer.cs">
-      <DependentUpon>frmAdminPanel.cs</DependentUpon>
+    <Compile Include="frmUsuarios.Designer.cs">
+      <DependentUpon>frmUsuarios.cs</DependentUpon>
     </Compile>
     <Compile Include="frmGestionDeUsuario.cs">
       <SubType>Form</SubType>
@@ -76,6 +76,12 @@
     <Compile Include="frmPrincipal.Designer.cs">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPrincipalAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrincipalAdmin.Designer.cs">
+      <DependentUpon>frmPrincipalAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmRegistro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,8 +91,8 @@
     <Compile Include="Objetos\clsUsuarioLogueado.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmAdminPanel.resx">
-      <DependentUpon>frmAdminPanel.cs</DependentUpon>
+    <EmbeddedResource Include="frmUsuarios.resx">
+      <DependentUpon>frmUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGestionDeUsuario.resx">
       <DependentUpon>frmGestionDeUsuario.cs</DependentUpon>
@@ -99,6 +105,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrincipalAdmin.resx">
+      <DependentUpon>frmPrincipalAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmRegistro.resx">
       <DependentUpon>frmRegistro.cs</DependentUpon>

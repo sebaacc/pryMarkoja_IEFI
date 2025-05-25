@@ -6,10 +6,10 @@ using System.Windows.Forms;
 
 namespace pryMarkoja_IEFI
 {
-    public partial class frmAdminPanel : Form
+    public partial class frmUsuarios : Form
     {
         private const string cadenaConexion = "Server=localhost;Database=Auditoria;Trusted_Connection=True;";
-        public frmAdminPanel()
+        public frmUsuarios()
         {
             InitializeComponent();
         }
