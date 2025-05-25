@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.barraEstadoInf = new System.Windows.Forms.StatusStrip();
             this.lblUsuarioAdmin = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
@@ -40,6 +41,7 @@
             this.lblNombreU = new System.Windows.Forms.Label();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.dgvUsuarios = new System.Windows.Forms.DataGridView();
+            this.TiempoSistema = new System.Windows.Forms.Timer(this.components);
             this.barraEstadoInf.SuspendLayout();
             this.pControles.SuspendLayout();
             this.pPrincipal.SuspendLayout();
@@ -162,6 +164,12 @@
             this.dgvUsuarios.Size = new System.Drawing.Size(1177, 463);
             this.dgvUsuarios.TabIndex = 0;
             // 
+            // TiempoSistema
+            // 
+            this.TiempoSistema.Enabled = true;
+            this.TiempoSistema.Interval = 1000;
+            this.TiempoSistema.Tick += new System.EventHandler(this.TiempoSistema_Tick);
+            // 
             // frmAuditoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -198,5 +206,6 @@
         private System.Windows.Forms.Label lblNombreU;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.DataGridView dgvUsuarios;
+        private System.Windows.Forms.Timer TiempoSistema;
     }
 }

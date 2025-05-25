@@ -21,5 +21,10 @@ namespace pryMarkoja_IEFI
         {
             this.Close();
         }
+
+        private void TiempoSistema_Tick(object sender, EventArgs e)
+        {
+            lblFechaHoraSistema.Text = DateTime.Now.ToString();
+        }
     }
 }

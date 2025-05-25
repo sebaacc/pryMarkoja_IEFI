@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.barraEstadoInf = new System.Windows.Forms.StatusStrip();
             this.lblUsuarioAdmin = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
@@ -39,6 +40,7 @@
             this.btnUsuarios = new System.Windows.Forms.Button();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.TiempoSistema = new System.Windows.Forms.Timer(this.components);
             this.barraEstadoInf.SuspendLayout();
             this.pControles.SuspendLayout();
             this.pPrincipal.SuspendLayout();
@@ -155,6 +157,12 @@
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
             // 
+            // TiempoSistema
+            // 
+            this.TiempoSistema.Enabled = true;
+            this.TiempoSistema.Interval = 1000;
+            this.TiempoSistema.Tick += new System.EventHandler(this.TiempoSistema_Tick);
+            // 
             // frmPrincipalAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -188,5 +196,6 @@
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnAuditoria;
+        private System.Windows.Forms.Timer TiempoSistema;
     }
 }
