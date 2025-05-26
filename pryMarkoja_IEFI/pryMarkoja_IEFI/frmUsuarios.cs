@@ -81,7 +81,19 @@ namespace pryMarkoja_IEFI
                 }
             }
         }
-
+        private void ActivarUsuario(int id)
+        {
+            using (SqlConnection conexion = new SqlConnection(cadenaConexion))
+            {
+                conexion.Open();
+                string query = "UPDATE Usuario SET Activo = 1 WHERE Id = @id";
+                using (SqlCommand comando = new SqlCommand(query, conexion))
+                {
+                    comando.Parameters.AddWithValue("@id", id);
+                    comando.ExecuteNonQuery();
+                }
+            }
+        }
         private void btnCerrarSesion_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -90,6 +102,21 @@ namespace pryMarkoja_IEFI
         private void TiempoSistema_Tick(object sender, EventArgs e)
         {
             lblFechaHoraSistema.Text = DateTime.Now.ToString();
+        }
+
+        private void btnActivar_Click(object sender, EventArgs e)
+        {
+            if (dgvUsuarios.SelectedRows.Count > 0)
+            {
+                int idUsuario = Convert.ToInt32(dgvUsuarios.SelectedRows[0].Cells["Id"].Value);
+                ActivarUsuario(idUsuario);
+                MessageBox.Show("Usuario activado.");
+                CargarUsuarios();
+            }
+            else
+            {
+                MessageBox.Show("Selecciona un usuario primero.");
+            }
         }
     }
 }

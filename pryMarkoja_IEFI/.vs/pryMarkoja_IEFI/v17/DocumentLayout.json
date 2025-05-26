@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "D:\\Escritorio\\pryMarkoja_IEFI\\pryMarkoja_IEFI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{939D6AA0-8536-43A5-8113-5568498D6E12}|pryMarkoja_IEFI\\pryMarkoja_IEFI.csproj|D:\\Escritorio\\pryMarkoja_IEFI\\pryMarkoja_IEFI\\prymarkoja_iefi\\frmauditoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{939D6AA0-8536-43A5-8113-5568498D6E12}|pryMarkoja_IEFI\\pryMarkoja_IEFI.csproj|solutionrelative:prymarkoja_iefi\\frmauditoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{939D6AA0-8536-43A5-8113-5568498D6E12}|pryMarkoja_IEFI\\pryMarkoja_IEFI.csproj|d:\\escritorio\\prymarkoja_iefi\\prymarkoja_iefi\\prymarkoja_iefi\\frmusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{939D6AA0-8536-43A5-8113-5568498D6E12}|pryMarkoja_IEFI\\pryMarkoja_IEFI.csproj|solutionrelative:prymarkoja_iefi\\frmusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{939D6AA0-8536-43A5-8113-5568498D6E12}|pryMarkoja_IEFI\\pryMarkoja_IEFI.csproj|D:\\Escritorio\\pryMarkoja_IEFI\\pryMarkoja_IEFI\\prymarkoja_iefi\\frmauditoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{939D6AA0-8536-43A5-8113-5568498D6E12}|pryMarkoja_IEFI\\pryMarkoja_IEFI.csproj|solutionrelative:prymarkoja_iefi\\frmauditoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{939D6AA0-8536-43A5-8113-5568498D6E12}|pryMarkoja_IEFI\\pryMarkoja_IEFI.csproj|d:\\escritorio\\prymarkoja_iefi\\prymarkoja_iefi\\prymarkoja_iefi\\frmusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{939D6AA0-8536-43A5-8113-5568498D6E12}|pryMarkoja_IEFI\\pryMarkoja_IEFI.csproj|solutionrelative:prymarkoja_iefi\\frmusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,31 +18,31 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "frmAuditoria.cs",
-              "DocumentMoniker": "D:\\Escritorio\\pryMarkoja_IEFI\\pryMarkoja_IEFI\\pryMarkoja_IEFI\\frmAuditoria.cs",
-              "RelativeDocumentMoniker": "pryMarkoja_IEFI\\frmAuditoria.cs",
-              "ToolTip": "D:\\Escritorio\\pryMarkoja_IEFI\\pryMarkoja_IEFI\\pryMarkoja_IEFI\\frmAuditoria.cs",
-              "RelativeToolTip": "pryMarkoja_IEFI\\frmAuditoria.cs",
-              "ViewState": "AQIAAGwAAAAAAAAAAAAwwIAAAAAJAAAA",
+              "DocumentIndex": 0,
+              "Title": "frmUsuarios.cs",
+              "DocumentMoniker": "D:\\Escritorio\\pryMarkoja_IEFI\\pryMarkoja_IEFI\\pryMarkoja_IEFI\\frmUsuarios.cs",
+              "RelativeDocumentMoniker": "pryMarkoja_IEFI\\frmUsuarios.cs",
+              "ToolTip": "D:\\Escritorio\\pryMarkoja_IEFI\\pryMarkoja_IEFI\\pryMarkoja_IEFI\\frmUsuarios.cs",
+              "RelativeToolTip": "pryMarkoja_IEFI\\frmUsuarios.cs",
+              "ViewState": "AQIAACwAAAAAAAAAAAAowHEAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-26T03:05:54.32Z",
+              "WhenOpened": "2025-05-26T14:55:55.779Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "frmAuditoria.cs [Dise\u00F1o]",
-              "DocumentMoniker": "D:\\Escritorio\\pryMarkoja_IEFI\\pryMarkoja_IEFI\\pryMarkoja_IEFI\\frmAuditoria.cs",
-              "RelativeDocumentMoniker": "pryMarkoja_IEFI\\frmAuditoria.cs",
-              "ToolTip": "D:\\Escritorio\\pryMarkoja_IEFI\\pryMarkoja_IEFI\\pryMarkoja_IEFI\\frmAuditoria.cs [Dise\u00F1o]",
-              "RelativeToolTip": "pryMarkoja_IEFI\\frmAuditoria.cs [Dise\u00F1o]",
+              "DocumentIndex": 1,
+              "Title": "frmUsuarios.cs [Dise\u00F1o]",
+              "DocumentMoniker": "D:\\Escritorio\\pryMarkoja_IEFI\\pryMarkoja_IEFI\\pryMarkoja_IEFI\\frmUsuarios.cs",
+              "RelativeDocumentMoniker": "pryMarkoja_IEFI\\frmUsuarios.cs",
+              "ToolTip": "D:\\Escritorio\\pryMarkoja_IEFI\\pryMarkoja_IEFI\\pryMarkoja_IEFI\\frmUsuarios.cs [Dise\u00F1o]",
+              "RelativeToolTip": "pryMarkoja_IEFI\\frmUsuarios.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-26T03:05:51.325Z",
+              "WhenOpened": "2025-05-26T14:55:53.726Z",
               "EditorCaption": " [Dise\u00F1o]"
             }
           ]
