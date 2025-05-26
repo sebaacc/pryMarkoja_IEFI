@@ -37,8 +37,10 @@
             this.pPrincipal = new System.Windows.Forms.Panel();
             this.btnSalir = new System.Windows.Forms.Button();
             this.tSessionTimer = new System.Windows.Forms.Timer(this.components);
+            this.lblTrabajo = new System.Windows.Forms.Label();
             this.pControles.SuspendLayout();
             this.BarraDeEstadoUsuario.SuspendLayout();
+            this.pPrincipal.SuspendLayout();
             this.SuspendLayout();
             // 
             // pControles
@@ -93,6 +95,8 @@
             // pPrincipal
             // 
             this.pPrincipal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.pPrincipal.Controls.Add(this.lblTrabajo);
+            this.pPrincipal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pPrincipal.Location = new System.Drawing.Point(103, 45);
             this.pPrincipal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pPrincipal.Name = "pPrincipal";
@@ -116,6 +120,16 @@
             this.tSessionTimer.Interval = 1000;
             this.tSessionTimer.Tick += new System.EventHandler(this.tSessionTimer_Tick);
             // 
+            // lblTrabajo
+            // 
+            this.lblTrabajo.AutoSize = true;
+            this.lblTrabajo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTrabajo.Location = new System.Drawing.Point(249, 224);
+            this.lblTrabajo.Name = "lblTrabajo";
+            this.lblTrabajo.Size = new System.Drawing.Size(281, 20);
+            this.lblTrabajo.TabIndex = 0;
+            this.lblTrabajo.Text = "Felicidades, ya estás laburando!";
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -131,6 +145,8 @@
             this.pControles.PerformLayout();
             this.BarraDeEstadoUsuario.ResumeLayout(false);
             this.BarraDeEstadoUsuario.PerformLayout();
+            this.pPrincipal.ResumeLayout(false);
+            this.pPrincipal.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -145,5 +161,6 @@
         private System.Windows.Forms.StatusStrip BarraDeEstadoUsuario;
         private System.Windows.Forms.ToolStripStatusLabel lblTiempoTitulo;
         private System.Windows.Forms.ToolStripStatusLabel lblTiempoStatus;
+        private System.Windows.Forms.Label lblTrabajo;
     }
 }

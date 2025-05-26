@@ -36,24 +36,24 @@
             this.pControles = new System.Windows.Forms.Panel();
             this.btnVolver = new System.Windows.Forms.Button();
             this.pPrincipal = new System.Windows.Forms.Panel();
+            this.lblFinal = new System.Windows.Forms.Label();
+            this.dtpHasta = new System.Windows.Forms.DateTimePicker();
+            this.lblInicio = new System.Windows.Forms.Label();
+            this.dtpDesde = new System.Windows.Forms.DateTimePicker();
+            this.gbFiltroNombre = new System.Windows.Forms.GroupBox();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
+            this.lblNombreU = new System.Windows.Forms.Label();
             this.btnFiltrar = new System.Windows.Forms.Button();
             this.lblTitulo = new System.Windows.Forms.Label();
-            this.lblNombreU = new System.Windows.Forms.Label();
-            this.txtBuscar = new System.Windows.Forms.TextBox();
             this.dgvAuditoria = new System.Windows.Forms.DataGridView();
             this.TiempoSistema = new System.Windows.Forms.Timer(this.components);
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.gbFiltroNombre = new System.Windows.Forms.GroupBox();
-            this.gbFiltroFecha = new System.Windows.Forms.GroupBox();
-            this.lblInicio = new System.Windows.Forms.Label();
             this.btnFiltrarFecha = new System.Windows.Forms.Button();
-            this.lblFinal = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.gbFiltroFecha = new System.Windows.Forms.GroupBox();
             this.barraEstadoInf.SuspendLayout();
             this.pControles.SuspendLayout();
             this.pPrincipal.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAuditoria)).BeginInit();
             this.gbFiltroNombre.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAuditoria)).BeginInit();
             this.gbFiltroFecha.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -127,13 +127,73 @@
             this.pPrincipal.Size = new System.Drawing.Size(1253, 632);
             this.pPrincipal.TabIndex = 1;
             // 
+            // lblFinal
+            // 
+            this.lblFinal.AutoSize = true;
+            this.lblFinal.Location = new System.Drawing.Point(450, 26);
+            this.lblFinal.Name = "lblFinal";
+            this.lblFinal.Size = new System.Drawing.Size(46, 16);
+            this.lblFinal.TabIndex = 6;
+            this.lblFinal.Text = "Hasta:";
+            // 
+            // dtpHasta
+            // 
+            this.dtpHasta.Location = new System.Drawing.Point(516, 23);
+            this.dtpHasta.Name = "dtpHasta";
+            this.dtpHasta.Size = new System.Drawing.Size(200, 22);
+            this.dtpHasta.TabIndex = 7;
+            // 
+            // lblInicio
+            // 
+            this.lblInicio.AutoSize = true;
+            this.lblInicio.Location = new System.Drawing.Point(64, 26);
+            this.lblInicio.Name = "lblInicio";
+            this.lblInicio.Size = new System.Drawing.Size(51, 16);
+            this.lblInicio.TabIndex = 2;
+            this.lblInicio.Text = "Desde:";
+            // 
+            // dtpDesde
+            // 
+            this.dtpDesde.Location = new System.Drawing.Point(133, 23);
+            this.dtpDesde.Name = "dtpDesde";
+            this.dtpDesde.Size = new System.Drawing.Size(200, 22);
+            this.dtpDesde.TabIndex = 5;
+            // 
+            // gbFiltroNombre
+            // 
+            this.gbFiltroNombre.Controls.Add(this.txtBuscar);
+            this.gbFiltroNombre.Controls.Add(this.lblNombreU);
+            this.gbFiltroNombre.Controls.Add(this.btnFiltrar);
+            this.gbFiltroNombre.Location = new System.Drawing.Point(40, 49);
+            this.gbFiltroNombre.Name = "gbFiltroNombre";
+            this.gbFiltroNombre.Size = new System.Drawing.Size(312, 112);
+            this.gbFiltroNombre.TabIndex = 6;
+            this.gbFiltroNombre.TabStop = false;
+            this.gbFiltroNombre.Text = "Filtro por nombre";
+            // 
+            // txtBuscar
+            // 
+            this.txtBuscar.Location = new System.Drawing.Point(99, 23);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(207, 22);
+            this.txtBuscar.TabIndex = 1;
+            // 
+            // lblNombreU
+            // 
+            this.lblNombreU.AutoSize = true;
+            this.lblNombreU.Location = new System.Drawing.Point(22, 26);
+            this.lblNombreU.Name = "lblNombreU";
+            this.lblNombreU.Size = new System.Drawing.Size(59, 16);
+            this.lblNombreU.TabIndex = 2;
+            this.lblNombreU.Text = "Nombre:";
+            // 
             // btnFiltrar
             // 
             this.btnFiltrar.Location = new System.Drawing.Point(99, 65);
             this.btnFiltrar.Name = "btnFiltrar";
             this.btnFiltrar.Size = new System.Drawing.Size(207, 33);
             this.btnFiltrar.TabIndex = 4;
-            this.btnFiltrar.Text = "Filtrar Nombre";
+            this.btnFiltrar.Text = "Filtrar nombre";
             this.btnFiltrar.UseVisualStyleBackColor = true;
             this.btnFiltrar.Click += new System.EventHandler(this.btnFiltrar_Click);
             // 
@@ -146,22 +206,6 @@
             this.lblTitulo.Size = new System.Drawing.Size(311, 25);
             this.lblTitulo.TabIndex = 3;
             this.lblTitulo.Text = "Auditoría de tiempos de trabajo";
-            // 
-            // lblNombreU
-            // 
-            this.lblNombreU.AutoSize = true;
-            this.lblNombreU.Location = new System.Drawing.Point(22, 26);
-            this.lblNombreU.Name = "lblNombreU";
-            this.lblNombreU.Size = new System.Drawing.Size(59, 16);
-            this.lblNombreU.TabIndex = 2;
-            this.lblNombreU.Text = "Nombre:";
-            // 
-            // txtBuscar
-            // 
-            this.txtBuscar.Location = new System.Drawing.Point(99, 23);
-            this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(207, 22);
-            this.txtBuscar.TabIndex = 1;
             // 
             // dgvAuditoria
             // 
@@ -179,48 +223,6 @@
             this.TiempoSistema.Interval = 1000;
             this.TiempoSistema.Tick += new System.EventHandler(this.TiempoSistema_Tick);
             // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(133, 23);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePicker1.TabIndex = 5;
-            // 
-            // gbFiltroNombre
-            // 
-            this.gbFiltroNombre.Controls.Add(this.txtBuscar);
-            this.gbFiltroNombre.Controls.Add(this.lblNombreU);
-            this.gbFiltroNombre.Controls.Add(this.btnFiltrar);
-            this.gbFiltroNombre.Location = new System.Drawing.Point(40, 49);
-            this.gbFiltroNombre.Name = "gbFiltroNombre";
-            this.gbFiltroNombre.Size = new System.Drawing.Size(312, 112);
-            this.gbFiltroNombre.TabIndex = 6;
-            this.gbFiltroNombre.TabStop = false;
-            this.gbFiltroNombre.Text = "Filtro por nombre";
-            // 
-            // gbFiltroFecha
-            // 
-            this.gbFiltroFecha.Controls.Add(this.lblFinal);
-            this.gbFiltroFecha.Controls.Add(this.dateTimePicker2);
-            this.gbFiltroFecha.Controls.Add(this.lblInicio);
-            this.gbFiltroFecha.Controls.Add(this.btnFiltrarFecha);
-            this.gbFiltroFecha.Controls.Add(this.dateTimePicker1);
-            this.gbFiltroFecha.Location = new System.Drawing.Point(438, 49);
-            this.gbFiltroFecha.Name = "gbFiltroFecha";
-            this.gbFiltroFecha.Size = new System.Drawing.Size(779, 112);
-            this.gbFiltroFecha.TabIndex = 7;
-            this.gbFiltroFecha.TabStop = false;
-            this.gbFiltroFecha.Text = "Filtro por fecha";
-            // 
-            // lblInicio
-            // 
-            this.lblInicio.AutoSize = true;
-            this.lblInicio.Location = new System.Drawing.Point(64, 26);
-            this.lblInicio.Name = "lblInicio";
-            this.lblInicio.Size = new System.Drawing.Size(51, 16);
-            this.lblInicio.TabIndex = 2;
-            this.lblInicio.Text = "Desde:";
-            // 
             // btnFiltrarFecha
             // 
             this.btnFiltrarFecha.Location = new System.Drawing.Point(516, 65);
@@ -229,22 +231,21 @@
             this.btnFiltrarFecha.TabIndex = 4;
             this.btnFiltrarFecha.Text = "Filtrar fecha";
             this.btnFiltrarFecha.UseVisualStyleBackColor = true;
+            this.btnFiltrarFecha.Click += new System.EventHandler(this.btnFiltrarFecha_Click);
             // 
-            // lblFinal
+            // gbFiltroFecha
             // 
-            this.lblFinal.AutoSize = true;
-            this.lblFinal.Location = new System.Drawing.Point(450, 26);
-            this.lblFinal.Name = "lblFinal";
-            this.lblFinal.Size = new System.Drawing.Size(46, 16);
-            this.lblFinal.TabIndex = 6;
-            this.lblFinal.Text = "Hasta:";
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(516, 23);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePicker2.TabIndex = 7;
+            this.gbFiltroFecha.Controls.Add(this.lblFinal);
+            this.gbFiltroFecha.Controls.Add(this.dtpHasta);
+            this.gbFiltroFecha.Controls.Add(this.lblInicio);
+            this.gbFiltroFecha.Controls.Add(this.btnFiltrarFecha);
+            this.gbFiltroFecha.Controls.Add(this.dtpDesde);
+            this.gbFiltroFecha.Location = new System.Drawing.Point(438, 49);
+            this.gbFiltroFecha.Name = "gbFiltroFecha";
+            this.gbFiltroFecha.Size = new System.Drawing.Size(779, 112);
+            this.gbFiltroFecha.TabIndex = 7;
+            this.gbFiltroFecha.TabStop = false;
+            this.gbFiltroFecha.Text = "Filtro por fecha";
             // 
             // frmAuditoria
             // 
@@ -262,9 +263,9 @@
             this.pControles.ResumeLayout(false);
             this.pPrincipal.ResumeLayout(false);
             this.pPrincipal.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAuditoria)).EndInit();
             this.gbFiltroNombre.ResumeLayout(false);
             this.gbFiltroNombre.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAuditoria)).EndInit();
             this.gbFiltroFecha.ResumeLayout(false);
             this.gbFiltroFecha.PerformLayout();
             this.ResumeLayout(false);
@@ -287,12 +288,12 @@
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.DataGridView dgvAuditoria;
         private System.Windows.Forms.Timer TiempoSistema;
-        private System.Windows.Forms.GroupBox gbFiltroFecha;
         private System.Windows.Forms.Label lblFinal;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dtpHasta;
         private System.Windows.Forms.Label lblInicio;
-        private System.Windows.Forms.Button btnFiltrarFecha;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpDesde;
         private System.Windows.Forms.GroupBox gbFiltroNombre;
+        private System.Windows.Forms.GroupBox gbFiltroFecha;
+        private System.Windows.Forms.Button btnFiltrarFecha;
     }
 }
