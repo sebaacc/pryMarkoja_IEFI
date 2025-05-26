@@ -40,5 +40,10 @@ namespace pryMarkoja_IEFI
         {
             lblFechaHoraSistema.Text = DateTime.Now.ToString();
         }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

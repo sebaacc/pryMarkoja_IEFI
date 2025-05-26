@@ -40,12 +40,21 @@
             this.lblTitulo = new System.Windows.Forms.Label();
             this.lblNombreU = new System.Windows.Forms.Label();
             this.txtBuscar = new System.Windows.Forms.TextBox();
-            this.dgvUsuarios = new System.Windows.Forms.DataGridView();
+            this.dgvAuditoria = new System.Windows.Forms.DataGridView();
             this.TiempoSistema = new System.Windows.Forms.Timer(this.components);
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.gbFiltroNombre = new System.Windows.Forms.GroupBox();
+            this.gbFiltroFecha = new System.Windows.Forms.GroupBox();
+            this.lblInicio = new System.Windows.Forms.Label();
+            this.btnFiltrarFecha = new System.Windows.Forms.Button();
+            this.lblFinal = new System.Windows.Forms.Label();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.barraEstadoInf.SuspendLayout();
             this.pControles.SuspendLayout();
             this.pPrincipal.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAuditoria)).BeginInit();
+            this.gbFiltroNombre.SuspendLayout();
+            this.gbFiltroFecha.SuspendLayout();
             this.SuspendLayout();
             // 
             // barraEstadoInf
@@ -108,11 +117,10 @@
             // pPrincipal
             // 
             this.pPrincipal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.pPrincipal.Controls.Add(this.btnFiltrar);
+            this.pPrincipal.Controls.Add(this.gbFiltroFecha);
+            this.pPrincipal.Controls.Add(this.gbFiltroNombre);
             this.pPrincipal.Controls.Add(this.lblTitulo);
-            this.pPrincipal.Controls.Add(this.lblNombreU);
-            this.pPrincipal.Controls.Add(this.txtBuscar);
-            this.pPrincipal.Controls.Add(this.dgvUsuarios);
+            this.pPrincipal.Controls.Add(this.dgvAuditoria);
             this.pPrincipal.Location = new System.Drawing.Point(12, 45);
             this.pPrincipal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pPrincipal.Name = "pPrincipal";
@@ -121,12 +129,13 @@
             // 
             // btnFiltrar
             // 
-            this.btnFiltrar.Location = new System.Drawing.Point(115, 93);
+            this.btnFiltrar.Location = new System.Drawing.Point(99, 65);
             this.btnFiltrar.Name = "btnFiltrar";
             this.btnFiltrar.Size = new System.Drawing.Size(207, 33);
             this.btnFiltrar.TabIndex = 4;
-            this.btnFiltrar.Text = "Filtrar";
+            this.btnFiltrar.Text = "Filtrar Nombre";
             this.btnFiltrar.UseVisualStyleBackColor = true;
+            this.btnFiltrar.Click += new System.EventHandler(this.btnFiltrar_Click);
             // 
             // lblTitulo
             // 
@@ -141,7 +150,7 @@
             // lblNombreU
             // 
             this.lblNombreU.AutoSize = true;
-            this.lblNombreU.Location = new System.Drawing.Point(37, 63);
+            this.lblNombreU.Location = new System.Drawing.Point(22, 26);
             this.lblNombreU.Name = "lblNombreU";
             this.lblNombreU.Size = new System.Drawing.Size(59, 16);
             this.lblNombreU.TabIndex = 2;
@@ -149,26 +158,93 @@
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(115, 60);
+            this.txtBuscar.Location = new System.Drawing.Point(99, 23);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(207, 22);
             this.txtBuscar.TabIndex = 1;
             // 
-            // dgvUsuarios
+            // dgvAuditoria
             // 
-            this.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUsuarios.Location = new System.Drawing.Point(40, 142);
-            this.dgvUsuarios.Name = "dgvUsuarios";
-            this.dgvUsuarios.RowHeadersWidth = 51;
-            this.dgvUsuarios.RowTemplate.Height = 24;
-            this.dgvUsuarios.Size = new System.Drawing.Size(1177, 463);
-            this.dgvUsuarios.TabIndex = 0;
+            this.dgvAuditoria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAuditoria.Location = new System.Drawing.Point(40, 175);
+            this.dgvAuditoria.Name = "dgvAuditoria";
+            this.dgvAuditoria.RowHeadersWidth = 51;
+            this.dgvAuditoria.RowTemplate.Height = 24;
+            this.dgvAuditoria.Size = new System.Drawing.Size(1177, 430);
+            this.dgvAuditoria.TabIndex = 0;
             // 
             // TiempoSistema
             // 
             this.TiempoSistema.Enabled = true;
             this.TiempoSistema.Interval = 1000;
             this.TiempoSistema.Tick += new System.EventHandler(this.TiempoSistema_Tick);
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(133, 23);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
+            this.dateTimePicker1.TabIndex = 5;
+            // 
+            // gbFiltroNombre
+            // 
+            this.gbFiltroNombre.Controls.Add(this.txtBuscar);
+            this.gbFiltroNombre.Controls.Add(this.lblNombreU);
+            this.gbFiltroNombre.Controls.Add(this.btnFiltrar);
+            this.gbFiltroNombre.Location = new System.Drawing.Point(40, 49);
+            this.gbFiltroNombre.Name = "gbFiltroNombre";
+            this.gbFiltroNombre.Size = new System.Drawing.Size(312, 112);
+            this.gbFiltroNombre.TabIndex = 6;
+            this.gbFiltroNombre.TabStop = false;
+            this.gbFiltroNombre.Text = "Filtro por nombre";
+            // 
+            // gbFiltroFecha
+            // 
+            this.gbFiltroFecha.Controls.Add(this.lblFinal);
+            this.gbFiltroFecha.Controls.Add(this.dateTimePicker2);
+            this.gbFiltroFecha.Controls.Add(this.lblInicio);
+            this.gbFiltroFecha.Controls.Add(this.btnFiltrarFecha);
+            this.gbFiltroFecha.Controls.Add(this.dateTimePicker1);
+            this.gbFiltroFecha.Location = new System.Drawing.Point(438, 49);
+            this.gbFiltroFecha.Name = "gbFiltroFecha";
+            this.gbFiltroFecha.Size = new System.Drawing.Size(779, 112);
+            this.gbFiltroFecha.TabIndex = 7;
+            this.gbFiltroFecha.TabStop = false;
+            this.gbFiltroFecha.Text = "Filtro por fecha";
+            // 
+            // lblInicio
+            // 
+            this.lblInicio.AutoSize = true;
+            this.lblInicio.Location = new System.Drawing.Point(64, 26);
+            this.lblInicio.Name = "lblInicio";
+            this.lblInicio.Size = new System.Drawing.Size(51, 16);
+            this.lblInicio.TabIndex = 2;
+            this.lblInicio.Text = "Desde:";
+            // 
+            // btnFiltrarFecha
+            // 
+            this.btnFiltrarFecha.Location = new System.Drawing.Point(516, 65);
+            this.btnFiltrarFecha.Name = "btnFiltrarFecha";
+            this.btnFiltrarFecha.Size = new System.Drawing.Size(207, 33);
+            this.btnFiltrarFecha.TabIndex = 4;
+            this.btnFiltrarFecha.Text = "Filtrar fecha";
+            this.btnFiltrarFecha.UseVisualStyleBackColor = true;
+            // 
+            // lblFinal
+            // 
+            this.lblFinal.AutoSize = true;
+            this.lblFinal.Location = new System.Drawing.Point(450, 26);
+            this.lblFinal.Name = "lblFinal";
+            this.lblFinal.Size = new System.Drawing.Size(46, 16);
+            this.lblFinal.TabIndex = 6;
+            this.lblFinal.Text = "Hasta:";
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Location = new System.Drawing.Point(516, 23);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(200, 22);
+            this.dateTimePicker2.TabIndex = 7;
             // 
             // frmAuditoria
             // 
@@ -186,7 +262,11 @@
             this.pControles.ResumeLayout(false);
             this.pPrincipal.ResumeLayout(false);
             this.pPrincipal.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAuditoria)).EndInit();
+            this.gbFiltroNombre.ResumeLayout(false);
+            this.gbFiltroNombre.PerformLayout();
+            this.gbFiltroFecha.ResumeLayout(false);
+            this.gbFiltroFecha.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -205,7 +285,14 @@
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Label lblNombreU;
         private System.Windows.Forms.TextBox txtBuscar;
-        private System.Windows.Forms.DataGridView dgvUsuarios;
+        private System.Windows.Forms.DataGridView dgvAuditoria;
         private System.Windows.Forms.Timer TiempoSistema;
+        private System.Windows.Forms.GroupBox gbFiltroFecha;
+        private System.Windows.Forms.Label lblFinal;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.Label lblInicio;
+        private System.Windows.Forms.Button btnFiltrarFecha;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.GroupBox gbFiltroNombre;
     }
 }
