@@ -17,9 +17,7 @@ namespace pryMarkoja_IEFI
         public frmAuditoria()
         {
             InitializeComponent();
-            dtpDesde.Value = DateTime.Today.AddDays(-7); // Últimos 7 días
-            dtpHasta.Value = DateTime.Today;
-            CargarTiemposDeUsuarios("", false, dtpDesde.Value, dtpHasta.Value);
+            formateoInicial();
         }
 
         private void btnVolver_Click(object sender, EventArgs e)
@@ -120,6 +118,18 @@ namespace pryMarkoja_IEFI
             DateTime desde = dtpDesde.Value.Date;
             DateTime hasta = dtpHasta.Value.Date.AddDays(1).AddSeconds(-1); // incluye todo el día
             CargarTiemposDeUsuarios("", true, desde, hasta);
+        }
+
+        private void btnMostrarTodos_Click(object sender, EventArgs e)
+        {
+            formateoInicial();
+        }
+
+        private void formateoInicial()
+        {
+            dtpDesde.Value = DateTime.Today.AddDays(-7); // Últimos 7 días
+            dtpHasta.Value = DateTime.Today;
+            CargarTiemposDeUsuarios("", false, dtpDesde.Value, dtpHasta.Value);
         }
     }
 }

@@ -32,8 +32,12 @@ GO
 
 INSERT INTO dbo.Usuario (NombreUsuario, ContraseñaHash, Nombre, Apellido, FechaNacimiento, PuestoTrabajo, Activo, EsAdministrador)
 VALUES ('sebaacc', '5419c560ba0de8c40366cc1691cf77d62db80d820745bca3f4548dc476b4e8db', 'Sebastián Alejo', 'Markoja', '2000-11-21', 'Frontend Developer', 1, 0);
+GO
+-- Otro usuario común. Contraseña: juan123
+INSERT INTO dbo.Usuario (NombreUsuario, ContraseñaHash, Nombre, Apellido, FechaNacimiento, PuestoTrabajo, Activo, EsAdministrador) VALUES
+('j.perez', 'f6ccb3e8d609012238c0b39e60b2c9632b3cdede91e035dad1de43469768f4cc', 'Juan', 'Perez', '1985-06-15', 'Desarrollador Senior', 1, 0);
 
-
+GO
 -- Este es un usuario ADMINISTRADOR. Usuario: admin. Contraseña: admin
 INSERT INTO Usuario 
 (NombreUsuario, ContraseñaHash, Nombre, Apellido, FechaNacimiento, PuestoTrabajo, Activo, EsAdministrador)
