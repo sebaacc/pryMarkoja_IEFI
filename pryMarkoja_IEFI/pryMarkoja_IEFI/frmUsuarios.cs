@@ -12,6 +12,7 @@ namespace pryMarkoja_IEFI
         public frmUsuarios()
         {
             InitializeComponent();
+            dgvUsuarios.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
 
         private void btnSalir_Click(object sender, EventArgs e)

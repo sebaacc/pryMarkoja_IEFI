@@ -32,6 +32,7 @@
             this.pControles = new System.Windows.Forms.Panel();
             this.btnVolver = new System.Windows.Forms.Button();
             this.pPrincipal = new System.Windows.Forms.Panel();
+            this.btnActivar = new System.Windows.Forms.Button();
             this.btnDesactivar = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.lblTitulo = new System.Windows.Forms.Label();
@@ -43,7 +44,6 @@
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.lblFechaHoraSistema = new System.Windows.Forms.ToolStripStatusLabel();
             this.TiempoSistema = new System.Windows.Forms.Timer(this.components);
-            this.btnActivar = new System.Windows.Forms.Button();
             this.pControles.SuspendLayout();
             this.pPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
@@ -82,16 +82,28 @@
             this.pPrincipal.Controls.Add(this.txtBuscar);
             this.pPrincipal.Controls.Add(this.dgvUsuarios);
             this.pPrincipal.Location = new System.Drawing.Point(-31, 37);
-            this.pPrincipal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pPrincipal.Margin = new System.Windows.Forms.Padding(2);
             this.pPrincipal.Name = "pPrincipal";
             this.pPrincipal.Size = new System.Drawing.Size(940, 514);
             this.pPrincipal.TabIndex = 1;
+            // 
+            // btnActivar
+            // 
+            this.btnActivar.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.btnActivar.Location = new System.Drawing.Point(297, 76);
+            this.btnActivar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnActivar.Name = "btnActivar";
+            this.btnActivar.Size = new System.Drawing.Size(155, 27);
+            this.btnActivar.TabIndex = 6;
+            this.btnActivar.Text = "Activar Usuario";
+            this.btnActivar.UseVisualStyleBackColor = false;
+            this.btnActivar.Click += new System.EventHandler(this.btnActivar_Click);
             // 
             // btnDesactivar
             // 
             this.btnDesactivar.BackColor = System.Drawing.Color.IndianRed;
             this.btnDesactivar.Location = new System.Drawing.Point(465, 76);
-            this.btnDesactivar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDesactivar.Margin = new System.Windows.Forms.Padding(2);
             this.btnDesactivar.Name = "btnDesactivar";
             this.btnDesactivar.Size = new System.Drawing.Size(155, 27);
             this.btnDesactivar.TabIndex = 5;
@@ -102,7 +114,7 @@
             // btnBuscar
             // 
             this.btnBuscar.Location = new System.Drawing.Point(86, 76);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(155, 27);
             this.btnBuscar.TabIndex = 4;
@@ -134,7 +146,7 @@
             // txtBuscar
             // 
             this.txtBuscar.Location = new System.Drawing.Point(86, 49);
-            this.txtBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(156, 20);
             this.txtBuscar.TabIndex = 1;
@@ -143,7 +155,7 @@
             // 
             this.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvUsuarios.Location = new System.Drawing.Point(30, 115);
-            this.dgvUsuarios.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvUsuarios.Margin = new System.Windows.Forms.Padding(2);
             this.dgvUsuarios.Name = "dgvUsuarios";
             this.dgvUsuarios.RowHeadersWidth = 51;
             this.dgvUsuarios.RowTemplate.Height = 24;
@@ -191,18 +203,6 @@
             this.TiempoSistema.Interval = 1000;
             this.TiempoSistema.Tick += new System.EventHandler(this.TiempoSistema_Tick);
             // 
-            // btnActivar
-            // 
-            this.btnActivar.BackColor = System.Drawing.Color.DarkOliveGreen;
-            this.btnActivar.Location = new System.Drawing.Point(297, 76);
-            this.btnActivar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnActivar.Name = "btnActivar";
-            this.btnActivar.Size = new System.Drawing.Size(155, 27);
-            this.btnActivar.TabIndex = 6;
-            this.btnActivar.Text = "Activar Usuario";
-            this.btnActivar.UseVisualStyleBackColor = false;
-            this.btnActivar.Click += new System.EventHandler(this.btnActivar_Click);
-            // 
             // frmUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -210,7 +210,7 @@
             this.ClientSize = new System.Drawing.Size(963, 672);
             this.Controls.Add(this.barraEstadoInf);
             this.Controls.Add(this.pControles);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmUsuarios";
             this.Text = "Panel de administración de usuarios";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
