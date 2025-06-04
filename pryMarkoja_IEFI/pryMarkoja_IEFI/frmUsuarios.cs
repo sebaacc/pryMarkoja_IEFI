@@ -2,13 +2,13 @@
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using pryMarkoja_IEFI.Clases;
 
 
 namespace pryMarkoja_IEFI
 {
     public partial class frmUsuarios : Form
     {
-        private const string cadenaConexion = "Server=localhost;Database=Auditoria;Trusted_Connection=True;";
         public frmUsuarios()
         {
             InitializeComponent();
@@ -26,7 +26,7 @@ namespace pryMarkoja_IEFI
         }
         private void CargarUsuarios(string filtro = "")
         {
-            using (SqlConnection conexion = new SqlConnection(cadenaConexion))
+            using (SqlConnection conexion = new SqlConnection(clsConexionBD.CadenaConexion))
             {
                 conexion.Open();
                 string query = @"
@@ -71,7 +71,7 @@ namespace pryMarkoja_IEFI
         }
         private void DesactivarUsuario(int id)
         {
-            using (SqlConnection conexion = new SqlConnection(cadenaConexion))
+            using (SqlConnection conexion = new SqlConnection(clsConexionBD.CadenaConexion))
             {
                 conexion.Open();
                 string query = "UPDATE Usuario SET Activo = 0 WHERE Id = @id";
@@ -84,7 +84,7 @@ namespace pryMarkoja_IEFI
         }
         private void ActivarUsuario(int id)
         {
-            using (SqlConnection conexion = new SqlConnection(cadenaConexion))
+            using (SqlConnection conexion = new SqlConnection(clsConexionBD.CadenaConexion))
             {
                 conexion.Open();
                 string query = "UPDATE Usuario SET Activo = 1 WHERE Id = @id";

@@ -8,12 +8,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using pryMarkoja_IEFI.Clases;
 
 namespace pryMarkoja_IEFI
 {
     public partial class frmPrincipal : Form
     {
-        private const string cadenaConexion = "Server=localhost;Database=Auditoria;Trusted_Connection=True;";
         private DateTime sesionStartTime;
         private int sesionId;
         private int usuarioId;
@@ -43,7 +43,7 @@ namespace pryMarkoja_IEFI
             sesionStartTime = DateTime.Now;
 
             // Insertar en la base de datos el inicio de sesión
-            using (SqlConnection conn = new SqlConnection(cadenaConexion))
+            using (SqlConnection conn = new SqlConnection(clsConexionBD.CadenaConexion))
             {
                 conn.Open();
                 string query = "INSERT INTO SesionTrabajo (UsuarioId, FechaInicio) OUTPUT INSERTED.Id VALUES (@usuarioId, @fechaInicio)";
@@ -69,7 +69,7 @@ namespace pryMarkoja_IEFI
         {
             DateTime sessionEndTime = DateTime.Now;
 
-            using (SqlConnection conn = new SqlConnection(cadenaConexion))
+            using (SqlConnection conn = new SqlConnection(clsConexionBD.CadenaConexion))
             {
                 conn.Open();
                 string query = "UPDATE SesionTrabajo SET FechaFin = @fechaFin WHERE Id = @sesionId";

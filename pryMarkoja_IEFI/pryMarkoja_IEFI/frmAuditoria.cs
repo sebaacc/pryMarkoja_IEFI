@@ -8,12 +8,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using pryMarkoja_IEFI.Clases;
 
 namespace pryMarkoja_IEFI
 {
     public partial class frmAuditoria : Form
     {
-        private const string cadenaConexion = "Server=localhost;Database=Auditoria;Trusted_Connection=True;";
         public frmAuditoria()
         {
             InitializeComponent();
@@ -33,7 +33,7 @@ namespace pryMarkoja_IEFI
         {
             try
             {
-                using (SqlConnection conexion = new SqlConnection(cadenaConexion))
+                using (SqlConnection conexion = new SqlConnection(clsConexionBD.CadenaConexion))
                 {
                     conexion.Open();
 

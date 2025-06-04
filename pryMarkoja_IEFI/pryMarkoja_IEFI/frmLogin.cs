@@ -3,6 +3,7 @@ using System.Data.SqlClient;
 using System.Security.Cryptography;
 using System.Text;
 using System.Windows.Forms;
+using pryMarkoja_IEFI.Clases;
 using pryMarkoja_IEFI.Objetos;
 
 namespace pryMarkoja_IEFI
@@ -10,7 +11,6 @@ namespace pryMarkoja_IEFI
     public partial class frmLogin : Form
     {
         private int intentos = 3;
-        private const string cadenaConexion = "Server=localhost;Database=Auditoria;Trusted_Connection=True;";
 
         public frmLogin()
         {
@@ -67,7 +67,7 @@ namespace pryMarkoja_IEFI
 
             try
             {
-                using (SqlConnection conexion = new SqlConnection(cadenaConexion))
+                using (SqlConnection conexion = new SqlConnection(clsConexionBD.CadenaConexion))
                 {
                     conexion.Open();
                     string query = "SELECT Id, EsAdministrador FROM Usuario WHERE NombreUsuario = @usuario AND ContraseñaHash = @hash AND Activo = 1";

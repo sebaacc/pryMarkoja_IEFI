@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\clsConexionBD.cs" />
     <Compile Include="frmUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,7 +83,7 @@
     <Compile Include="frmRegistro.Designer.cs">
       <DependentUpon>frmRegistro.cs</DependentUpon>
     </Compile>
-    <Compile Include="Objetos\clsUsuarioLogueado.cs" />
+    <Compile Include="Clases\clsUsuarioLogueado.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmUsuarios.resx">
