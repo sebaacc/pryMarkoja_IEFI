@@ -35,9 +35,17 @@
             this.lblTiempoStatus = new System.Windows.Forms.ToolStripStatusLabel();
             this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.pPrincipal = new System.Windows.Forms.Panel();
+            this.cmbLugar = new System.Windows.Forms.ComboBox();
+            this.cmbTarea = new System.Windows.Forms.ComboBox();
+            this.lblComentario = new System.Windows.Forms.Label();
+            this.txtComentario = new System.Windows.Forms.TextBox();
+            this.gbDetalle = new System.Windows.Forms.GroupBox();
+            this.lblLugar = new System.Windows.Forms.Label();
+            this.lblFecha = new System.Windows.Forms.Label();
+            this.lblTarea = new System.Windows.Forms.Label();
             this.btnSalir = new System.Windows.Forms.Button();
             this.tSessionTimer = new System.Windows.Forms.Timer(this.components);
-            this.lblTrabajo = new System.Windows.Forms.Label();
+            this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.pControles.SuspendLayout();
             this.BarraDeEstadoUsuario.SuspendLayout();
             this.pPrincipal.SuspendLayout();
@@ -95,13 +103,95 @@
             // pPrincipal
             // 
             this.pPrincipal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.pPrincipal.Controls.Add(this.lblTrabajo);
+            this.pPrincipal.Controls.Add(this.dtpFecha);
+            this.pPrincipal.Controls.Add(this.cmbLugar);
+            this.pPrincipal.Controls.Add(this.cmbTarea);
+            this.pPrincipal.Controls.Add(this.lblComentario);
+            this.pPrincipal.Controls.Add(this.txtComentario);
+            this.pPrincipal.Controls.Add(this.gbDetalle);
+            this.pPrincipal.Controls.Add(this.lblLugar);
+            this.pPrincipal.Controls.Add(this.lblFecha);
+            this.pPrincipal.Controls.Add(this.lblTarea);
             this.pPrincipal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pPrincipal.Location = new System.Drawing.Point(103, 45);
             this.pPrincipal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pPrincipal.Name = "pPrincipal";
             this.pPrincipal.Size = new System.Drawing.Size(756, 483);
             this.pPrincipal.TabIndex = 1;
+            // 
+            // cmbLugar
+            // 
+            this.cmbLugar.FormattingEnabled = true;
+            this.cmbLugar.Location = new System.Drawing.Point(421, 96);
+            this.cmbLugar.Name = "cmbLugar";
+            this.cmbLugar.Size = new System.Drawing.Size(121, 28);
+            this.cmbLugar.TabIndex = 7;
+            // 
+            // cmbTarea
+            // 
+            this.cmbTarea.FormattingEnabled = true;
+            this.cmbTarea.Location = new System.Drawing.Point(100, 38);
+            this.cmbTarea.Name = "cmbTarea";
+            this.cmbTarea.Size = new System.Drawing.Size(121, 28);
+            this.cmbTarea.TabIndex = 6;
+            // 
+            // lblComentario
+            // 
+            this.lblComentario.AutoSize = true;
+            this.lblComentario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblComentario.Location = new System.Drawing.Point(32, 346);
+            this.lblComentario.Name = "lblComentario";
+            this.lblComentario.Size = new System.Drawing.Size(65, 20);
+            this.lblComentario.TabIndex = 5;
+            this.lblComentario.Text = "Fecha: ";
+            // 
+            // txtComentario
+            // 
+            this.txtComentario.Location = new System.Drawing.Point(36, 369);
+            this.txtComentario.Multiline = true;
+            this.txtComentario.Name = "txtComentario";
+            this.txtComentario.Size = new System.Drawing.Size(668, 89);
+            this.txtComentario.TabIndex = 4;
+            // 
+            // gbDetalle
+            // 
+            this.gbDetalle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbDetalle.Location = new System.Drawing.Point(36, 135);
+            this.gbDetalle.Name = "gbDetalle";
+            this.gbDetalle.Size = new System.Drawing.Size(668, 203);
+            this.gbDetalle.TabIndex = 3;
+            this.gbDetalle.TabStop = false;
+            this.gbDetalle.Text = "Detalle";
+            // 
+            // lblLugar
+            // 
+            this.lblLugar.AutoSize = true;
+            this.lblLugar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLugar.Location = new System.Drawing.Point(358, 99);
+            this.lblLugar.Name = "lblLugar";
+            this.lblLugar.Size = new System.Drawing.Size(57, 20);
+            this.lblLugar.TabIndex = 2;
+            this.lblLugar.Text = "Lugar:";
+            // 
+            // lblFecha
+            // 
+            this.lblFecha.AutoSize = true;
+            this.lblFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFecha.Location = new System.Drawing.Point(32, 99);
+            this.lblFecha.Name = "lblFecha";
+            this.lblFecha.Size = new System.Drawing.Size(65, 20);
+            this.lblFecha.TabIndex = 1;
+            this.lblFecha.Text = "Fecha: ";
+            // 
+            // lblTarea
+            // 
+            this.lblTarea.AutoSize = true;
+            this.lblTarea.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTarea.Location = new System.Drawing.Point(32, 41);
+            this.lblTarea.Name = "lblTarea";
+            this.lblTarea.Size = new System.Drawing.Size(62, 20);
+            this.lblTarea.TabIndex = 0;
+            this.lblTarea.Text = "Tarea: ";
             // 
             // btnSalir
             // 
@@ -120,15 +210,12 @@
             this.tSessionTimer.Interval = 1000;
             this.tSessionTimer.Tick += new System.EventHandler(this.tSessionTimer_Tick);
             // 
-            // lblTrabajo
+            // dtpFecha
             // 
-            this.lblTrabajo.AutoSize = true;
-            this.lblTrabajo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTrabajo.Location = new System.Drawing.Point(249, 224);
-            this.lblTrabajo.Name = "lblTrabajo";
-            this.lblTrabajo.Size = new System.Drawing.Size(281, 20);
-            this.lblTrabajo.TabIndex = 0;
-            this.lblTrabajo.Text = "Felicidades, ya estás laburando!";
+            this.dtpFecha.Location = new System.Drawing.Point(100, 96);
+            this.dtpFecha.Name = "dtpFecha";
+            this.dtpFecha.Size = new System.Drawing.Size(200, 27);
+            this.dtpFecha.TabIndex = 8;
             // 
             // frmPrincipal
             // 
@@ -161,6 +248,14 @@
         private System.Windows.Forms.StatusStrip BarraDeEstadoUsuario;
         private System.Windows.Forms.ToolStripStatusLabel lblTiempoTitulo;
         private System.Windows.Forms.ToolStripStatusLabel lblTiempoStatus;
-        private System.Windows.Forms.Label lblTrabajo;
+        private System.Windows.Forms.ComboBox cmbLugar;
+        private System.Windows.Forms.ComboBox cmbTarea;
+        private System.Windows.Forms.Label lblComentario;
+        private System.Windows.Forms.TextBox txtComentario;
+        private System.Windows.Forms.GroupBox gbDetalle;
+        private System.Windows.Forms.Label lblLugar;
+        private System.Windows.Forms.Label lblFecha;
+        private System.Windows.Forms.Label lblTarea;
+        private System.Windows.Forms.DateTimePicker dtpFecha;
     }
 }

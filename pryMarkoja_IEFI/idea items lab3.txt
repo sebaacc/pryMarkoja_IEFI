@@ -1,0 +1,11 @@
+tabla de Tipo de tarea: IdTipoTarea (PK), nombre.
+
+tabla Lugar: IdLugar (PK), nombre Lugar.
+
+Tabla Tarea:
+IdTarea (PK), fecha, IdTipoTarea (FK), IdLugar (FK), IdUsuario (FK), items checkeados[], items no checkeados[].
+
+Tabla Item:
+IdItem (PK), Idtarea (FK), nombre Item, checkeado o no (bool).
+
+Entonces cuando se agregue una nueva tarea, no solo se modificará la tabla tarea sino también la tabla item con los nuevos items. 
