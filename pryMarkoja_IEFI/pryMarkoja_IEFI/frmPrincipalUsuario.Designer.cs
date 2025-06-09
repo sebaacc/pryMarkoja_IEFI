@@ -1,6 +1,6 @@
 ﻿namespace pryMarkoja_IEFI
 {
-    partial class frmPrincipal
+    partial class frmPrincipalUsuario
     {
         /// <summary>
         /// Required designer variable.

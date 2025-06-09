@@ -15,6 +15,8 @@ namespace pryMarkoja_IEFI
 {
     public partial class frmRegistro : Form
     {
+        clsFuncionesUtiles funciones = new clsFuncionesUtiles();
+
         public frmRegistro()
         {
             InitializeComponent();
@@ -115,6 +117,11 @@ namespace pryMarkoja_IEFI
             this.Close();
             frmLogin v = new frmLogin();
             v.ShowDialog();
+        }
+
+        private void chkContraVisible_CheckedChanged(object sender, EventArgs e)
+        {
+            funciones.mostrarContraseña(chkContraVisible, txtContraseña);
         }
     }
 }

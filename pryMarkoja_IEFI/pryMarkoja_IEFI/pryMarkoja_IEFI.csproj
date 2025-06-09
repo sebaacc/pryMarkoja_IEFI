@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="Clases\clsAuditoriaService.cs" />
     <Compile Include="Clases\clsConexionBD.cs" />
+    <Compile Include="Clases\clsFuncionesUtiles.cs" />
     <Compile Include="frmUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,11 +67,11 @@
     <Compile Include="frmAuditoria.Designer.cs">
       <DependentUpon>frmAuditoria.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmPrincipal.cs">
+    <Compile Include="frmPrincipalUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPrincipal.Designer.cs">
-      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    <Compile Include="frmPrincipalUsuario.Designer.cs">
+      <DependentUpon>frmPrincipalUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="frmPrincipalAdmin.cs">
       <SubType>Form</SubType>
@@ -96,8 +97,8 @@
     <EmbeddedResource Include="frmAuditoria.resx">
       <DependentUpon>frmAuditoria.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmPrincipal.resx">
-      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    <EmbeddedResource Include="frmPrincipalUsuario.resx">
+      <DependentUpon>frmPrincipalUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipalAdmin.resx">
       <DependentUpon>frmPrincipalAdmin.cs</DependentUpon>

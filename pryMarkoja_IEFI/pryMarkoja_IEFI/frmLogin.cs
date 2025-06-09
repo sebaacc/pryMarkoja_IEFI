@@ -11,7 +11,7 @@ namespace pryMarkoja_IEFI
     public partial class frmLogin : Form
     {
         private int intentos = 3;
-
+        clsFuncionesUtiles funciones = new clsFuncionesUtiles();
         public frmLogin()
         {
             InitializeComponent();
@@ -42,7 +42,7 @@ namespace pryMarkoja_IEFI
                 }
                 else
                 {
-                    frmPrincipal menu = new frmPrincipal(usuarioLogueado.Id);
+                    frmPrincipalUsuario menu = new frmPrincipalUsuario(usuarioLogueado.Id);
                     menu.Show();
                 }
                 this.Hide();
@@ -128,6 +128,11 @@ namespace pryMarkoja_IEFI
             {
                 btnLogin.PerformClick();
             }
+        }
+
+        private void chkContraVisible_CheckedChanged(object sender, EventArgs e)
+        {
+            funciones.mostrarContraseña(chkContraVisible, txtContraseña);
         }
     }
 }

@@ -12,13 +12,13 @@ using pryMarkoja_IEFI.Clases;
 
 namespace pryMarkoja_IEFI
 {
-    public partial class frmPrincipal : Form
+    public partial class frmPrincipalUsuario : Form
     {
         private DateTime sesionStartTime;
         private int sesionId;
         private int usuarioId;
 
-        public frmPrincipal(int idUsuario)
+        public frmPrincipalUsuario(int idUsuario)
         {
             InitializeComponent();
             usuarioId = idUsuario;
