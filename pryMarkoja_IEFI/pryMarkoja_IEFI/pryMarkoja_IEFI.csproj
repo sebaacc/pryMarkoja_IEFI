@@ -49,6 +49,18 @@
     <Compile Include="Clases\clsAuditoriaService.cs" />
     <Compile Include="Clases\clsConexionBD.cs" />
     <Compile Include="Clases\clsFuncionesUtiles.cs" />
+    <Compile Include="frmHistorial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHistorial.Designer.cs">
+      <DependentUpon>frmHistorial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTarea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTarea.Designer.cs">
+      <DependentUpon>frmTarea.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +100,12 @@
     <Compile Include="Clases\clsUsuarioLogueado.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmHistorial.resx">
+      <DependentUpon>frmHistorial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTarea.resx">
+      <DependentUpon>frmTarea.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmUsuarios.resx">
       <DependentUpon>frmUsuarios.cs</DependentUpon>
     </EmbeddedResource>

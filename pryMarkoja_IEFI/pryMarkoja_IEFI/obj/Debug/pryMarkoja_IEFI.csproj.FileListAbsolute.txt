@@ -44,3 +44,5 @@ E:\Escritorio\pryMarkoja_IEFI\pryMarkoja_IEFI\pryMarkoja_IEFI\obj\Debug\pryMarko
 E:\Escritorio\pryMarkoja_IEFI\pryMarkoja_IEFI\pryMarkoja_IEFI\obj\Debug\pryMarkoja_IEFI.pdb
 D:\Escritorio\pryMarkoja_IEFI\pryMarkoja_IEFI\pryMarkoja_IEFI\obj\Debug\pryMarkoja_IEFI.frmPrincipalUsuario.resources
 D:\Seba\weas\Documentso\Estudios\IES\semestre3\lab3\pryMarkoja_IEFI\pryMarkoja_IEFI\pryMarkoja_IEFI\obj\Debug\pryMarkoja_IEFI.frmPrincipalUsuario.resources
+D:\Seba\weas\Documentso\Estudios\IES\semestre3\lab3\pryMarkoja_IEFI\pryMarkoja_IEFI\pryMarkoja_IEFI\obj\Debug\pryMarkoja_IEFI.frmTarea.resources
+D:\Seba\weas\Documentso\Estudios\IES\semestre3\lab3\pryMarkoja_IEFI\pryMarkoja_IEFI\pryMarkoja_IEFI\obj\Debug\pryMarkoja_IEFI.frmHistorial.resources

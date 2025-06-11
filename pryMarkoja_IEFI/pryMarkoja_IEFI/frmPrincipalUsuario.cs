@@ -86,13 +86,14 @@ namespace pryMarkoja_IEFI
 
         private void crearTareaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //frmTarea tareas = new frmTarea();
-            //tareas.ShowDialog();
+            frmTarea tareas = new frmTarea();
+            tareas.ShowDialog();
         }
 
         private void verHistorialDeTareasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //ver historial
+            frmHistorial historial = new frmHistorial();
+            historial.ShowDialog();
         }
     }
 }
