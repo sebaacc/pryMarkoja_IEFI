@@ -26,21 +26,62 @@ CREATE TABLE [dbo].[SesionTrabajo] (
         REFERENCES [dbo].[Usuario](Id)
         ON DELETE CASCADE
 );
-GO
 
+GO
+CREATE TABLE [dbo].[TipoTarea] (
+    Id INT IDENTITY(1,1) PRIMARY KEY,
+    Nombre NVARCHAR(100) NOT NULL
+);
+
+GO
+CREATE TABLE [dbo].[Lugar] (
+    Id INT IDENTITY(1,1) PRIMARY KEY,
+    Nombre NVARCHAR(100) NOT NULL
+);
+
+GO
+CREATE TABLE [dbo].[Tarea] (
+    Id INT IDENTITY(1,1) PRIMARY KEY,
+    NombreTarea NVARCHAR(50) NOT NULL,
+    UsuarioId INT NOT NULL,
+    FechaTarea DATETIME NOT NULL,
+    Detalle NVARCHAR(50),
+    Comentario NVARCHAR(255),
+    IdTipoTarea INT NOT NULL,
+    IdLugar INT NOT NULL,
+
+    CONSTRAINT FK_Tarea_Usuario FOREIGN KEY (UsuarioId) REFERENCES [dbo].[Usuario](Id),
+    CONSTRAINT FK_Tarea_TipoTarea FOREIGN KEY (IdTipoTarea) REFERENCES [dbo].[TipoTarea](Id),
+    CONSTRAINT FK_Tarea_Lugar FOREIGN KEY (IdLugar) REFERENCES [dbo].[Lugar](Id)
+);
+
+GO
+INSERT INTO [dbo].[TipoTarea] (Nombre) VALUES 
+('Auditoría'),
+('Consulta'),
+('Inspección'),
+('Reclamo'),
+('Visita');
+GO
+INSERT INTO [dbo].[Lugar] (Nombre) VALUES 
+('Empresa'),
+('Servicio'),
+('Oficina');
+
+GO
 -- Este es un usuario común. Usuario: sebaacc. Contraseña: seba123
 
 INSERT INTO dbo.Usuario (NombreUsuario, ContraseñaHash, Nombre, Apellido, FechaNacimiento, PuestoTrabajo, Activo, EsAdministrador)
-VALUES ('sebaacc', '5419c560ba0de8c40366cc1691cf77d62db80d820745bca3f4548dc476b4e8db', 'Sebastián Alejo', 'Markoja', '2000-11-21', 'Frontend Developer', 1, 0);
+VALUES ('sebaacc', '5419c560ba0de8c40366cc1691cf77d62db80d820745bca3f4548dc476b4e8db', 'Sebastián Alejo', 'Markoja', '2000-11-21', 'Desarrollador Frontend Senior', 1, 0);
 GO
 -- Otro usuario común.  Usuario: mlopez  Contraseña: mariano123
 INSERT INTO dbo.Usuario (NombreUsuario, ContraseñaHash, Nombre, Apellido, FechaNacimiento, PuestoTrabajo, Activo, EsAdministrador) VALUES
-('mlopez', '8d423deba40a20ddb96fe1d1d131b89da7b665b5e3997d2e81730b8af88b9908', 'Mariano', 'Lopez', '1995-03-15', 'Desarrollador Senior', 1, 0);
+('mlopez', '8d423deba40a20ddb96fe1d1d131b89da7b665b5e3997d2e81730b8af88b9908', 'Mariano', 'Lopez', '1995-03-15', 'Desarrollador Backend Senior', 1, 0);
 
 GO
 -- Otro usuario común.  Usuario: felgueta Contraseña: facundo123
 INSERT INTO dbo.Usuario (NombreUsuario, ContraseñaHash, Nombre, Apellido, FechaNacimiento, PuestoTrabajo, Activo, EsAdministrador) VALUES
-('felgueta', '75984463897e38ebf26119419c901d6d2d0ebba276a8bb949bb378c6fed4aa68', 'Facundo', 'Elgueta', '2005-01-15', 'Desarrollador Senior', 1, 0);
+('felgueta', '75984463897e38ebf26119419c901d6d2d0ebba276a8bb949bb378c6fed4aa68', 'Facundo', 'Elgueta', '2005-01-15', 'Desarrollador Backend Senior', 1, 0);
 
 GO
 -- Este es un usuario ADMINISTRADOR. Usuario: admin. Contraseña: admin

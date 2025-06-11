@@ -1,4 +1,4 @@
-opcion Mostrar contraseña login y registro
+--opcion Mostrar contraseña login y registro
 Busqueda por tipo tarea, o detalle.
 Que el usuario vea solo sus tareas, admin pueda ver todas.
 
