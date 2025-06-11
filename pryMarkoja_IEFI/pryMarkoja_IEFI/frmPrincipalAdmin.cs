@@ -17,31 +17,31 @@ namespace pryMarkoja_IEFI
             InitializeComponent();
         }
 
-        private void btnUsuarios_Click(object sender, EventArgs e)
+        private void TiempoSistema_Tick(object sender, EventArgs e)
+        {
+            lblFechaHoraSistema.Text = DateTime.Now.ToString();
+        }
+
+        private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmUsuarios v = new frmUsuarios();
             v.ShowDialog();
         }
 
-        private void btnAuditoria_Click(object sender, EventArgs e)
+        private void auditoríaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmAuditoria v = new frmAuditoria();
             v.ShowDialog();
         }
 
-        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        private void cerrarSesiónToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
             frmLogin v = new frmLogin();
             v.ShowDialog();
         }
 
-        private void TiempoSistema_Tick(object sender, EventArgs e)
-        {
-            lblFechaHoraSistema.Text = DateTime.Now.ToString();
-        }
-
-        private void btnSalir_Click(object sender, EventArgs e)
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }

@@ -34,16 +34,23 @@
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.lblFechaHoraSistema = new System.Windows.Forms.ToolStripStatusLabel();
             this.pControles = new System.Windows.Forms.Panel();
-            this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.pPrincipal = new System.Windows.Forms.Panel();
-            this.btnAuditoria = new System.Windows.Forms.Button();
-            this.btnUsuarios = new System.Windows.Forms.Button();
             this.lblTitulo = new System.Windows.Forms.Label();
-            this.btnSalir = new System.Windows.Forms.Button();
             this.TiempoSistema = new System.Windows.Forms.Timer(this.components);
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.tareasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.administraciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.auditoríaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.añadirTipoDeTareaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.añadirLugarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sesiónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cerrarSesiónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.barraEstadoInf.SuspendLayout();
             this.pControles.SuspendLayout();
             this.pPrincipal.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // barraEstadoInf
@@ -82,9 +89,8 @@
             // 
             // pControles
             // 
-            this.pControles.Controls.Add(this.btnCerrarSesion);
             this.pControles.Controls.Add(this.pPrincipal);
-            this.pControles.Controls.Add(this.btnSalir);
+            this.pControles.Controls.Add(this.menuStrip1);
             this.pControles.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pControles.Location = new System.Drawing.Point(0, 0);
             this.pControles.Margin = new System.Windows.Forms.Padding(4);
@@ -92,23 +98,9 @@
             this.pControles.Size = new System.Drawing.Size(1061, 607);
             this.pControles.TabIndex = 5;
             // 
-            // btnCerrarSesion
-            // 
-            this.btnCerrarSesion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCerrarSesion.Location = new System.Drawing.Point(897, 463);
-            this.btnCerrarSesion.Margin = new System.Windows.Forms.Padding(4);
-            this.btnCerrarSesion.Name = "btnCerrarSesion";
-            this.btnCerrarSesion.Size = new System.Drawing.Size(136, 28);
-            this.btnCerrarSesion.TabIndex = 2;
-            this.btnCerrarSesion.Text = "Cerrar sesión";
-            this.btnCerrarSesion.UseVisualStyleBackColor = true;
-            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
-            // 
             // pPrincipal
             // 
             this.pPrincipal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.pPrincipal.Controls.Add(this.btnAuditoria);
-            this.pPrincipal.Controls.Add(this.btnUsuarios);
             this.pPrincipal.Controls.Add(this.lblTitulo);
             this.pPrincipal.Location = new System.Drawing.Point(100, 45);
             this.pPrincipal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -116,53 +108,103 @@
             this.pPrincipal.Size = new System.Drawing.Size(756, 506);
             this.pPrincipal.TabIndex = 1;
             // 
-            // btnAuditoria
-            // 
-            this.btnAuditoria.Location = new System.Drawing.Point(273, 307);
-            this.btnAuditoria.Name = "btnAuditoria";
-            this.btnAuditoria.Size = new System.Drawing.Size(207, 45);
-            this.btnAuditoria.TabIndex = 5;
-            this.btnAuditoria.Text = "Auditoría";
-            this.btnAuditoria.UseVisualStyleBackColor = true;
-            this.btnAuditoria.Click += new System.EventHandler(this.btnAuditoria_Click);
-            // 
-            // btnUsuarios
-            // 
-            this.btnUsuarios.Location = new System.Drawing.Point(273, 163);
-            this.btnUsuarios.Name = "btnUsuarios";
-            this.btnUsuarios.Size = new System.Drawing.Size(207, 45);
-            this.btnUsuarios.TabIndex = 4;
-            this.btnUsuarios.Text = "Usuarios";
-            this.btnUsuarios.UseVisualStyleBackColor = true;
-            this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
-            // 
             // lblTitulo
             // 
+            this.lblTitulo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(30, 15);
+            this.lblTitulo.Location = new System.Drawing.Point(253, 23);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(242, 25);
             this.lblTitulo.TabIndex = 3;
             this.lblTitulo.Text = "Panel de administración";
-            // 
-            // btnSalir
-            // 
-            this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSalir.Location = new System.Drawing.Point(897, 523);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(4);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(136, 28);
-            this.btnSalir.TabIndex = 0;
-            this.btnSalir.Text = "Salir";
-            this.btnSalir.UseVisualStyleBackColor = true;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // TiempoSistema
             // 
             this.TiempoSistema.Enabled = true;
             this.TiempoSistema.Interval = 1000;
             this.TiempoSistema.Tick += new System.EventHandler(this.TiempoSistema_Tick);
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tareasToolStripMenuItem,
+            this.administraciónToolStripMenuItem,
+            this.sesiónToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1061, 28);
+            this.menuStrip1.TabIndex = 3;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // tareasToolStripMenuItem
+            // 
+            this.tareasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.añadirTipoDeTareaToolStripMenuItem,
+            this.añadirLugarToolStripMenuItem});
+            this.tareasToolStripMenuItem.Name = "tareasToolStripMenuItem";
+            this.tareasToolStripMenuItem.Size = new System.Drawing.Size(64, 24);
+            this.tareasToolStripMenuItem.Text = "Tareas";
+            // 
+            // administraciónToolStripMenuItem
+            // 
+            this.administraciónToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.usuariosToolStripMenuItem,
+            this.auditoríaToolStripMenuItem});
+            this.administraciónToolStripMenuItem.Name = "administraciónToolStripMenuItem";
+            this.administraciónToolStripMenuItem.Size = new System.Drawing.Size(123, 24);
+            this.administraciónToolStripMenuItem.Text = "Administración";
+            // 
+            // usuariosToolStripMenuItem
+            // 
+            this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.usuariosToolStripMenuItem.Text = "Usuarios...";
+            this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
+            // 
+            // auditoríaToolStripMenuItem
+            // 
+            this.auditoríaToolStripMenuItem.Name = "auditoríaToolStripMenuItem";
+            this.auditoríaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.auditoríaToolStripMenuItem.Text = "Auditoría...";
+            this.auditoríaToolStripMenuItem.Click += new System.EventHandler(this.auditoríaToolStripMenuItem_Click);
+            // 
+            // añadirTipoDeTareaToolStripMenuItem
+            // 
+            this.añadirTipoDeTareaToolStripMenuItem.Name = "añadirTipoDeTareaToolStripMenuItem";
+            this.añadirTipoDeTareaToolStripMenuItem.Size = new System.Drawing.Size(235, 26);
+            this.añadirTipoDeTareaToolStripMenuItem.Text = "Añadir tipo de tarea...";
+            // 
+            // añadirLugarToolStripMenuItem
+            // 
+            this.añadirLugarToolStripMenuItem.Name = "añadirLugarToolStripMenuItem";
+            this.añadirLugarToolStripMenuItem.Size = new System.Drawing.Size(235, 26);
+            this.añadirLugarToolStripMenuItem.Text = "Añadir lugar...";
+            // 
+            // sesiónToolStripMenuItem
+            // 
+            this.sesiónToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cerrarSesiónToolStripMenuItem,
+            this.salirToolStripMenuItem});
+            this.sesiónToolStripMenuItem.Name = "sesiónToolStripMenuItem";
+            this.sesiónToolStripMenuItem.Size = new System.Drawing.Size(66, 24);
+            this.sesiónToolStripMenuItem.Text = "Sesión";
+            // 
+            // cerrarSesiónToolStripMenuItem
+            // 
+            this.cerrarSesiónToolStripMenuItem.Name = "cerrarSesiónToolStripMenuItem";
+            this.cerrarSesiónToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.cerrarSesiónToolStripMenuItem.Text = "Cerrar sesión...";
+            this.cerrarSesiónToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesiónToolStripMenuItem_Click);
+            // 
+            // salirToolStripMenuItem
+            // 
+            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.salirToolStripMenuItem.Text = "Salir";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
             // frmPrincipalAdmin
             // 
@@ -171,14 +213,18 @@
             this.ClientSize = new System.Drawing.Size(1061, 607);
             this.Controls.Add(this.barraEstadoInf);
             this.Controls.Add(this.pControles);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmPrincipalAdmin";
-            this.Text = "Panel Principal";
+            this.Text = "Panel Principal de Administrador";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.barraEstadoInf.ResumeLayout(false);
             this.barraEstadoInf.PerformLayout();
             this.pControles.ResumeLayout(false);
+            this.pControles.PerformLayout();
             this.pPrincipal.ResumeLayout(false);
             this.pPrincipal.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -191,12 +237,18 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.ToolStripStatusLabel lblFechaHoraSistema;
         private System.Windows.Forms.Panel pControles;
-        private System.Windows.Forms.Button btnCerrarSesion;
         private System.Windows.Forms.Panel pPrincipal;
-        private System.Windows.Forms.Button btnUsuarios;
         private System.Windows.Forms.Label lblTitulo;
-        private System.Windows.Forms.Button btnSalir;
-        private System.Windows.Forms.Button btnAuditoria;
         private System.Windows.Forms.Timer TiempoSistema;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem tareasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem añadirTipoDeTareaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem añadirLugarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem administraciónToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem auditoríaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sesiónToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cerrarSesiónToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
     }
 }

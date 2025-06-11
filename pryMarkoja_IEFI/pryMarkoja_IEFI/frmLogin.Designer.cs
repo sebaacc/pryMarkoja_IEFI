@@ -31,6 +31,7 @@
             this.btnSalir = new System.Windows.Forms.Button();
             this.pControles = new System.Windows.Forms.Panel();
             this.pLogin = new System.Windows.Forms.Panel();
+            this.chkContraVisible = new System.Windows.Forms.CheckBox();
             this.pbLogo = new System.Windows.Forms.PictureBox();
             this.btnLogin = new System.Windows.Forms.Button();
             this.lblBienvenidaLogin2 = new System.Windows.Forms.Label();
@@ -40,7 +41,6 @@
             this.lblUsuario = new System.Windows.Forms.Label();
             this.lblLinkRegistrarse = new System.Windows.Forms.LinkLabel();
             this.lblContraseña = new System.Windows.Forms.Label();
-            this.chkContraVisible = new System.Windows.Forms.CheckBox();
             this.pControles.SuspendLayout();
             this.pLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
@@ -49,9 +49,10 @@
             // btnSalir
             // 
             this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSalir.Location = new System.Drawing.Point(724, 472);
+            this.btnSalir.Location = new System.Drawing.Point(965, 581);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(75, 23);
+            this.btnSalir.Size = new System.Drawing.Size(100, 28);
             this.btnSalir.TabIndex = 0;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
@@ -63,9 +64,10 @@
             this.pControles.Controls.Add(this.btnSalir);
             this.pControles.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pControles.Location = new System.Drawing.Point(0, 0);
+            this.pControles.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pControles.Name = "pControles";
-            this.pControles.Size = new System.Drawing.Size(820, 516);
-            this.pControles.TabIndex = 1;
+            this.pControles.Size = new System.Drawing.Size(1093, 635);
+            this.pControles.TabIndex = 0;
             this.pControles.Paint += new System.Windows.Forms.PaintEventHandler(this.pControles_Paint);
             // 
             // pLogin
@@ -81,18 +83,30 @@
             this.pLogin.Controls.Add(this.lblUsuario);
             this.pLogin.Controls.Add(this.lblLinkRegistrarse);
             this.pLogin.Controls.Add(this.lblContraseña);
-            this.pLogin.Location = new System.Drawing.Point(236, 44);
-            this.pLogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pLogin.Location = new System.Drawing.Point(315, 54);
+            this.pLogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pLogin.Name = "pLogin";
-            this.pLogin.Size = new System.Drawing.Size(352, 424);
-            this.pLogin.TabIndex = 1;
+            this.pLogin.Size = new System.Drawing.Size(469, 522);
+            this.pLogin.TabIndex = 0;
+            // 
+            // chkContraVisible
+            // 
+            this.chkContraVisible.AutoSize = true;
+            this.chkContraVisible.Location = new System.Drawing.Point(107, 338);
+            this.chkContraVisible.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chkContraVisible.Name = "chkContraVisible";
+            this.chkContraVisible.Size = new System.Drawing.Size(146, 20);
+            this.chkContraVisible.TabIndex = 2;
+            this.chkContraVisible.Text = "Mostrar Contraseña";
+            this.chkContraVisible.UseVisualStyleBackColor = true;
+            this.chkContraVisible.CheckedChanged += new System.EventHandler(this.chkContraVisible_CheckedChanged);
             // 
             // pbLogo
             // 
-            this.pbLogo.Location = new System.Drawing.Point(147, 26);
-            this.pbLogo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pbLogo.Location = new System.Drawing.Point(196, 32);
+            this.pbLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pbLogo.Name = "pbLogo";
-            this.pbLogo.Size = new System.Drawing.Size(64, 56);
+            this.pbLogo.Size = new System.Drawing.Size(85, 69);
             this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbLogo.TabIndex = 9;
             this.pbLogo.TabStop = false;
@@ -100,11 +114,11 @@
             // btnLogin
             // 
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogin.Location = new System.Drawing.Point(108, 353);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLogin.Location = new System.Drawing.Point(144, 434);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(141, 32);
-            this.btnLogin.TabIndex = 2;
+            this.btnLogin.Size = new System.Drawing.Size(188, 39);
+            this.btnLogin.TabIndex = 3;
             this.btnLogin.Text = "Ingresar";
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
@@ -113,28 +127,27 @@
             // 
             this.lblBienvenidaLogin2.AutoSize = true;
             this.lblBienvenidaLogin2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBienvenidaLogin2.Location = new System.Drawing.Point(6, 104);
-            this.lblBienvenidaLogin2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblBienvenidaLogin2.Location = new System.Drawing.Point(8, 128);
             this.lblBienvenidaLogin2.Name = "lblBienvenidaLogin2";
-            this.lblBienvenidaLogin2.Size = new System.Drawing.Size(344, 20);
-            this.lblBienvenidaLogin2.TabIndex = 8;
+            this.lblBienvenidaLogin2.Size = new System.Drawing.Size(418, 25);
+            this.lblBienvenidaLogin2.TabIndex = 7;
             this.lblBienvenidaLogin2.Text = "Te damos la bienvenida a AuditoríaMaster";
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(80, 180);
-            this.txtUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtUsuario.Location = new System.Drawing.Point(107, 222);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(201, 20);
+            this.txtUsuario.Size = new System.Drawing.Size(267, 22);
             this.txtUsuario.TabIndex = 0;
             // 
             // txtContraseña
             // 
-            this.txtContraseña.Location = new System.Drawing.Point(80, 250);
-            this.txtContraseña.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtContraseña.Location = new System.Drawing.Point(107, 308);
+            this.txtContraseña.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.PasswordChar = '*';
-            this.txtContraseña.Size = new System.Drawing.Size(201, 20);
+            this.txtContraseña.Size = new System.Drawing.Size(267, 22);
             this.txtContraseña.TabIndex = 1;
             this.txtContraseña.TextChanged += new System.EventHandler(this.txtContraseña_TextChanged);
             this.txtContraseña.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtContraseña_KeyDown);
@@ -142,31 +155,28 @@
             // lblPreguntaR
             // 
             this.lblPreguntaR.AutoSize = true;
-            this.lblPreguntaR.Location = new System.Drawing.Point(78, 297);
-            this.lblPreguntaR.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPreguntaR.Location = new System.Drawing.Point(104, 366);
             this.lblPreguntaR.Name = "lblPreguntaR";
-            this.lblPreguntaR.Size = new System.Drawing.Size(140, 13);
+            this.lblPreguntaR.Size = new System.Drawing.Size(169, 16);
             this.lblPreguntaR.TabIndex = 6;
             this.lblPreguntaR.Text = "¿Todavía no tenés cuenta?";
             // 
             // lblUsuario
             // 
             this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Location = new System.Drawing.Point(80, 159);
-            this.lblUsuario.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblUsuario.Location = new System.Drawing.Point(107, 196);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(43, 13);
-            this.lblUsuario.TabIndex = 3;
+            this.lblUsuario.Size = new System.Drawing.Size(54, 16);
+            this.lblUsuario.TabIndex = 8;
             this.lblUsuario.Text = "Usuario";
             // 
             // lblLinkRegistrarse
             // 
             this.lblLinkRegistrarse.AutoSize = true;
-            this.lblLinkRegistrarse.Location = new System.Drawing.Point(223, 297);
-            this.lblLinkRegistrarse.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblLinkRegistrarse.Location = new System.Drawing.Point(297, 366);
             this.lblLinkRegistrarse.Name = "lblLinkRegistrarse";
-            this.lblLinkRegistrarse.Size = new System.Drawing.Size(60, 13);
-            this.lblLinkRegistrarse.TabIndex = 5;
+            this.lblLinkRegistrarse.Size = new System.Drawing.Size(77, 16);
+            this.lblLinkRegistrarse.TabIndex = 4;
             this.lblLinkRegistrarse.TabStop = true;
             this.lblLinkRegistrarse.Text = "Registrarse";
             this.lblLinkRegistrarse.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblLinkRegistrarse_LinkClicked);
@@ -174,30 +184,19 @@
             // lblContraseña
             // 
             this.lblContraseña.AutoSize = true;
-            this.lblContraseña.Location = new System.Drawing.Point(80, 230);
-            this.lblContraseña.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblContraseña.Location = new System.Drawing.Point(107, 283);
             this.lblContraseña.Name = "lblContraseña";
-            this.lblContraseña.Size = new System.Drawing.Size(61, 13);
+            this.lblContraseña.Size = new System.Drawing.Size(76, 16);
             this.lblContraseña.TabIndex = 4;
             this.lblContraseña.Text = "Contraseña";
             // 
-            // chkContraVisible
-            // 
-            this.chkContraVisible.AutoSize = true;
-            this.chkContraVisible.Location = new System.Drawing.Point(80, 275);
-            this.chkContraVisible.Name = "chkContraVisible";
-            this.chkContraVisible.Size = new System.Drawing.Size(118, 17);
-            this.chkContraVisible.TabIndex = 10;
-            this.chkContraVisible.Text = "Mostrar Contraseña";
-            this.chkContraVisible.UseVisualStyleBackColor = true;
-            this.chkContraVisible.CheckedChanged += new System.EventHandler(this.chkContraVisible_CheckedChanged);
-            // 
             // frmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(820, 516);
+            this.ClientSize = new System.Drawing.Size(1093, 635);
             this.Controls.Add(this.pControles);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inicio de sesión";
