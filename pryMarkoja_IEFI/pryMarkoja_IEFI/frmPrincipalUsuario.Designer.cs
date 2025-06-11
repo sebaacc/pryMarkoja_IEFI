@@ -33,8 +33,8 @@
             this.BarraDeEstadoUsuario = new System.Windows.Forms.StatusStrip();
             this.lblTiempoTitulo = new System.Windows.Forms.ToolStripStatusLabel();
             this.lblTiempoStatus = new System.Windows.Forms.ToolStripStatusLabel();
-            this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.pPrincipal = new System.Windows.Forms.Panel();
+            this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.cmbLugar = new System.Windows.Forms.ComboBox();
             this.cmbTarea = new System.Windows.Forms.ComboBox();
             this.lblComentario = new System.Windows.Forms.Label();
@@ -43,20 +43,25 @@
             this.lblLugar = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblTarea = new System.Windows.Forms.Label();
-            this.btnSalir = new System.Windows.Forms.Button();
             this.tSessionTimer = new System.Windows.Forms.Timer(this.components);
-            this.dtpFecha = new System.Windows.Forms.DateTimePicker();
+            this.menuUsuario = new System.Windows.Forms.MenuStrip();
+            this.sesiónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cerrarSesiónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tareasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.crearTareaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.verHistorialDeTareasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pControles.SuspendLayout();
             this.BarraDeEstadoUsuario.SuspendLayout();
             this.pPrincipal.SuspendLayout();
+            this.menuUsuario.SuspendLayout();
             this.SuspendLayout();
             // 
             // pControles
             // 
             this.pControles.Controls.Add(this.BarraDeEstadoUsuario);
-            this.pControles.Controls.Add(this.btnCerrarSesion);
+            this.pControles.Controls.Add(this.menuUsuario);
             this.pControles.Controls.Add(this.pPrincipal);
-            this.pControles.Controls.Add(this.btnSalir);
             this.pControles.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pControles.Location = new System.Drawing.Point(0, 0);
             this.pControles.Margin = new System.Windows.Forms.Padding(4);
@@ -88,18 +93,6 @@
             this.lblTiempoStatus.Size = new System.Drawing.Size(15, 20);
             this.lblTiempoStatus.Text = "-";
             // 
-            // btnCerrarSesion
-            // 
-            this.btnCerrarSesion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCerrarSesion.Location = new System.Drawing.Point(907, 444);
-            this.btnCerrarSesion.Margin = new System.Windows.Forms.Padding(4);
-            this.btnCerrarSesion.Name = "btnCerrarSesion";
-            this.btnCerrarSesion.Size = new System.Drawing.Size(136, 28);
-            this.btnCerrarSesion.TabIndex = 3;
-            this.btnCerrarSesion.Text = "Cerrar sesión";
-            this.btnCerrarSesion.UseVisualStyleBackColor = true;
-            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
-            // 
             // pPrincipal
             // 
             this.pPrincipal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
@@ -118,6 +111,13 @@
             this.pPrincipal.Name = "pPrincipal";
             this.pPrincipal.Size = new System.Drawing.Size(756, 483);
             this.pPrincipal.TabIndex = 1;
+            // 
+            // dtpFecha
+            // 
+            this.dtpFecha.Location = new System.Drawing.Point(100, 96);
+            this.dtpFecha.Name = "dtpFecha";
+            this.dtpFecha.Size = new System.Drawing.Size(200, 27);
+            this.dtpFecha.TabIndex = 8;
             // 
             // cmbLugar
             // 
@@ -193,38 +193,78 @@
             this.lblTarea.TabIndex = 0;
             this.lblTarea.Text = "Tarea: ";
             // 
-            // btnSalir
-            // 
-            this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSalir.Location = new System.Drawing.Point(907, 500);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(4);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(136, 28);
-            this.btnSalir.TabIndex = 0;
-            this.btnSalir.Text = "Salir";
-            this.btnSalir.UseVisualStyleBackColor = true;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
-            // 
             // tSessionTimer
             // 
             this.tSessionTimer.Interval = 1000;
             this.tSessionTimer.Tick += new System.EventHandler(this.tSessionTimer_Tick);
             // 
-            // dtpFecha
+            // menuUsuario
             // 
-            this.dtpFecha.Location = new System.Drawing.Point(100, 96);
-            this.dtpFecha.Name = "dtpFecha";
-            this.dtpFecha.Size = new System.Drawing.Size(200, 27);
-            this.dtpFecha.TabIndex = 8;
+            this.menuUsuario.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuUsuario.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tareasToolStripMenuItem,
+            this.sesiónToolStripMenuItem});
+            this.menuUsuario.Location = new System.Drawing.Point(0, 0);
+            this.menuUsuario.Name = "menuUsuario";
+            this.menuUsuario.Size = new System.Drawing.Size(1067, 28);
+            this.menuUsuario.TabIndex = 6;
+            this.menuUsuario.Text = "menuStrip1";
             // 
-            // frmPrincipal
+            // sesiónToolStripMenuItem
+            // 
+            this.sesiónToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cerrarSesiónToolStripMenuItem,
+            this.salirToolStripMenuItem});
+            this.sesiónToolStripMenuItem.Name = "sesiónToolStripMenuItem";
+            this.sesiónToolStripMenuItem.Size = new System.Drawing.Size(66, 24);
+            this.sesiónToolStripMenuItem.Text = "Sesión";
+            // 
+            // cerrarSesiónToolStripMenuItem
+            // 
+            this.cerrarSesiónToolStripMenuItem.Name = "cerrarSesiónToolStripMenuItem";
+            this.cerrarSesiónToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.cerrarSesiónToolStripMenuItem.Text = "Cerrar sesión...";
+            this.cerrarSesiónToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesiónToolStripMenuItem_Click);
+            // 
+            // salirToolStripMenuItem
+            // 
+            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.salirToolStripMenuItem.Text = "Salir";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
+            // 
+            // tareasToolStripMenuItem
+            // 
+            this.tareasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.crearTareaToolStripMenuItem,
+            this.verHistorialDeTareasToolStripMenuItem});
+            this.tareasToolStripMenuItem.Name = "tareasToolStripMenuItem";
+            this.tareasToolStripMenuItem.Size = new System.Drawing.Size(64, 24);
+            this.tareasToolStripMenuItem.Text = "Tareas";
+            // 
+            // crearTareaToolStripMenuItem
+            // 
+            this.crearTareaToolStripMenuItem.Name = "crearTareaToolStripMenuItem";
+            this.crearTareaToolStripMenuItem.Size = new System.Drawing.Size(244, 26);
+            this.crearTareaToolStripMenuItem.Text = "Crear tarea...";
+            this.crearTareaToolStripMenuItem.Click += new System.EventHandler(this.crearTareaToolStripMenuItem_Click);
+            // 
+            // verHistorialDeTareasToolStripMenuItem
+            // 
+            this.verHistorialDeTareasToolStripMenuItem.Name = "verHistorialDeTareasToolStripMenuItem";
+            this.verHistorialDeTareasToolStripMenuItem.Size = new System.Drawing.Size(244, 26);
+            this.verHistorialDeTareasToolStripMenuItem.Text = "Ver historial de tareas...";
+            this.verHistorialDeTareasToolStripMenuItem.Click += new System.EventHandler(this.verHistorialDeTareasToolStripMenuItem_Click);
+            // 
+            // frmPrincipalUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.pControles);
+            this.MainMenuStrip = this.menuUsuario;
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "frmPrincipal";
+            this.Name = "frmPrincipalUsuario";
             this.Text = "Menú principal";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmPrincipal_Load);
@@ -234,6 +274,8 @@
             this.BarraDeEstadoUsuario.PerformLayout();
             this.pPrincipal.ResumeLayout(false);
             this.pPrincipal.PerformLayout();
+            this.menuUsuario.ResumeLayout(false);
+            this.menuUsuario.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -242,8 +284,6 @@
 
         private System.Windows.Forms.Panel pControles;
         private System.Windows.Forms.Panel pPrincipal;
-        private System.Windows.Forms.Button btnSalir;
-        private System.Windows.Forms.Button btnCerrarSesion;
         private System.Windows.Forms.Timer tSessionTimer;
         private System.Windows.Forms.StatusStrip BarraDeEstadoUsuario;
         private System.Windows.Forms.ToolStripStatusLabel lblTiempoTitulo;
@@ -257,5 +297,12 @@
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.Label lblTarea;
         private System.Windows.Forms.DateTimePicker dtpFecha;
+        private System.Windows.Forms.MenuStrip menuUsuario;
+        private System.Windows.Forms.ToolStripMenuItem tareasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem crearTareaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem verHistorialDeTareasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sesiónToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cerrarSesiónToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
     }
 }

@@ -24,20 +24,6 @@ namespace pryMarkoja_IEFI
             usuarioId = idUsuario;
         }
 
-        private void btnSalir_Click(object sender, EventArgs e)
-        {
-            RegistrarFechaFin();
-            Application.Exit();
-        }
-
-        private void btnCerrarSesion_Click(object sender, EventArgs e)
-        {
-            RegistrarFechaFin();
-            this.Close();
-            frmLogin v = new frmLogin();
-            v.ShowDialog();
-        }
-
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
             sesionStartTime = DateTime.Now;
@@ -82,6 +68,31 @@ namespace pryMarkoja_IEFI
             }
 
             tSessionTimer.Stop();
+        }
+
+        private void cerrarSesiónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RegistrarFechaFin();
+            this.Close();
+            frmLogin v = new frmLogin();
+            v.ShowDialog();
+        }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RegistrarFechaFin();
+            Application.Exit();
+        }
+
+        private void crearTareaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //frmTarea tareas = new frmTarea();
+            //tareas.ShowDialog();
+        }
+
+        private void verHistorialDeTareasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //ver historial
         }
     }
 }
