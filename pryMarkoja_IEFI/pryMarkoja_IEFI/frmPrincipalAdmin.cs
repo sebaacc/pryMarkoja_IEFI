@@ -45,5 +45,10 @@ namespace pryMarkoja_IEFI
         {
             Application.Exit();
         }
+
+        private void historialDeTareasDeUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //historial COMPLETO 
+        }
     }
 }
