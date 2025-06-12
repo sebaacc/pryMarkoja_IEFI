@@ -42,7 +42,6 @@ CREATE TABLE [dbo].[Lugar] (
 GO
 CREATE TABLE [dbo].[Tarea] (
     Id INT IDENTITY(1,1) PRIMARY KEY,
-    NombreTarea NVARCHAR(50) NOT NULL,
     UsuarioId INT NOT NULL,
     FechaTarea DATETIME NOT NULL,
     Detalle NVARCHAR(50),

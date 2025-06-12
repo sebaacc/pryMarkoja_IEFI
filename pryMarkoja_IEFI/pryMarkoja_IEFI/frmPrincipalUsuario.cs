@@ -16,7 +16,7 @@ namespace pryMarkoja_IEFI
     {
         private DateTime sesionStartTime;
         private int sesionId;
-        private int usuarioId;
+        private readonly int usuarioId;
 
         public frmPrincipalUsuario(int idUsuario)
         {
@@ -86,7 +86,7 @@ namespace pryMarkoja_IEFI
 
         private void crearTareaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmTarea tareas = new frmTarea();
+            frmTarea tareas = new frmTarea(usuarioId);
             tareas.ShowDialog();
         }
 
