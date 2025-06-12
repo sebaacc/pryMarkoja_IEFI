@@ -31,6 +31,11 @@
             this.pPrincipal = new System.Windows.Forms.Panel();
             this.lblTituloTareas = new System.Windows.Forms.Label();
             this.dgvTareas = new System.Windows.Forms.DataGridView();
+            this.TipoTarea = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Lugar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Detalle = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Comentario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnGrabar = new System.Windows.Forms.Button();
             this.btnAgregarTarea = new System.Windows.Forms.Button();
             this.lblDetalle = new System.Windows.Forms.Label();
@@ -60,11 +65,6 @@
             this.menuTareas = new System.Windows.Forms.MenuStrip();
             this.ventanaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.volverAMenúPrincipalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.TipoTarea = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Lugar = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Detalle = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Comentario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTareas)).BeginInit();
             this.panel1.SuspendLayout();
@@ -90,19 +90,20 @@
             this.pPrincipal.Controls.Add(this.lblTarea);
             this.pPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pPrincipal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pPrincipal.Location = new System.Drawing.Point(0, 28);
-            this.pPrincipal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pPrincipal.Location = new System.Drawing.Point(0, 24);
+            this.pPrincipal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pPrincipal.Name = "pPrincipal";
-            this.pPrincipal.Size = new System.Drawing.Size(1805, 910);
+            this.pPrincipal.Size = new System.Drawing.Size(963, 738);
             this.pPrincipal.TabIndex = 2;
             // 
             // lblTituloTareas
             // 
             this.lblTituloTareas.AutoSize = true;
             this.lblTituloTareas.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTituloTareas.Location = new System.Drawing.Point(258, 11);
+            this.lblTituloTareas.Location = new System.Drawing.Point(194, 9);
+            this.lblTituloTareas.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTituloTareas.Name = "lblTituloTareas";
-            this.lblTituloTareas.Size = new System.Drawing.Size(326, 29);
+            this.lblTituloTareas.Size = new System.Drawing.Size(255, 24);
             this.lblTituloTareas.TabIndex = 13;
             this.lblTituloTareas.Text = "Registrar tareas realizadas";
             // 
@@ -110,6 +111,10 @@
             // 
             this.dgvTareas.AllowUserToAddRows = false;
             this.dgvTareas.AllowUserToDeleteRows = false;
+            this.dgvTareas.AllowUserToResizeColumns = false;
+            this.dgvTareas.AllowUserToResizeRows = false;
+            this.dgvTareas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvTareas.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvTareas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTareas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.TipoTarea,
@@ -117,20 +122,65 @@
             this.Fecha,
             this.Detalle,
             this.Comentario});
-            this.dgvTareas.Location = new System.Drawing.Point(263, 568);
+            this.dgvTareas.Location = new System.Drawing.Point(197, 462);
+            this.dgvTareas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvTareas.MultiSelect = false;
             this.dgvTareas.Name = "dgvTareas";
+            this.dgvTareas.ReadOnly = true;
+            this.dgvTareas.RowHeadersVisible = false;
             this.dgvTareas.RowHeadersWidth = 51;
             this.dgvTareas.RowTemplate.Height = 24;
             this.dgvTareas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvTareas.Size = new System.Drawing.Size(1205, 240);
+            this.dgvTareas.Size = new System.Drawing.Size(904, 195);
             this.dgvTareas.TabIndex = 12;
+            // 
+            // TipoTarea
+            // 
+            this.TipoTarea.HeaderText = "Tipo de Tarea";
+            this.TipoTarea.MinimumWidth = 6;
+            this.TipoTarea.Name = "TipoTarea";
+            this.TipoTarea.ReadOnly = true;
+            this.TipoTarea.Width = 124;
+            // 
+            // Lugar
+            // 
+            this.Lugar.HeaderText = "Lugar";
+            this.Lugar.MinimumWidth = 6;
+            this.Lugar.Name = "Lugar";
+            this.Lugar.ReadOnly = true;
+            this.Lugar.Width = 75;
+            // 
+            // Fecha
+            // 
+            this.Fecha.HeaderText = "Fecha";
+            this.Fecha.MinimumWidth = 6;
+            this.Fecha.Name = "Fecha";
+            this.Fecha.ReadOnly = true;
+            this.Fecha.Width = 77;
+            // 
+            // Detalle
+            // 
+            this.Detalle.HeaderText = "Detalle";
+            this.Detalle.MinimumWidth = 6;
+            this.Detalle.Name = "Detalle";
+            this.Detalle.ReadOnly = true;
+            this.Detalle.Width = 84;
+            // 
+            // Comentario
+            // 
+            this.Comentario.HeaderText = " Comentario";
+            this.Comentario.MinimumWidth = 6;
+            this.Comentario.Name = "Comentario";
+            this.Comentario.ReadOnly = true;
+            this.Comentario.Width = 120;
             // 
             // btnGrabar
             // 
             this.btnGrabar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGrabar.Location = new System.Drawing.Point(1320, 846);
+            this.btnGrabar.Location = new System.Drawing.Point(990, 687);
+            this.btnGrabar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnGrabar.Name = "btnGrabar";
-            this.btnGrabar.Size = new System.Drawing.Size(148, 33);
+            this.btnGrabar.Size = new System.Drawing.Size(111, 27);
             this.btnGrabar.TabIndex = 11;
             this.btnGrabar.Text = "Grabar y Salir";
             this.btnGrabar.UseVisualStyleBackColor = true;
@@ -139,9 +189,10 @@
             // btnAgregarTarea
             // 
             this.btnAgregarTarea.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarTarea.Location = new System.Drawing.Point(831, 509);
+            this.btnAgregarTarea.Location = new System.Drawing.Point(623, 414);
+            this.btnAgregarTarea.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAgregarTarea.Name = "btnAgregarTarea";
-            this.btnAgregarTarea.Size = new System.Drawing.Size(148, 33);
+            this.btnAgregarTarea.Size = new System.Drawing.Size(111, 27);
             this.btnAgregarTarea.TabIndex = 10;
             this.btnAgregarTarea.Text = "Agregar Tarea";
             this.btnAgregarTarea.UseVisualStyleBackColor = true;
@@ -151,9 +202,10 @@
             // 
             this.lblDetalle.AutoSize = true;
             this.lblDetalle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDetalle.Location = new System.Drawing.Point(965, 79);
+            this.lblDetalle.Location = new System.Drawing.Point(724, 64);
+            this.lblDetalle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDetalle.Name = "lblDetalle";
-            this.lblDetalle.Size = new System.Drawing.Size(72, 20);
+            this.lblDetalle.Size = new System.Drawing.Size(60, 17);
             this.lblDetalle.TabIndex = 9;
             this.lblDetalle.Text = "Detalle: ";
             // 
@@ -174,84 +226,94 @@
             this.panel1.Controls.Add(this.chkVacacion);
             this.panel1.Controls.Add(this.chkEstudio);
             this.panel1.Controls.Add(this.chkInsumo);
-            this.panel1.Location = new System.Drawing.Point(943, 102);
+            this.panel1.Location = new System.Drawing.Point(707, 83);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(525, 386);
+            this.panel1.Size = new System.Drawing.Size(394, 314);
             this.panel1.TabIndex = 0;
             // 
             // lblReclamo
             // 
             this.lblReclamo.AutoSize = true;
-            this.lblReclamo.Location = new System.Drawing.Point(154, 277);
+            this.lblReclamo.Location = new System.Drawing.Point(116, 225);
+            this.lblReclamo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblReclamo.Name = "lblReclamo";
-            this.lblReclamo.Size = new System.Drawing.Size(88, 20);
+            this.lblReclamo.Size = new System.Drawing.Size(75, 17);
             this.lblReclamo.TabIndex = 12;
             this.lblReclamo.Text = "Reclamo:";
             // 
             // lblLicencia
             // 
             this.lblLicencia.AutoSize = true;
-            this.lblLicencia.Location = new System.Drawing.Point(154, 144);
+            this.lblLicencia.Location = new System.Drawing.Point(116, 117);
+            this.lblLicencia.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblLicencia.Name = "lblLicencia";
-            this.lblLicencia.Size = new System.Drawing.Size(86, 20);
+            this.lblLicencia.Size = new System.Drawing.Size(73, 17);
             this.lblLicencia.TabIndex = 11;
             this.lblLicencia.Text = "Licencia:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(154, 30);
+            this.label1.Location = new System.Drawing.Point(116, 24);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(157, 20);
+            this.label1.Size = new System.Drawing.Size(136, 17);
             this.label1.TabIndex = 10;
             this.label1.Text = "Uniforme (pauta):";
             // 
             // pCanvas5
             // 
-            this.pCanvas5.Location = new System.Drawing.Point(172, 328);
+            this.pCanvas5.Location = new System.Drawing.Point(129, 266);
+            this.pCanvas5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pCanvas5.Name = "pCanvas5";
-            this.pCanvas5.Size = new System.Drawing.Size(68, 35);
+            this.pCanvas5.Size = new System.Drawing.Size(51, 28);
             this.pCanvas5.TabIndex = 9;
             this.pCanvas5.Paint += new System.Windows.Forms.PaintEventHandler(this.pCanvas5_Paint);
             // 
             // pCanvas4
             // 
-            this.pCanvas4.Location = new System.Drawing.Point(172, 300);
+            this.pCanvas4.Location = new System.Drawing.Point(129, 244);
+            this.pCanvas4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pCanvas4.Name = "pCanvas4";
-            this.pCanvas4.Size = new System.Drawing.Size(68, 35);
+            this.pCanvas4.Size = new System.Drawing.Size(51, 28);
             this.pCanvas4.TabIndex = 8;
             this.pCanvas4.Paint += new System.Windows.Forms.PaintEventHandler(this.pCanvas4_Paint);
             // 
             // pCanvas3
             // 
-            this.pCanvas3.Location = new System.Drawing.Point(172, 197);
+            this.pCanvas3.Location = new System.Drawing.Point(129, 160);
+            this.pCanvas3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pCanvas3.Name = "pCanvas3";
-            this.pCanvas3.Size = new System.Drawing.Size(68, 35);
+            this.pCanvas3.Size = new System.Drawing.Size(51, 28);
             this.pCanvas3.TabIndex = 7;
             this.pCanvas3.Paint += new System.Windows.Forms.PaintEventHandler(this.pCanvas3_Paint);
             // 
             // pCanvas2
             // 
-            this.pCanvas2.Location = new System.Drawing.Point(172, 169);
+            this.pCanvas2.Location = new System.Drawing.Point(129, 137);
+            this.pCanvas2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pCanvas2.Name = "pCanvas2";
-            this.pCanvas2.Size = new System.Drawing.Size(68, 35);
+            this.pCanvas2.Size = new System.Drawing.Size(51, 28);
             this.pCanvas2.TabIndex = 6;
             this.pCanvas2.Paint += new System.Windows.Forms.PaintEventHandler(this.pCanvas2_Paint);
             // 
             // pCanvas
             // 
-            this.pCanvas.Location = new System.Drawing.Point(172, 57);
+            this.pCanvas.Location = new System.Drawing.Point(129, 46);
+            this.pCanvas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pCanvas.Name = "pCanvas";
-            this.pCanvas.Size = new System.Drawing.Size(68, 35);
+            this.pCanvas.Size = new System.Drawing.Size(51, 28);
             this.pCanvas.TabIndex = 5;
             this.pCanvas.Paint += new System.Windows.Forms.PaintEventHandler(this.pCanvas_Paint);
             // 
             // chkRecibo
             // 
             this.chkRecibo.AutoSize = true;
-            this.chkRecibo.Location = new System.Drawing.Point(248, 332);
+            this.chkRecibo.Location = new System.Drawing.Point(186, 270);
+            this.chkRecibo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkRecibo.Name = "chkRecibo";
-            this.chkRecibo.Size = new System.Drawing.Size(89, 24);
+            this.chkRecibo.Size = new System.Drawing.Size(77, 21);
             this.chkRecibo.TabIndex = 4;
             this.chkRecibo.Text = "Recibo";
             this.chkRecibo.UseVisualStyleBackColor = true;
@@ -259,9 +321,10 @@
             // chkSalario
             // 
             this.chkSalario.AutoSize = true;
-            this.chkSalario.Location = new System.Drawing.Point(248, 306);
+            this.chkSalario.Location = new System.Drawing.Point(186, 249);
+            this.chkSalario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkSalario.Name = "chkSalario";
-            this.chkSalario.Size = new System.Drawing.Size(90, 24);
+            this.chkSalario.Size = new System.Drawing.Size(78, 21);
             this.chkSalario.TabIndex = 3;
             this.chkSalario.Text = "Salario";
             this.chkSalario.UseVisualStyleBackColor = true;
@@ -269,9 +332,10 @@
             // chkVacacion
             // 
             this.chkVacacion.AutoSize = true;
-            this.chkVacacion.Location = new System.Drawing.Point(248, 203);
+            this.chkVacacion.Location = new System.Drawing.Point(186, 165);
+            this.chkVacacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkVacacion.Name = "chkVacacion";
-            this.chkVacacion.Size = new System.Drawing.Size(108, 24);
+            this.chkVacacion.Size = new System.Drawing.Size(93, 21);
             this.chkVacacion.TabIndex = 2;
             this.chkVacacion.Text = "Vacación";
             this.chkVacacion.UseVisualStyleBackColor = true;
@@ -279,9 +343,10 @@
             // chkEstudio
             // 
             this.chkEstudio.AutoSize = true;
-            this.chkEstudio.Location = new System.Drawing.Point(248, 173);
+            this.chkEstudio.Location = new System.Drawing.Point(186, 141);
+            this.chkEstudio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkEstudio.Name = "chkEstudio";
-            this.chkEstudio.Size = new System.Drawing.Size(94, 24);
+            this.chkEstudio.Size = new System.Drawing.Size(81, 21);
             this.chkEstudio.TabIndex = 1;
             this.chkEstudio.Text = "Estudio";
             this.chkEstudio.UseVisualStyleBackColor = true;
@@ -289,63 +354,71 @@
             // chkInsumo
             // 
             this.chkInsumo.AutoSize = true;
-            this.chkInsumo.Location = new System.Drawing.Point(248, 61);
+            this.chkInsumo.Location = new System.Drawing.Point(186, 50);
+            this.chkInsumo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkInsumo.Name = "chkInsumo";
-            this.chkInsumo.Size = new System.Drawing.Size(91, 24);
+            this.chkInsumo.Size = new System.Drawing.Size(78, 21);
             this.chkInsumo.TabIndex = 0;
             this.chkInsumo.Text = "Insumo";
             this.chkInsumo.UseVisualStyleBackColor = true;
             // 
             // dtpFecha
             // 
-            this.dtpFecha.Location = new System.Drawing.Point(445, 157);
+            this.dtpFecha.Location = new System.Drawing.Point(334, 128);
+            this.dtpFecha.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtpFecha.Name = "dtpFecha";
-            this.dtpFecha.Size = new System.Drawing.Size(435, 27);
+            this.dtpFecha.Size = new System.Drawing.Size(327, 23);
             this.dtpFecha.TabIndex = 8;
             // 
             // cmbLugar
             // 
             this.cmbLugar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbLugar.FormattingEnabled = true;
-            this.cmbLugar.Location = new System.Drawing.Point(445, 241);
+            this.cmbLugar.Location = new System.Drawing.Point(334, 196);
+            this.cmbLugar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbLugar.Name = "cmbLugar";
-            this.cmbLugar.Size = new System.Drawing.Size(435, 28);
+            this.cmbLugar.Size = new System.Drawing.Size(327, 25);
             this.cmbLugar.TabIndex = 7;
             // 
             // cmbTarea
             // 
             this.cmbTarea.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTarea.FormattingEnabled = true;
-            this.cmbTarea.Location = new System.Drawing.Point(445, 76);
+            this.cmbTarea.Location = new System.Drawing.Point(334, 62);
+            this.cmbTarea.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbTarea.Name = "cmbTarea";
-            this.cmbTarea.Size = new System.Drawing.Size(435, 28);
+            this.cmbTarea.Size = new System.Drawing.Size(327, 25);
             this.cmbTarea.TabIndex = 6;
             // 
             // lblComentario
             // 
             this.lblComentario.AutoSize = true;
             this.lblComentario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblComentario.Location = new System.Drawing.Point(264, 311);
+            this.lblComentario.Location = new System.Drawing.Point(198, 253);
+            this.lblComentario.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblComentario.Name = "lblComentario";
-            this.lblComentario.Size = new System.Drawing.Size(105, 20);
+            this.lblComentario.Size = new System.Drawing.Size(88, 17);
             this.lblComentario.TabIndex = 5;
             this.lblComentario.Text = "Comentario: ";
             // 
             // txtComentario
             // 
-            this.txtComentario.Location = new System.Drawing.Point(268, 334);
+            this.txtComentario.Location = new System.Drawing.Point(201, 271);
+            this.txtComentario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtComentario.Multiline = true;
             this.txtComentario.Name = "txtComentario";
-            this.txtComentario.Size = new System.Drawing.Size(612, 154);
+            this.txtComentario.Size = new System.Drawing.Size(460, 126);
             this.txtComentario.TabIndex = 4;
+            this.txtComentario.TextChanged += new System.EventHandler(this.txtComentario_TextChanged);
             // 
             // lblLugar
             // 
             this.lblLugar.AutoSize = true;
             this.lblLugar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLugar.Location = new System.Drawing.Point(264, 244);
+            this.lblLugar.Location = new System.Drawing.Point(198, 198);
+            this.lblLugar.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblLugar.Name = "lblLugar";
-            this.lblLugar.Size = new System.Drawing.Size(57, 20);
+            this.lblLugar.Size = new System.Drawing.Size(49, 17);
             this.lblLugar.TabIndex = 2;
             this.lblLugar.Text = "Lugar:";
             // 
@@ -353,9 +426,10 @@
             // 
             this.lblFecha.AutoSize = true;
             this.lblFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFecha.Location = new System.Drawing.Point(264, 162);
+            this.lblFecha.Location = new System.Drawing.Point(198, 132);
+            this.lblFecha.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(65, 20);
+            this.lblFecha.Size = new System.Drawing.Size(55, 17);
             this.lblFecha.TabIndex = 1;
             this.lblFecha.Text = "Fecha: ";
             // 
@@ -363,9 +437,10 @@
             // 
             this.lblTarea.AutoSize = true;
             this.lblTarea.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTarea.Location = new System.Drawing.Point(264, 79);
+            this.lblTarea.Location = new System.Drawing.Point(198, 64);
+            this.lblTarea.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTarea.Name = "lblTarea";
-            this.lblTarea.Size = new System.Drawing.Size(135, 20);
+            this.lblTarea.Size = new System.Drawing.Size(116, 17);
             this.lblTarea.TabIndex = 0;
             this.lblTarea.Text = "Tarea realizada: ";
             // 
@@ -376,7 +451,8 @@
             this.ventanaToolStripMenuItem});
             this.menuTareas.Location = new System.Drawing.Point(0, 0);
             this.menuTareas.Name = "menuTareas";
-            this.menuTareas.Size = new System.Drawing.Size(1805, 28);
+            this.menuTareas.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuTareas.Size = new System.Drawing.Size(963, 24);
             this.menuTareas.TabIndex = 4;
             this.menuTareas.Text = "menuStrip1";
             // 
@@ -385,59 +461,25 @@
             this.ventanaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.volverAMenúPrincipalToolStripMenuItem});
             this.ventanaToolStripMenuItem.Name = "ventanaToolStripMenuItem";
-            this.ventanaToolStripMenuItem.Size = new System.Drawing.Size(76, 24);
+            this.ventanaToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.ventanaToolStripMenuItem.Text = "Ventana";
             // 
             // volverAMenúPrincipalToolStripMenuItem
             // 
             this.volverAMenúPrincipalToolStripMenuItem.Name = "volverAMenúPrincipalToolStripMenuItem";
-            this.volverAMenúPrincipalToolStripMenuItem.Size = new System.Drawing.Size(274, 26);
+            this.volverAMenúPrincipalToolStripMenuItem.Size = new System.Drawing.Size(220, 22);
             this.volverAMenúPrincipalToolStripMenuItem.Text = "← Volver a Menú principal...";
             this.volverAMenúPrincipalToolStripMenuItem.Click += new System.EventHandler(this.volverAMenúPrincipalToolStripMenuItem_Click);
             // 
-            // TipoTarea
-            // 
-            this.TipoTarea.HeaderText = "Tipo de Tarea";
-            this.TipoTarea.MinimumWidth = 6;
-            this.TipoTarea.Name = "TipoTarea";
-            this.TipoTarea.Width = 125;
-            // 
-            // Lugar
-            // 
-            this.Lugar.HeaderText = "Lugar";
-            this.Lugar.MinimumWidth = 6;
-            this.Lugar.Name = "Lugar";
-            this.Lugar.Width = 125;
-            // 
-            // Fecha
-            // 
-            this.Fecha.HeaderText = "Fecha";
-            this.Fecha.MinimumWidth = 6;
-            this.Fecha.Name = "Fecha";
-            this.Fecha.Width = 125;
-            // 
-            // Detalle
-            // 
-            this.Detalle.HeaderText = "Detalle";
-            this.Detalle.MinimumWidth = 6;
-            this.Detalle.Name = "Detalle";
-            this.Detalle.Width = 125;
-            // 
-            // Comentario
-            // 
-            this.Comentario.HeaderText = " Comentario";
-            this.Comentario.MinimumWidth = 6;
-            this.Comentario.Name = "Comentario";
-            this.Comentario.Width = 125;
-            // 
             // frmTarea
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1805, 938);
+            this.ClientSize = new System.Drawing.Size(963, 762);
             this.Controls.Add(this.pPrincipal);
             this.Controls.Add(this.menuTareas);
             this.MainMenuStrip = this.menuTareas;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmTarea";
             this.Text = "Tareas";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

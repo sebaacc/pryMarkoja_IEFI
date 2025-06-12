@@ -187,5 +187,10 @@ namespace pryMarkoja_IEFI
                 MessageBox.Show("Error al grabar tareas: " + ex.Message);
             }
         }
+
+        private void txtComentario_TextChanged(object sender, EventArgs e)
+        {
+            txtComentario.MaxLength = 255;
+        }
     }
 }
