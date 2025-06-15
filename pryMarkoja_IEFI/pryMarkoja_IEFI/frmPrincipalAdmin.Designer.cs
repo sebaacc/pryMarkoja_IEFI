@@ -40,6 +40,7 @@
             this.tareasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.añadirTipoDeTareaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.añadirLugarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.historialDeTareasDeUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.administraciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.auditoríaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -47,7 +48,6 @@
             this.cerrarSesiónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.TiempoSistema = new System.Windows.Forms.Timer(this.components);
-            this.historialDeTareasDeUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.barraEstadoInf.SuspendLayout();
             this.pControles.SuspendLayout();
             this.pPrincipal.SuspendLayout();
@@ -149,12 +149,20 @@
             this.añadirTipoDeTareaToolStripMenuItem.Name = "añadirTipoDeTareaToolStripMenuItem";
             this.añadirTipoDeTareaToolStripMenuItem.Size = new System.Drawing.Size(301, 26);
             this.añadirTipoDeTareaToolStripMenuItem.Text = "Añadir tipo de tarea...";
+            this.añadirTipoDeTareaToolStripMenuItem.Click += new System.EventHandler(this.añadirTipoDeTareaToolStripMenuItem_Click);
             // 
             // añadirLugarToolStripMenuItem
             // 
             this.añadirLugarToolStripMenuItem.Name = "añadirLugarToolStripMenuItem";
             this.añadirLugarToolStripMenuItem.Size = new System.Drawing.Size(301, 26);
             this.añadirLugarToolStripMenuItem.Text = "Añadir lugar...";
+            // 
+            // historialDeTareasDeUsuariosToolStripMenuItem
+            // 
+            this.historialDeTareasDeUsuariosToolStripMenuItem.Name = "historialDeTareasDeUsuariosToolStripMenuItem";
+            this.historialDeTareasDeUsuariosToolStripMenuItem.Size = new System.Drawing.Size(301, 26);
+            this.historialDeTareasDeUsuariosToolStripMenuItem.Text = "Historial de tareas de usuarios...";
+            this.historialDeTareasDeUsuariosToolStripMenuItem.Click += new System.EventHandler(this.historialDeTareasDeUsuariosToolStripMenuItem_Click);
             // 
             // administraciónToolStripMenuItem
             // 
@@ -191,14 +199,14 @@
             // cerrarSesiónToolStripMenuItem
             // 
             this.cerrarSesiónToolStripMenuItem.Name = "cerrarSesiónToolStripMenuItem";
-            this.cerrarSesiónToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.cerrarSesiónToolStripMenuItem.Size = new System.Drawing.Size(186, 26);
             this.cerrarSesiónToolStripMenuItem.Text = "Cerrar sesión...";
             this.cerrarSesiónToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesiónToolStripMenuItem_Click);
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(186, 26);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
@@ -207,13 +215,6 @@
             this.TiempoSistema.Enabled = true;
             this.TiempoSistema.Interval = 1000;
             this.TiempoSistema.Tick += new System.EventHandler(this.TiempoSistema_Tick);
-            // 
-            // historialDeTareasDeUsuariosToolStripMenuItem
-            // 
-            this.historialDeTareasDeUsuariosToolStripMenuItem.Name = "historialDeTareasDeUsuariosToolStripMenuItem";
-            this.historialDeTareasDeUsuariosToolStripMenuItem.Size = new System.Drawing.Size(301, 26);
-            this.historialDeTareasDeUsuariosToolStripMenuItem.Text = "Historial de tareas de usuarios...";
-            this.historialDeTareasDeUsuariosToolStripMenuItem.Click += new System.EventHandler(this.historialDeTareasDeUsuariosToolStripMenuItem_Click);
             // 
             // frmPrincipalAdmin
             // 

@@ -1,7 +1,20 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\Seba\\weas\\Documentso\\Estudios\\IES\\semestre3\\lab3\\pryMarkoja_IEFI\\pryMarkoja_IEFI\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{939D6AA0-8536-43A5-8113-5568498D6E12}|pryMarkoja_IEFI\\pryMarkoja_IEFI.csproj|d:\\seba\\weas\\documentso\\estudios\\ies\\semestre3\\lab3\\prymarkoja_iefi\\prymarkoja_iefi\\prymarkoja_iefi\\frmprincipaladmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{939D6AA0-8536-43A5-8113-5568498D6E12}|pryMarkoja_IEFI\\pryMarkoja_IEFI.csproj|solutionrelative:prymarkoja_iefi\\frmprincipaladmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{939D6AA0-8536-43A5-8113-5568498D6E12}|pryMarkoja_IEFI\\pryMarkoja_IEFI.csproj|d:\\seba\\weas\\documentso\\estudios\\ies\\semestre3\\lab3\\prymarkoja_iefi\\prymarkoja_iefi\\prymarkoja_iefi\\frmprincipaladmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{939D6AA0-8536-43A5-8113-5568498D6E12}|pryMarkoja_IEFI\\pryMarkoja_IEFI.csproj|solutionrelative:prymarkoja_iefi\\frmprincipaladmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{939D6AA0-8536-43A5-8113-5568498D6E12}|pryMarkoja_IEFI\\pryMarkoja_IEFI.csproj|d:\\seba\\weas\\documentso\\estudios\\ies\\semestre3\\lab3\\prymarkoja_iefi\\prymarkoja_iefi\\prymarkoja_iefi\\frmagregartarea.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{939D6AA0-8536-43A5-8113-5568498D6E12}|pryMarkoja_IEFI\\pryMarkoja_IEFI.csproj|solutionrelative:prymarkoja_iefi\\frmagregartarea.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -22,6 +35,43 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "frmAgregarTarea.cs [Dise\u00F1o]",
+              "DocumentMoniker": "D:\\Seba\\weas\\Documentso\\Estudios\\IES\\semestre3\\lab3\\pryMarkoja_IEFI\\pryMarkoja_IEFI\\pryMarkoja_IEFI\\frmAgregarTarea.cs",
+              "RelativeDocumentMoniker": "pryMarkoja_IEFI\\frmAgregarTarea.cs",
+              "ToolTip": "D:\\Seba\\weas\\Documentso\\Estudios\\IES\\semestre3\\lab3\\pryMarkoja_IEFI\\pryMarkoja_IEFI\\pryMarkoja_IEFI\\frmAgregarTarea.cs [Dise\u00F1o]",
+              "RelativeToolTip": "pryMarkoja_IEFI\\frmAgregarTarea.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-15T15:50:04.496Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "frmPrincipalAdmin.cs",
+              "DocumentMoniker": "D:\\Seba\\weas\\Documentso\\Estudios\\IES\\semestre3\\lab3\\pryMarkoja_IEFI\\pryMarkoja_IEFI\\pryMarkoja_IEFI\\frmPrincipalAdmin.cs",
+              "RelativeDocumentMoniker": "pryMarkoja_IEFI\\frmPrincipalAdmin.cs",
+              "ToolTip": "D:\\Seba\\weas\\Documentso\\Estudios\\IES\\semestre3\\lab3\\pryMarkoja_IEFI\\pryMarkoja_IEFI\\pryMarkoja_IEFI\\frmPrincipalAdmin.cs",
+              "RelativeToolTip": "pryMarkoja_IEFI\\frmPrincipalAdmin.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAAADgAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-15T15:49:41.298Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmPrincipalAdmin.cs [Dise\u00F1o]",
+              "DocumentMoniker": "D:\\Seba\\weas\\Documentso\\Estudios\\IES\\semestre3\\lab3\\pryMarkoja_IEFI\\pryMarkoja_IEFI\\pryMarkoja_IEFI\\frmPrincipalAdmin.cs",
+              "RelativeDocumentMoniker": "pryMarkoja_IEFI\\frmPrincipalAdmin.cs",
+              "ToolTip": "D:\\Seba\\weas\\Documentso\\Estudios\\IES\\semestre3\\lab3\\pryMarkoja_IEFI\\pryMarkoja_IEFI\\pryMarkoja_IEFI\\frmPrincipalAdmin.cs [Dise\u00F1o]",
+              "RelativeToolTip": "pryMarkoja_IEFI\\frmPrincipalAdmin.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-15T15:49:24.028Z",
+              "EditorCaption": " [Dise\u00F1o]"
             }
           ]
         }

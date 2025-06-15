@@ -50,5 +50,11 @@ namespace pryMarkoja_IEFI
         {
             //historial COMPLETO 
         }
+
+        private void añadirTipoDeTareaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAgregarTarea frmagregartarea = new frmAgregarTarea(); 
+            frmagregartarea.ShowDialog();
+        }
     }
 }

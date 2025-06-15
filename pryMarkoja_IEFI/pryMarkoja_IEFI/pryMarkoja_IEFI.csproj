@@ -50,6 +50,12 @@
     <Compile Include="Clases\clsConexionBD.cs" />
     <Compile Include="Clases\clsFuncionesUtiles.cs" />
     <Compile Include="Clases\clsTarea.cs" />
+    <Compile Include="frmAgregarTarea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgregarTarea.Designer.cs">
+      <DependentUpon>frmAgregarTarea.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmHistorial.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +107,9 @@
     <Compile Include="Clases\clsUsuarioLogueado.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAgregarTarea.resx">
+      <DependentUpon>frmAgregarTarea.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmHistorial.resx">
       <DependentUpon>frmHistorial.cs</DependentUpon>
     </EmbeddedResource>
