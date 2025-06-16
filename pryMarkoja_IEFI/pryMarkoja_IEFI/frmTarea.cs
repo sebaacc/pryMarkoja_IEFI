@@ -17,15 +17,15 @@ namespace pryMarkoja_IEFI
     {
         clsFuncionesUtiles funciones = new clsFuncionesUtiles();
         List<clsTarea> listaTareasAñadidas = new List<clsTarea>();
-        clsTarea tarea = new clsTarea(); 
         private readonly int usuarioId;
+        clsTareasService BD = new clsTareasService();
         public frmTarea()
         {
             InitializeComponent();
             usuarioId = clsUsuarioLogueado.Id;
 
-            CargarTiposTarea();
-            CargarLugares();
+            BD.CargarTiposTarea(cmbTarea);
+            BD.CargarLugares(cmbLugar);
             
         }
 
@@ -78,62 +78,7 @@ namespace pryMarkoja_IEFI
 
             dgvTareas.Rows.Add(cmbTarea.Text, cmbLugar.Text, fecha.ToShortDateString(), detalle, comentario);
         }
-        public void CargarTiposTarea()
-        {
-            try
-            {
-                using (SqlConnection conexion = new SqlConnection(clsConexionBD.CadenaConexion))
-                {
-                    conexion.Open();
-                    string query = @"SELECT Id, Nombre FROM TipoTarea";
-
-                    using (SqlCommand comando = new SqlCommand(query, conexion))
-                    {
-                        using (SqlDataAdapter adaptador = new SqlDataAdapter(comando))
-                        {
-                            DataTable tabla = new DataTable();
-                            adaptador.Fill(tabla);
-
-                            cmbTarea.DataSource = tabla;
-                            cmbTarea.DisplayMember = "Nombre";
-                            cmbTarea.ValueMember = "Id";
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Ocurrió un error. " + ex);   
-            }
-        }
-        public void CargarLugares()
-        {
-            try
-            {
-                using (SqlConnection conexion = new SqlConnection(clsConexionBD.CadenaConexion))
-                {
-                    conexion.Open();
-                    string query = @"SELECT Id, Nombre FROM Lugar";
-
-                    using (SqlCommand comando = new SqlCommand(query, conexion))
-                    {
-                        using (SqlDataAdapter adaptador = new SqlDataAdapter(comando))
-                        {
-                            DataTable tabla = new DataTable();
-                            adaptador.Fill(tabla);
-
-                            cmbLugar.DataSource = tabla;
-                            cmbLugar.DisplayMember = "Nombre";
-                            cmbLugar.ValueMember = "Id";
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Ocurrió un error. " + ex);
-            }
-        }
+        
         public string generarDetalle()
         {
             List<string> detalle = new List<string>();

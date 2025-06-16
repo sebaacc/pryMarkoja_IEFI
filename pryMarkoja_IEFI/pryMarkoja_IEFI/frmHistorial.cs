@@ -14,7 +14,7 @@ namespace pryMarkoja_IEFI
 {
     public partial class frmHistorial : Form
     {
-        clsConexionBD BD = new clsConexionBD();
+        clsTareasService BD = new clsTareasService();
         public frmHistorial()
         {
             InitializeComponent();
@@ -23,6 +23,13 @@ namespace pryMarkoja_IEFI
         private void frmHistorial_Load(object sender, EventArgs e)
         {
             BD.CargarHistorialTareasUsuario(dgvHistorial);
+            BD.CargarTiposTarea(cmbTipoTarea);
+            BD.CargarLugares(cmbLugar);
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

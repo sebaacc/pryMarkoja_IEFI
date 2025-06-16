@@ -1,0 +1,139 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using pryMarkoja_IEFI.Objetos;
+
+namespace pryMarkoja_IEFI.Clases
+{
+    public class clsTareasService
+    {
+        string CadenaConexion = clsConexionBD.CadenaConexion;
+        public void CargarHistorialTareasUsuario(DataGridView dgvHistorial)
+        {
+            string query = clsUsuarioLogueado.EsAdministrador == true ?
+                (
+                @"
+                SELECT 
+                    T.Id,
+                    T.FechaTarea,
+                    TT.Nombre AS TipoTarea,
+                    L.Nombre AS Lugar,
+                    T.Detalle,
+                    T.Comentario,
+                    U.Nombre + ' ' + U.Apellido AS [Nombre de Usuario]
+                FROM Tarea T
+                INNER JOIN TipoTarea TT ON T.IdTipoTarea = TT.Id
+                INNER JOIN Lugar L ON T.IdLugar = L.Id
+                INNER JOIN Usuario U ON T.UsuarioId = U.Id
+                ORDER BY T.FechaTarea DESC"
+            ) : (
+                @"
+                SELECT 
+                    T.Id,
+                    T.FechaTarea,
+                    TT.Nombre AS TipoTarea,
+                    L.Nombre AS Lugar,
+                    T.Detalle,
+                    T.Comentario
+                FROM Tarea T
+                INNER JOIN TipoTarea TT ON T.IdTipoTarea = TT.Id
+                INNER JOIN Lugar L ON T.IdLugar = L.Id
+                WHERE T.UsuarioId = @UsuarioId
+                ORDER BY T.FechaTarea DESC"
+            );
+
+            using (SqlConnection conn = new SqlConnection(CadenaConexion))
+            using (SqlCommand cmd = new SqlCommand(query, conn))
+            using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
+            {
+                cmd.Parameters.AddWithValue("@UsuarioId", clsUsuarioLogueado.Id);
+                DataTable dt = new DataTable();
+
+                try
+                {
+                    conn.Open();
+                    adapter.Fill(dt);
+                    dgvHistorial.DataSource = dt;
+
+                    dgvHistorial.Columns["Id"].HeaderText = "ID";
+                    dgvHistorial.Columns["FechaTarea"].HeaderText = "Fecha";
+                    dgvHistorial.Columns["TipoTarea"].HeaderText = "Tipo de Tarea";
+                    dgvHistorial.Columns["Lugar"].HeaderText = "Lugar";
+                    dgvHistorial.Columns["Detalle"].HeaderText = "Detalle";
+                    dgvHistorial.Columns["Comentario"].HeaderText = "Comentario";
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al cargar historial: " + ex.Message);
+                }
+            }
+        }
+        public void CargarTiposTarea(ComboBox cmbTarea)
+        {
+            try
+            {
+                using (SqlConnection conexion = new SqlConnection(CadenaConexion))
+                {
+                    conexion.Open();
+                    string query = @"SELECT Id, Nombre FROM TipoTarea";
+
+                    using (SqlCommand comando = new SqlCommand(query, conexion))
+                    {
+                        using (SqlDataAdapter adaptador = new SqlDataAdapter(comando))
+                        {
+                            DataTable tabla = new DataTable();
+                            adaptador.Fill(tabla);
+
+                            cmbTarea.DataSource = tabla;
+                            cmbTarea.DisplayMember = "Nombre";
+                            cmbTarea.ValueMember = "Id";
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocurrió un error. " + ex);
+            }
+        }
+        public void CargarLugares(ComboBox cmbLugar)
+        {
+            try
+            {
+                using (SqlConnection conexion = new SqlConnection(CadenaConexion))
+                {
+                    conexion.Open();
+                    string query = @"SELECT Id, Nombre FROM Lugar";
+
+                    using (SqlCommand comando = new SqlCommand(query, conexion))
+                    {
+                        using (SqlDataAdapter adaptador = new SqlDataAdapter(comando))
+                        {
+                            DataTable tabla = new DataTable();
+                            adaptador.Fill(tabla);
+
+                            cmbLugar.DataSource = tabla;
+                            cmbLugar.DisplayMember = "Nombre";
+                            cmbLugar.ValueMember = "Id";
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocurrió un error. " + ex);
+            }
+        }
+
+
+
+
+
+
+    }
+}
