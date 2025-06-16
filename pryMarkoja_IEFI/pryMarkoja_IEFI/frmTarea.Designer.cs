@@ -31,6 +31,11 @@
             this.pPrincipal = new System.Windows.Forms.Panel();
             this.lblTituloTareas = new System.Windows.Forms.Label();
             this.dgvTareas = new System.Windows.Forms.DataGridView();
+            this.TipoTarea = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Lugar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Detalle = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Comentario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnGrabar = new System.Windows.Forms.Button();
             this.btnAgregarTarea = new System.Windows.Forms.Button();
             this.lblDetalle = new System.Windows.Forms.Label();
@@ -60,11 +65,6 @@
             this.menuTareas = new System.Windows.Forms.MenuStrip();
             this.ventanaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.volverAMenúPrincipalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.TipoTarea = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Lugar = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Detalle = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Comentario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTareas)).BeginInit();
             this.panel1.SuspendLayout();
@@ -110,6 +110,8 @@
             // 
             this.dgvTareas.AllowUserToAddRows = false;
             this.dgvTareas.AllowUserToDeleteRows = false;
+            this.dgvTareas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvTareas.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvTareas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTareas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.TipoTarea,
@@ -119,11 +121,42 @@
             this.Comentario});
             this.dgvTareas.Location = new System.Drawing.Point(263, 568);
             this.dgvTareas.Name = "dgvTareas";
+            this.dgvTareas.RowHeadersVisible = false;
             this.dgvTareas.RowHeadersWidth = 51;
             this.dgvTareas.RowTemplate.Height = 24;
             this.dgvTareas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvTareas.Size = new System.Drawing.Size(1205, 240);
             this.dgvTareas.TabIndex = 12;
+            // 
+            // TipoTarea
+            // 
+            this.TipoTarea.HeaderText = "Tipo de Tarea";
+            this.TipoTarea.MinimumWidth = 6;
+            this.TipoTarea.Name = "TipoTarea";
+            // 
+            // Lugar
+            // 
+            this.Lugar.HeaderText = "Lugar";
+            this.Lugar.MinimumWidth = 6;
+            this.Lugar.Name = "Lugar";
+            // 
+            // Fecha
+            // 
+            this.Fecha.HeaderText = "Fecha";
+            this.Fecha.MinimumWidth = 6;
+            this.Fecha.Name = "Fecha";
+            // 
+            // Detalle
+            // 
+            this.Detalle.HeaderText = "Detalle";
+            this.Detalle.MinimumWidth = 6;
+            this.Detalle.Name = "Detalle";
+            // 
+            // Comentario
+            // 
+            this.Comentario.HeaderText = " Comentario";
+            this.Comentario.MinimumWidth = 6;
+            this.Comentario.Name = "Comentario";
             // 
             // btnGrabar
             // 
@@ -394,41 +427,6 @@
             this.volverAMenúPrincipalToolStripMenuItem.Size = new System.Drawing.Size(274, 26);
             this.volverAMenúPrincipalToolStripMenuItem.Text = "← Volver a Menú principal...";
             this.volverAMenúPrincipalToolStripMenuItem.Click += new System.EventHandler(this.volverAMenúPrincipalToolStripMenuItem_Click);
-            // 
-            // TipoTarea
-            // 
-            this.TipoTarea.HeaderText = "Tipo de Tarea";
-            this.TipoTarea.MinimumWidth = 6;
-            this.TipoTarea.Name = "TipoTarea";
-            this.TipoTarea.Width = 125;
-            // 
-            // Lugar
-            // 
-            this.Lugar.HeaderText = "Lugar";
-            this.Lugar.MinimumWidth = 6;
-            this.Lugar.Name = "Lugar";
-            this.Lugar.Width = 125;
-            // 
-            // Fecha
-            // 
-            this.Fecha.HeaderText = "Fecha";
-            this.Fecha.MinimumWidth = 6;
-            this.Fecha.Name = "Fecha";
-            this.Fecha.Width = 125;
-            // 
-            // Detalle
-            // 
-            this.Detalle.HeaderText = "Detalle";
-            this.Detalle.MinimumWidth = 6;
-            this.Detalle.Name = "Detalle";
-            this.Detalle.Width = 125;
-            // 
-            // Comentario
-            // 
-            this.Comentario.HeaderText = " Comentario";
-            this.Comentario.MinimumWidth = 6;
-            this.Comentario.Name = "Comentario";
-            this.Comentario.Width = 125;
             // 
             // frmTarea
             // 

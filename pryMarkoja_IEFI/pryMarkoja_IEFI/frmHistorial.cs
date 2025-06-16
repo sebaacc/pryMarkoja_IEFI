@@ -7,12 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using pryMarkoja_IEFI.Clases;
 using pryMarkoja_IEFI.Objetos;
 
 namespace pryMarkoja_IEFI
 {
     public partial class frmHistorial : Form
     {
+        private int usuarioId;
+        clsConexionBD BD = new clsConexionBD();
         public frmHistorial()
         {
             InitializeComponent();
@@ -20,8 +23,8 @@ namespace pryMarkoja_IEFI
 
         private void frmHistorial_Load(object sender, EventArgs e)
         {
-            int usuarioId = clsUsuarioLogueado.Id;
-
+            usuarioId = clsUsuarioLogueado.Id;
+            BD.CargarHistorialTareasUsuario(dgvHistorial);
         }
     }
 }
