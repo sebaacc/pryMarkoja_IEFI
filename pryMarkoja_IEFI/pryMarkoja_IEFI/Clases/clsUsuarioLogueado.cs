@@ -6,9 +6,14 @@ using System.Threading.Tasks;
 
 namespace pryMarkoja_IEFI.Objetos
 {
-    public class clsUsuarioLogueado
+    public static class clsUsuarioLogueado
     {
-        public int Id { get; set; }
-        public bool EsAdministrador { get; set; }
+        public static int Id { get; set; }
+        public static bool EsAdministrador { get; set; }
+        public static void CerrarSesion()
+        {
+            Id = 0;
+            EsAdministrador = false;
+        }
     }
 }

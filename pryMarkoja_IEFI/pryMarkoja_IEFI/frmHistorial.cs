@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using pryMarkoja_IEFI.Objetos;
 
 namespace pryMarkoja_IEFI
 {
@@ -15,6 +16,12 @@ namespace pryMarkoja_IEFI
         public frmHistorial()
         {
             InitializeComponent();
+        }
+
+        private void frmHistorial_Load(object sender, EventArgs e)
+        {
+            int usuarioId = clsUsuarioLogueado.Id;
+
         }
     }
 }

@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using pryMarkoja_IEFI.Clases;
+using pryMarkoja_IEFI.Objetos;
 
 namespace pryMarkoja_IEFI
 {
@@ -18,10 +19,10 @@ namespace pryMarkoja_IEFI
         private int sesionId;
         private readonly int usuarioId;
 
-        public frmPrincipalUsuario(int idUsuario)
+        public frmPrincipalUsuario()
         {
             InitializeComponent();
-            usuarioId = idUsuario;
+            usuarioId = clsUsuarioLogueado.Id;
         }
 
         private void frmPrincipal_Load(object sender, EventArgs e)
@@ -86,7 +87,7 @@ namespace pryMarkoja_IEFI
 
         private void crearTareaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmTarea tareas = new frmTarea(usuarioId);
+            frmTarea tareas = new frmTarea();
             tareas.ShowDialog();
         }
 

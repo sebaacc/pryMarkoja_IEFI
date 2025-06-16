@@ -13,9 +13,9 @@ using pryMarkoja_IEFI.Clases;
 
 namespace pryMarkoja_IEFI
 {
-    public partial class frmAgregarTarea : Form
+    public partial class frmAgregarTipoTarea : Form
     {
-        public frmAgregarTarea()
+        public frmAgregarTipoTarea()
         {
             InitializeComponent();
             txtNombreTareaNuevo.MaxLength = 100;

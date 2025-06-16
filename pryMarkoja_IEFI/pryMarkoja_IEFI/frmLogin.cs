@@ -12,6 +12,7 @@ namespace pryMarkoja_IEFI
     {
         private int intentos = 3;
         clsFuncionesUtiles funciones = new clsFuncionesUtiles();
+      
         public frmLogin()
         {
             InitializeComponent();
@@ -30,19 +31,18 @@ namespace pryMarkoja_IEFI
         {
             string usuario = txtUsuario.Text.Trim();
             string contraseña = txtContraseña.Text;
+            ValidarCredenciales(usuario, contraseña);
 
-            var usuarioLogueado = ValidarCredenciales(usuario, contraseña);
-
-            if (usuarioLogueado != null)
+            if (clsUsuarioLogueado.Id != 0)
             {
-                if (usuarioLogueado.EsAdministrador)
+                if (clsUsuarioLogueado.EsAdministrador)
                 {
                     frmPrincipalAdmin admin = new frmPrincipalAdmin();
                     admin.Show();
                 }
                 else
                 {
-                    frmPrincipalUsuario menu = new frmPrincipalUsuario(usuarioLogueado.Id);
+                    frmPrincipalUsuario menu = new frmPrincipalUsuario();
                     menu.Show();
                 }
                 this.Hide();
@@ -61,7 +61,7 @@ namespace pryMarkoja_IEFI
                 }
             }
         }
-        private clsUsuarioLogueado ValidarCredenciales(string usuario, string contraseña)
+        private void ValidarCredenciales(string usuario, string contraseña)
         {
             string hash = ObtenerSHA256(contraseña);
 
@@ -81,11 +81,8 @@ namespace pryMarkoja_IEFI
                         {
                             if (reader.Read())
                             {
-                                return new clsUsuarioLogueado
-                                {
-                                    Id = reader.GetInt32(0),
-                                    EsAdministrador = reader.GetBoolean(1)
-                                };
+                                clsUsuarioLogueado.Id = reader.GetInt32(0);
+                                clsUsuarioLogueado.EsAdministrador = reader.GetBoolean(1);
                             }
                         }
                     }
@@ -95,8 +92,6 @@ namespace pryMarkoja_IEFI
             {
                 MessageBox.Show("Error al validar el usuario: " + ex.Message);
             }
-
-            return null; // No válido
         }
         private string ObtenerSHA256(string texto)
         {

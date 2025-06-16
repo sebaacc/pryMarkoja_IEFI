@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using pryMarkoja_IEFI.Clases;
+using pryMarkoja_IEFI.Objetos;
 
 namespace pryMarkoja_IEFI
 {
@@ -18,10 +19,10 @@ namespace pryMarkoja_IEFI
         List<clsTarea> listaTareasAñadidas = new List<clsTarea>();
         clsTarea tarea = new clsTarea(); 
         private readonly int usuarioId;
-        public frmTarea(int Idusuario)
+        public frmTarea()
         {
             InitializeComponent();
-            usuarioId = Idusuario;
+            usuarioId = clsUsuarioLogueado.Id;
 
             CargarTiposTarea();
             CargarLugares();
@@ -33,11 +34,7 @@ namespace pryMarkoja_IEFI
         {
             funciones.dibujarFlechaDerecha(sender, e);
         }
-        /*
-        private void btnVolver_Click(object sender, EventArgs e)
-            this.Close();
-        }
-        */
+        
         private void pCanvas2_Paint(object sender, PaintEventArgs e)
         {
             funciones.dibujarFlechaDerecha(sender, e);

@@ -1,6 +1,6 @@
 ﻿namespace pryMarkoja_IEFI
 {
-    partial class frmAgregarTarea
+    partial class frmAgregarTipoTarea
     {
         /// <summary>
         /// Required designer variable.

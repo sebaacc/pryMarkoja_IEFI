@@ -56,11 +56,11 @@
     <Compile Include="frmAgregarLugar.Designer.cs">
       <DependentUpon>frmAgregarLugar.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAgregarTarea.cs">
+    <Compile Include="frmAgregarTipoTarea.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAgregarTarea.Designer.cs">
-      <DependentUpon>frmAgregarTarea.cs</DependentUpon>
+    <Compile Include="frmAgregarTipoTarea.Designer.cs">
+      <DependentUpon>frmAgregarTipoTarea.cs</DependentUpon>
     </Compile>
     <Compile Include="frmHistorial.cs">
       <SubType>Form</SubType>
@@ -116,8 +116,8 @@
     <EmbeddedResource Include="frmAgregarLugar.resx">
       <DependentUpon>frmAgregarLugar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAgregarTarea.resx">
-      <DependentUpon>frmAgregarTarea.cs</DependentUpon>
+    <EmbeddedResource Include="frmAgregarTipoTarea.resx">
+      <DependentUpon>frmAgregarTipoTarea.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmHistorial.resx">
       <DependentUpon>frmHistorial.cs</DependentUpon>

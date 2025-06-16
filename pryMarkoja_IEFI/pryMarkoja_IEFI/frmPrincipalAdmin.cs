@@ -24,21 +24,21 @@ namespace pryMarkoja_IEFI
 
         private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmUsuarios v = new frmUsuarios();
-            v.ShowDialog();
+            frmUsuarios frm = new frmUsuarios();
+            frm.ShowDialog();
         }
 
         private void auditoríaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmAuditoria v = new frmAuditoria();
-            v.ShowDialog();
+            frmAuditoria frm = new frmAuditoria();
+            frm.ShowDialog();
         }
 
         private void cerrarSesiónToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
-            frmLogin v = new frmLogin();
-            v.ShowDialog();
+            frmLogin frm = new frmLogin();
+            frm.ShowDialog();
         }
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
@@ -48,12 +48,13 @@ namespace pryMarkoja_IEFI
 
         private void historialDeTareasDeUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //historial COMPLETO 
+            frmHistorial frm = new frmHistorial();
+            frm.ShowDialog();
         }
 
         private void añadirTipoDeTareaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmAgregarTarea frm = new frmAgregarTarea();
+            frmAgregarTipoTarea frm = new frmAgregarTipoTarea();
             frm.ShowDialog();
         }
 
