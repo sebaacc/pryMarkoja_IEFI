@@ -16,7 +16,24 @@ namespace pryMarkoja_IEFI.Clases
 
         public void CargarHistorialTareasUsuario(DataGridView dgvHistorial)
         {
-            string query = @"
+            string query = clsUsuarioLogueado.EsAdministrador == true ?
+                (
+                @"
+                SELECT 
+                    T.Id,
+                    T.FechaTarea,
+                    TT.Nombre AS TipoTarea,
+                    L.Nombre AS Lugar,
+                    T.Detalle,
+                    T.Comentario,
+                    U.Nombre + ' ' + U.Apellido AS [Nombre de Usuario]
+                FROM Tarea T
+                INNER JOIN TipoTarea TT ON T.IdTipoTarea = TT.Id
+                INNER JOIN Lugar L ON T.IdLugar = L.Id
+                INNER JOIN Usuario U ON T.UsuarioId = U.Id
+                ORDER BY T.FechaTarea DESC"
+            ) : (
+                @"
                 SELECT 
                     T.Id,
                     T.FechaTarea,
@@ -28,7 +45,8 @@ namespace pryMarkoja_IEFI.Clases
                 INNER JOIN TipoTarea TT ON T.IdTipoTarea = TT.Id
                 INNER JOIN Lugar L ON T.IdLugar = L.Id
                 WHERE T.UsuarioId = @UsuarioId
-                ORDER BY T.FechaTarea DESC";
+                ORDER BY T.FechaTarea DESC"
+            );
 
             using (SqlConnection conn = new SqlConnection(CadenaConexion))
             using (SqlCommand cmd = new SqlCommand(query, conn))

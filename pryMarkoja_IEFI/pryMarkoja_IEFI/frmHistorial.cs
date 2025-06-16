@@ -14,7 +14,6 @@ namespace pryMarkoja_IEFI
 {
     public partial class frmHistorial : Form
     {
-        private int usuarioId;
         clsConexionBD BD = new clsConexionBD();
         public frmHistorial()
         {
@@ -23,7 +22,6 @@ namespace pryMarkoja_IEFI
 
         private void frmHistorial_Load(object sender, EventArgs e)
         {
-            usuarioId = clsUsuarioLogueado.Id;
             BD.CargarHistorialTareasUsuario(dgvHistorial);
         }
     }

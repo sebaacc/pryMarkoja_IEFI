@@ -41,16 +41,15 @@
             this.dgvHistorial.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvHistorial.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvHistorial.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvHistorial.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvHistorial.GridColor = System.Drawing.SystemColors.ControlText;
-            this.dgvHistorial.Location = new System.Drawing.Point(0, 0);
+            this.dgvHistorial.Location = new System.Drawing.Point(56, 94);
             this.dgvHistorial.Name = "dgvHistorial";
             this.dgvHistorial.ReadOnly = true;
             this.dgvHistorial.RowHeadersVisible = false;
             this.dgvHistorial.RowHeadersWidth = 51;
             this.dgvHistorial.RowTemplate.Height = 24;
             this.dgvHistorial.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvHistorial.Size = new System.Drawing.Size(1044, 645);
+            this.dgvHistorial.Size = new System.Drawing.Size(942, 528);
             this.dgvHistorial.TabIndex = 0;
             // 
             // frmHistorial

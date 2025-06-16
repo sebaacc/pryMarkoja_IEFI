@@ -75,6 +75,7 @@ namespace pryMarkoja_IEFI
         {
             RegistrarFechaFin();
             this.Close();
+            clsUsuarioLogueado.CerrarSesion();
             frmLogin v = new frmLogin();
             v.ShowDialog();
         }

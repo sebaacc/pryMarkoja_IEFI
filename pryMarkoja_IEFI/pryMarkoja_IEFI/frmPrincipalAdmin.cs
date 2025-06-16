@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using pryMarkoja_IEFI.Objetos;
 
 namespace pryMarkoja_IEFI
 {
@@ -37,6 +38,7 @@ namespace pryMarkoja_IEFI
         private void cerrarSesiónToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
+            clsUsuarioLogueado.CerrarSesion();
             frmLogin frm = new frmLogin();
             frm.ShowDialog();
         }
