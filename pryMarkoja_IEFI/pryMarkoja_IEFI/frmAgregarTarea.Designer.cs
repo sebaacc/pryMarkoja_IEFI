@@ -50,6 +50,7 @@
             this.btnAgregarTipoTarea.TabIndex = 1;
             this.btnAgregarTipoTarea.Text = "Agregar";
             this.btnAgregarTipoTarea.UseVisualStyleBackColor = true;
+            this.btnAgregarTipoTarea.Click += new System.EventHandler(this.btnAgregarTipoTarea_Click);
             // 
             // lblNombreTarea
             // 
