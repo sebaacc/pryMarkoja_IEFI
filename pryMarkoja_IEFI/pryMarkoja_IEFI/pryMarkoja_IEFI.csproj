@@ -50,6 +50,12 @@
     <Compile Include="Clases\clsConexionBD.cs" />
     <Compile Include="Clases\clsFuncionesUtiles.cs" />
     <Compile Include="Clases\clsTarea.cs" />
+    <Compile Include="frmAgregarLugar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgregarLugar.Designer.cs">
+      <DependentUpon>frmAgregarLugar.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAgregarTarea.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +113,9 @@
     <Compile Include="Clases\clsUsuarioLogueado.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAgregarLugar.resx">
+      <DependentUpon>frmAgregarLugar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAgregarTarea.resx">
       <DependentUpon>frmAgregarTarea.cs</DependentUpon>
     </EmbeddedResource>

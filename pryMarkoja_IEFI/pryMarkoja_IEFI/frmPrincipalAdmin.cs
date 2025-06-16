@@ -53,8 +53,14 @@ namespace pryMarkoja_IEFI
 
         private void añadirTipoDeTareaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmAgregarTarea frmagregartarea = new frmAgregarTarea(); 
-            frmagregartarea.ShowDialog();
+            frmAgregarTarea frm = new frmAgregarTarea();
+            frm.ShowDialog();
+        }
+
+        private void añadirLugarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAgregarLugar frm = new frmAgregarLugar();
+            frm.ShowDialog();
         }
     }
 }

@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -13,32 +12,32 @@ using pryMarkoja_IEFI.Clases;
 
 namespace pryMarkoja_IEFI
 {
-    public partial class frmAgregarTarea : Form
+    public partial class frmAgregarLugar : Form
     {
-        public frmAgregarTarea()
+        public frmAgregarLugar()
         {
             InitializeComponent();
-            txtNombreTareaNuevo.MaxLength = 100;
+            txtNombreLugarNuevo.MaxLength = 100;
         }
 
-        private void btnAgregarTipoTarea_Click(object sender, EventArgs e)
+        private void btnAgregarLugar_Click(object sender, EventArgs e)
         {
-            string nombre = txtNombreTareaNuevo.Text;
-            if (nombre != "")
+            string lugar = txtNombreLugarNuevo.Text;
+            if (lugar != "")
             {
-                if (nombreNoExistente(nombre))
+                if (lugarNoExistente(lugar))
                 {
                     try
                     {
                         using (SqlConnection conexion = new SqlConnection(clsConexionBD.CadenaConexion))
                         {
                             conexion.Open();
-                            String query = @"INSERT INTO TipoTarea (Nombre) VALUES (@nombre)";
+                            String query = @"INSERT INTO Lugar (Nombre) VALUES (@nombre)";
                             using (SqlCommand comando = new SqlCommand(query, conexion))
                             {
-                                comando.Parameters.AddWithValue("@nombre", txtNombreTareaNuevo.Text);
+                                comando.Parameters.AddWithValue("@nombre", txtNombreLugarNuevo.Text);
                                 comando.ExecuteNonQuery();
-                                MessageBox.Show("Nueva tarea agregada correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("Nuevo lugar agregado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             }
                         }
                     }
@@ -46,9 +45,10 @@ namespace pryMarkoja_IEFI
                     {
                         MessageBox.Show("Ocurrió un error: " + ex.Message);
                     }
-                } else
+                }
+                else
                 {
-                    MessageBox.Show("El nombre ya existe en la base de datos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("El lugar ya existe en la base de datos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
             else
@@ -56,12 +56,12 @@ namespace pryMarkoja_IEFI
                 MessageBox.Show("Por favor complete el campo nombre correctamente.");
             }
         }
-        private bool nombreNoExistente(string nombre)
+        private bool lugarNoExistente(string nombre)
         {
             using (SqlConnection conexion = new SqlConnection(clsConexionBD.CadenaConexion))
             {
                 conexion.Open();
-                string query = @"SELECT COUNT(*) FROM TipoTarea WHERE Nombre = @nombre";
+                string query = @"SELECT COUNT(*) FROM Lugar WHERE Nombre = @nombre";
                 using (SqlCommand comando = new SqlCommand(query, conexion))
                 {
                     comando.Parameters.AddWithValue("@nombre", nombre);

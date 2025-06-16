@@ -156,6 +156,7 @@
             this.añadirLugarToolStripMenuItem.Name = "añadirLugarToolStripMenuItem";
             this.añadirLugarToolStripMenuItem.Size = new System.Drawing.Size(301, 26);
             this.añadirLugarToolStripMenuItem.Text = "Añadir lugar...";
+            this.añadirLugarToolStripMenuItem.Click += new System.EventHandler(this.añadirLugarToolStripMenuItem_Click);
             // 
             // historialDeTareasDeUsuariosToolStripMenuItem
             // 
@@ -176,14 +177,14 @@
             // usuariosToolStripMenuItem
             // 
             this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(163, 26);
             this.usuariosToolStripMenuItem.Text = "Usuarios...";
             this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
             // 
             // auditoríaToolStripMenuItem
             // 
             this.auditoríaToolStripMenuItem.Name = "auditoríaToolStripMenuItem";
-            this.auditoríaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.auditoríaToolStripMenuItem.Size = new System.Drawing.Size(163, 26);
             this.auditoríaToolStripMenuItem.Text = "Auditoría...";
             this.auditoríaToolStripMenuItem.Click += new System.EventHandler(this.auditoríaToolStripMenuItem_Click);
             // 
