@@ -10,11 +10,56 @@ using pryMarkoja_IEFI.Objetos;
 
 namespace pryMarkoja_IEFI.Clases
 {
-    public class clsTareasService
+    public class clsTareaService
     {
         string CadenaConexion = clsConexionBD.CadenaConexion;
         private DataTable historialTareasDataTable;
+        private int usuarioId = clsUsuarioLogueado.Id;
 
+        public void GrabarTareas(List<clsTarea> listaTareasAñadidas, DataGridView dgvTareas)
+        {
+            if (listaTareasAñadidas.Count > 0)
+            {
+                try
+                {
+                    using (SqlConnection conexion = new SqlConnection(CadenaConexion))
+                    {
+                        conexion.Open();
+
+                        foreach (clsTarea tarea in listaTareasAñadidas)
+                        {
+                            string query = @"INSERT INTO Tarea (UsuarioId, FechaTarea, Detalle, Comentario, IdTipoTarea, IdLugar)
+                                 VALUES (@UsuarioId, @FechaTarea, @Detalle, @Comentario, @IdTipoTarea, @IdLugar)";
+
+                            using (SqlCommand comando = new SqlCommand(query, conexion))
+                            {
+                                comando.Parameters.AddWithValue("@UsuarioId", usuarioId);
+                                comando.Parameters.AddWithValue("@FechaTarea", tarea.FechaTarea);
+                                comando.Parameters.AddWithValue("@Detalle", tarea.Detalle ?? "");
+                                comando.Parameters.AddWithValue("@Comentario", tarea.Comentario ?? "");
+                                comando.Parameters.AddWithValue("@IdTipoTarea", tarea.TipoTarea);
+                                comando.Parameters.AddWithValue("@IdLugar", tarea.Lugar);
+
+                                comando.ExecuteNonQuery();
+                            }
+                        }
+
+                        MessageBox.Show("Todas las tareas se grabaron correctamente.");
+
+                        listaTareasAñadidas.Clear();
+                        dgvTareas.Rows.Clear();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al grabar tareas: " + ex.Message);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Agrega por favor alguna tarea para poder grabarla.");
+            }
+        }
         public void CargarHistorialTareasUsuario(DataGridView dgvHistorial)
         {
             string query = clsUsuarioLogueado.EsAdministrador == true ?

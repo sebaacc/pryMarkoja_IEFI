@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHistorial));
             this.dgvHistorial = new System.Windows.Forms.DataGridView();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.cmbTipoTarea = new System.Windows.Forms.ComboBox();
@@ -227,6 +228,7 @@
             this.Controls.Add(this.gbFiltros);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.dgvHistorial);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmHistorial";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Historial de tareas";

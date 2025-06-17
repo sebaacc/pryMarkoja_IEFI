@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAgregarTipoTarea));
             this.txtNombreTareaNuevo = new System.Windows.Forms.TextBox();
             this.btnAgregarTipoTarea = new System.Windows.Forms.Button();
             this.lblNombreTarea = new System.Windows.Forms.Label();
@@ -73,13 +74,14 @@
             this.gbElementos.TabStop = false;
             this.gbElementos.Text = "Agregar nuevo tipo de tarea";
             // 
-            // frmAgregarTarea
+            // frmAgregarTipoTarea
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.gbElementos);
-            this.Name = "frmAgregarTarea";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "frmAgregarTipoTarea";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agregar tipo de tarea";
             this.gbElementos.ResumeLayout(false);

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.btnSalir = new System.Windows.Forms.Button();
             this.pControles = new System.Windows.Forms.Panel();
             this.pLogin = new System.Windows.Forms.Panel();
@@ -50,7 +51,7 @@
             // 
             this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSalir.Location = new System.Drawing.Point(965, 581);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(4);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(100, 28);
             this.btnSalir.TabIndex = 0;
@@ -64,7 +65,7 @@
             this.pControles.Controls.Add(this.btnSalir);
             this.pControles.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pControles.Location = new System.Drawing.Point(0, 0);
-            this.pControles.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pControles.Margin = new System.Windows.Forms.Padding(4);
             this.pControles.Name = "pControles";
             this.pControles.Size = new System.Drawing.Size(1093, 635);
             this.pControles.TabIndex = 0;
@@ -93,7 +94,7 @@
             // 
             this.chkContraVisible.AutoSize = true;
             this.chkContraVisible.Location = new System.Drawing.Point(107, 338);
-            this.chkContraVisible.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chkContraVisible.Margin = new System.Windows.Forms.Padding(4);
             this.chkContraVisible.Name = "chkContraVisible";
             this.chkContraVisible.Size = new System.Drawing.Size(146, 20);
             this.chkContraVisible.TabIndex = 2;
@@ -103,7 +104,8 @@
             // 
             // pbLogo
             // 
-            this.pbLogo.Location = new System.Drawing.Point(196, 32);
+            this.pbLogo.Image = global::pryMarkoja_IEFI.Properties.Resources.auditoria;
+            this.pbLogo.Location = new System.Drawing.Point(203, 36);
             this.pbLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pbLogo.Name = "pbLogo";
             this.pbLogo.Size = new System.Drawing.Size(85, 69);
@@ -127,7 +129,7 @@
             // 
             this.lblBienvenidaLogin2.AutoSize = true;
             this.lblBienvenidaLogin2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBienvenidaLogin2.Location = new System.Drawing.Point(8, 128);
+            this.lblBienvenidaLogin2.Location = new System.Drawing.Point(33, 125);
             this.lblBienvenidaLogin2.Name = "lblBienvenidaLogin2";
             this.lblBienvenidaLogin2.Size = new System.Drawing.Size(418, 25);
             this.lblBienvenidaLogin2.TabIndex = 7;
@@ -196,7 +198,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1093, 635);
             this.Controls.Add(this.pControles);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inicio de sesión";

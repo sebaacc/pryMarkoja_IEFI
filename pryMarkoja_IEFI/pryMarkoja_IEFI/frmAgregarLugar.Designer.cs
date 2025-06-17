@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAgregarLugar));
             this.gbElementos = new System.Windows.Forms.GroupBox();
             this.btnAgregarLugar = new System.Windows.Forms.Button();
             this.lblNombreLugar = new System.Windows.Forms.Label();
@@ -79,7 +80,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.gbElementos);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmAgregarLugar";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agregar lugar";
             this.gbElementos.ResumeLayout(false);
             this.gbElementos.PerformLayout();

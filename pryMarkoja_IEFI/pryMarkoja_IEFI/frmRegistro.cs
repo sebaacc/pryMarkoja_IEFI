@@ -16,7 +16,7 @@ namespace pryMarkoja_IEFI
     public partial class frmRegistro : Form
     {
         clsFuncionesUtiles funciones = new clsFuncionesUtiles();
-
+        clsRegistroService BD = new clsRegistroService();
         public frmRegistro()
         {
             InitializeComponent();
@@ -24,7 +24,6 @@ namespace pryMarkoja_IEFI
 
         private void pControles_Paint(object sender, PaintEventArgs e)
         {
-
         }
         private string ObtenerSHA256(string texto)
         {
@@ -45,7 +44,7 @@ namespace pryMarkoja_IEFI
             string contraseña = txtContraseña.Text;
             string nombre = txtNombre.Text.Trim();
             string apellido = txtApellido.Text.Trim();
-            string puestoTrabajo = txtPuesto.Text.Trim(); // Usamos el nombre correcto
+            string puestoTrabajo = txtPuesto.Text.Trim();
             DateTime fechaNacimiento = dtpFechaNacimiento.Value;
 
             int edad = CalcularEdad(fechaNacimiento);
@@ -56,53 +55,19 @@ namespace pryMarkoja_IEFI
                 MessageBox.Show("Por favor, completa todos los campos.", "Campos incompletos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-
-            if (edad < 18)
+            else if (edad < 18)
             {
                 MessageBox.Show("El usuario debe ser mayor de 18 años.", "Edad inválida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            string hash = ObtenerSHA256(contraseña);
+            else
+            {
+                string hash = ObtenerSHA256(contraseña);
 
-            try
-            {
-                using (SqlConnection conexion = new SqlConnection(clsConexionBD.CadenaConexion))
-                {
-                    conexion.Open();
-                    string query = @"INSERT INTO Usuario 
-                            (NombreUsuario, ContraseñaHash, Nombre, Apellido, PuestoTrabajo, FechaNacimiento, Activo) 
-                             VALUES (@usuario, @hash, @nombre, @apellido, @puestoTrabajo, @fechaNacimiento, @activo)";
-                    using (SqlCommand comando = new SqlCommand(query, conexion))
-                    {
-                        comando.Parameters.AddWithValue("@usuario", usuario);
-                        comando.Parameters.AddWithValue("@hash", hash);
-                        comando.Parameters.AddWithValue("@nombre", nombre);
-                        comando.Parameters.AddWithValue("@apellido", apellido);
-                        comando.Parameters.AddWithValue("@puestoTrabajo", puestoTrabajo);
-                        comando.Parameters.AddWithValue("@fechaNacimiento", fechaNacimiento);
-                        comando.Parameters.AddWithValue("@activo", true); // o 1, para declarar activo el usuario.
+                BD.Registrar(usuario, hash, nombre, apellido, puestoTrabajo, fechaNacimiento);
+                this.Close();
+            }
 
-                        comando.ExecuteNonQuery();
-                        MessageBox.Show("Usuario registrado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        this.Close();
-                    }
-                }
-            }
-            catch (SqlException ex)
-            {
-                if (ex.Message.Contains("UNIQUE"))
-                {
-                    MessageBox.Show("El nombre de usuario ya existe.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                else
-                {
-                    MessageBox.Show("Error al registrar el usuario: " + ex.Message);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error inesperado: " + ex.Message);
-            }
         }
         private int CalcularEdad(DateTime fechaNacimiento)
         {

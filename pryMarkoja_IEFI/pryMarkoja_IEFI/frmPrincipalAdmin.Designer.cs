@@ -29,12 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipalAdmin));
             this.barraEstadoInf = new System.Windows.Forms.StatusStrip();
             this.lblUsuarioAdmin = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.lblFechaHoraSistema = new System.Windows.Forms.ToolStripStatusLabel();
             this.pControles = new System.Windows.Forms.Panel();
             this.pPrincipal = new System.Windows.Forms.Panel();
+            this.pbLogo = new System.Windows.Forms.PictureBox();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.menuAdmin = new System.Windows.Forms.MenuStrip();
             this.tareasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -51,6 +53,7 @@
             this.barraEstadoInf.SuspendLayout();
             this.pControles.SuspendLayout();
             this.pPrincipal.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.menuAdmin.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -102,12 +105,24 @@
             // pPrincipal
             // 
             this.pPrincipal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.pPrincipal.Controls.Add(this.pbLogo);
             this.pPrincipal.Controls.Add(this.lblTitulo);
             this.pPrincipal.Location = new System.Drawing.Point(100, 45);
             this.pPrincipal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pPrincipal.Name = "pPrincipal";
             this.pPrincipal.Size = new System.Drawing.Size(756, 506);
             this.pPrincipal.TabIndex = 1;
+            // 
+            // pbLogo
+            // 
+            this.pbLogo.Image = global::pryMarkoja_IEFI.Properties.Resources.auditoria;
+            this.pbLogo.Location = new System.Drawing.Point(344, 218);
+            this.pbLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pbLogo.Name = "pbLogo";
+            this.pbLogo.Size = new System.Drawing.Size(85, 69);
+            this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbLogo.TabIndex = 10;
+            this.pbLogo.TabStop = false;
             // 
             // lblTitulo
             // 
@@ -224,6 +239,7 @@
             this.ClientSize = new System.Drawing.Size(1061, 607);
             this.Controls.Add(this.barraEstadoInf);
             this.Controls.Add(this.pControles);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuAdmin;
             this.Name = "frmPrincipalAdmin";
             this.Text = "Panel Principal de Administrador";
@@ -234,6 +250,7 @@
             this.pControles.PerformLayout();
             this.pPrincipal.ResumeLayout(false);
             this.pPrincipal.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             this.menuAdmin.ResumeLayout(false);
             this.menuAdmin.PerformLayout();
             this.ResumeLayout(false);
@@ -262,5 +279,6 @@
         private System.Windows.Forms.ToolStripMenuItem cerrarSesiónToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem historialDeTareasDeUsuariosToolStripMenuItem;
+        private System.Windows.Forms.PictureBox pbLogo;
     }
 }

@@ -18,7 +18,7 @@ namespace pryMarkoja_IEFI
         clsFuncionesUtiles funciones = new clsFuncionesUtiles();
         List<clsTarea> listaTareasAñadidas = new List<clsTarea>();
         private readonly int usuarioId;
-        clsTareasService BD = new clsTareasService();
+        clsTareaService BD = new clsTareaService();
         public frmTarea()
         {
             InitializeComponent();
@@ -95,48 +95,7 @@ namespace pryMarkoja_IEFI
 
         private void btnGrabar_Click(object sender, EventArgs e)
         {
-            if (listaTareasAñadidas.Count > 0)
-            {
-                try
-                {
-                    using (SqlConnection conexion = new SqlConnection(clsConexionBD.CadenaConexion))
-                    {
-                        conexion.Open();
-
-                        foreach (clsTarea tarea in listaTareasAñadidas)
-                        {
-                            string query = @"INSERT INTO Tarea (UsuarioId, FechaTarea, Detalle, Comentario, IdTipoTarea, IdLugar)
-                                 VALUES (@UsuarioId, @FechaTarea, @Detalle, @Comentario, @IdTipoTarea, @IdLugar)";
-
-                            using (SqlCommand comando = new SqlCommand(query, conexion))
-                            {
-                                comando.Parameters.AddWithValue("@UsuarioId", usuarioId);
-                                comando.Parameters.AddWithValue("@FechaTarea", tarea.FechaTarea);
-                                comando.Parameters.AddWithValue("@Detalle", tarea.Detalle ?? "");
-                                comando.Parameters.AddWithValue("@Comentario", tarea.Comentario ?? "");
-                                comando.Parameters.AddWithValue("@IdTipoTarea", tarea.TipoTarea);
-                                comando.Parameters.AddWithValue("@IdLugar", tarea.Lugar);
-
-                                comando.ExecuteNonQuery();
-                            }
-                        }
-
-                        MessageBox.Show("Todas las tareas se grabaron correctamente.");
-
-                        listaTareasAñadidas.Clear();
-                        dgvTareas.Rows.Clear();
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error al grabar tareas: " + ex.Message);
-                }
-            }
-            else
-            {
-                MessageBox.Show("Agrega por favor alguna tarea para poder grabarla.");
-            }
-
+            BD.GrabarTareas(listaTareasAñadidas, dgvTareas);
         }
 
         private void btnBorrarTareas_Click(object sender, EventArgs e)

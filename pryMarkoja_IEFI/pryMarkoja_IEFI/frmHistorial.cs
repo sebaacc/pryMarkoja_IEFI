@@ -14,7 +14,7 @@ namespace pryMarkoja_IEFI
 {
     public partial class frmHistorial : Form
     {
-        clsTareasService BD = new clsTareasService();
+        clsTareaService BD = new clsTareaService();
         public frmHistorial()
         {
             InitializeComponent();

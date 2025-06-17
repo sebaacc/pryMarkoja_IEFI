@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTarea));
             this.pPrincipal = new System.Windows.Forms.Panel();
+            this.btnBorrarTareas = new System.Windows.Forms.Button();
             this.lblTituloTareas = new System.Windows.Forms.Label();
             this.dgvTareas = new System.Windows.Forms.DataGridView();
             this.TipoTarea = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -65,7 +67,6 @@
             this.menuTareas = new System.Windows.Forms.MenuStrip();
             this.ventanaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.volverAMenúPrincipalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnBorrarTareas = new System.Windows.Forms.Button();
             this.pPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTareas)).BeginInit();
             this.panel1.SuspendLayout();
@@ -97,6 +98,18 @@
             this.pPrincipal.Name = "pPrincipal";
             this.pPrincipal.Size = new System.Drawing.Size(1805, 910);
             this.pPrincipal.TabIndex = 2;
+            // 
+            // btnBorrarTareas
+            // 
+            this.btnBorrarTareas.BackColor = System.Drawing.Color.LightCoral;
+            this.btnBorrarTareas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBorrarTareas.Location = new System.Drawing.Point(1116, 846);
+            this.btnBorrarTareas.Name = "btnBorrarTareas";
+            this.btnBorrarTareas.Size = new System.Drawing.Size(148, 33);
+            this.btnBorrarTareas.TabIndex = 14;
+            this.btnBorrarTareas.Text = "Borrar tareas";
+            this.btnBorrarTareas.UseVisualStyleBackColor = false;
+            this.btnBorrarTareas.Click += new System.EventHandler(this.btnBorrarTareas_Click);
             // 
             // lblTituloTareas
             // 
@@ -430,18 +443,6 @@
             this.volverAMenúPrincipalToolStripMenuItem.Text = "← Volver a Menú principal...";
             this.volverAMenúPrincipalToolStripMenuItem.Click += new System.EventHandler(this.volverAMenúPrincipalToolStripMenuItem_Click);
             // 
-            // btnBorrarTareas
-            // 
-            this.btnBorrarTareas.BackColor = System.Drawing.Color.LightCoral;
-            this.btnBorrarTareas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBorrarTareas.Location = new System.Drawing.Point(1116, 846);
-            this.btnBorrarTareas.Name = "btnBorrarTareas";
-            this.btnBorrarTareas.Size = new System.Drawing.Size(148, 33);
-            this.btnBorrarTareas.TabIndex = 14;
-            this.btnBorrarTareas.Text = "Borrar tareas";
-            this.btnBorrarTareas.UseVisualStyleBackColor = false;
-            this.btnBorrarTareas.Click += new System.EventHandler(this.btnBorrarTareas_Click);
-            // 
             // frmTarea
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -449,6 +450,7 @@
             this.ClientSize = new System.Drawing.Size(1805, 938);
             this.Controls.Add(this.pPrincipal);
             this.Controls.Add(this.menuTareas);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuTareas;
             this.Name = "frmTarea";
             this.Text = "Tareas";

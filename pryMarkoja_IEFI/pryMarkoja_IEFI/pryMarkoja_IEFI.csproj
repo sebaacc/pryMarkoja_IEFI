@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>auditoria.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -49,8 +52,10 @@
     <Compile Include="Clases\clsAuditoriaService.cs" />
     <Compile Include="Clases\clsConexionBD.cs" />
     <Compile Include="Clases\clsFuncionesUtiles.cs" />
-    <Compile Include="Clases\clsTareasService.cs" />
+    <Compile Include="Clases\clsRegistroService.cs" />
+    <Compile Include="Clases\clsTareaService.cs" />
     <Compile Include="Clases\clsTarea.cs" />
+    <Compile Include="Clases\clsUsuarioService.cs" />
     <Compile Include="frmAgregarLugar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,6 +157,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -165,6 +171,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\auditoria.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="auditoria.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

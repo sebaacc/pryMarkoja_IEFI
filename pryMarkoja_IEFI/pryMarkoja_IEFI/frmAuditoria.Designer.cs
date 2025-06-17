@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAuditoria));
             this.barraEstadoInf = new System.Windows.Forms.StatusStrip();
             this.lblUsuarioAdmin = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
@@ -38,6 +39,7 @@
             this.pPrincipal = new System.Windows.Forms.Panel();
             this.btnMostrarTodos = new System.Windows.Forms.Button();
             this.gbFiltroFecha = new System.Windows.Forms.GroupBox();
+            this.btnFiltrarFechaYNombre = new System.Windows.Forms.Button();
             this.lblFinal = new System.Windows.Forms.Label();
             this.dtpHasta = new System.Windows.Forms.DateTimePicker();
             this.lblInicio = new System.Windows.Forms.Label();
@@ -50,7 +52,6 @@
             this.lblTitulo = new System.Windows.Forms.Label();
             this.dgvAuditoria = new System.Windows.Forms.DataGridView();
             this.TiempoSistema = new System.Windows.Forms.Timer(this.components);
-            this.btnFiltrarFechaYNombre = new System.Windows.Forms.Button();
             this.barraEstadoInf.SuspendLayout();
             this.pControles.SuspendLayout();
             this.pPrincipal.SuspendLayout();
@@ -100,7 +101,7 @@
             this.pControles.Controls.Add(this.pPrincipal);
             this.pControles.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pControles.Location = new System.Drawing.Point(0, 0);
-            this.pControles.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pControles.Margin = new System.Windows.Forms.Padding(4);
             this.pControles.Name = "pControles";
             this.pControles.Size = new System.Drawing.Size(1445, 887);
             this.pControles.TabIndex = 5;
@@ -109,7 +110,7 @@
             // 
             this.btnVolver.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnVolver.Location = new System.Drawing.Point(1281, 783);
-            this.btnVolver.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnVolver.Margin = new System.Windows.Forms.Padding(4);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(136, 28);
             this.btnVolver.TabIndex = 2;
@@ -134,7 +135,7 @@
             // btnMostrarTodos
             // 
             this.btnMostrarTodos.Location = new System.Drawing.Point(1081, 624);
-            this.btnMostrarTodos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMostrarTodos.Margin = new System.Windows.Forms.Padding(4);
             this.btnMostrarTodos.Name = "btnMostrarTodos";
             this.btnMostrarTodos.Size = new System.Drawing.Size(136, 28);
             this.btnMostrarTodos.TabIndex = 3;
@@ -158,6 +159,17 @@
             this.gbFiltroFecha.TabIndex = 7;
             this.gbFiltroFecha.TabStop = false;
             this.gbFiltroFecha.Text = "Filtro por fecha";
+            // 
+            // btnFiltrarFechaYNombre
+            // 
+            this.btnFiltrarFechaYNombre.Location = new System.Drawing.Point(516, 65);
+            this.btnFiltrarFechaYNombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnFiltrarFechaYNombre.Name = "btnFiltrarFechaYNombre";
+            this.btnFiltrarFechaYNombre.Size = new System.Drawing.Size(207, 33);
+            this.btnFiltrarFechaYNombre.TabIndex = 8;
+            this.btnFiltrarFechaYNombre.Text = "Filtrar por fecha y nombre";
+            this.btnFiltrarFechaYNombre.UseVisualStyleBackColor = true;
+            this.btnFiltrarFechaYNombre.Click += new System.EventHandler(this.btnFiltrarFechaYNombre_Click);
             // 
             // lblFinal
             // 
@@ -273,17 +285,6 @@
             this.TiempoSistema.Interval = 1000;
             this.TiempoSistema.Tick += new System.EventHandler(this.TiempoSistema_Tick);
             // 
-            // btnFiltrarFechaYNombre
-            // 
-            this.btnFiltrarFechaYNombre.Location = new System.Drawing.Point(516, 65);
-            this.btnFiltrarFechaYNombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnFiltrarFechaYNombre.Name = "btnFiltrarFechaYNombre";
-            this.btnFiltrarFechaYNombre.Size = new System.Drawing.Size(207, 33);
-            this.btnFiltrarFechaYNombre.TabIndex = 8;
-            this.btnFiltrarFechaYNombre.Text = "Filtrar por fecha y nombre";
-            this.btnFiltrarFechaYNombre.UseVisualStyleBackColor = true;
-            this.btnFiltrarFechaYNombre.Click += new System.EventHandler(this.btnFiltrarFechaYNombre_Click);
-            // 
             // frmAuditoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -291,7 +292,8 @@
             this.ClientSize = new System.Drawing.Size(1445, 887);
             this.Controls.Add(this.barraEstadoInf);
             this.Controls.Add(this.pControles);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmAuditoria";
             this.Text = "Auditoria";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

@@ -29,9 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUsuarios));
             this.pControles = new System.Windows.Forms.Panel();
             this.btnVolver = new System.Windows.Forms.Button();
             this.pPrincipal = new System.Windows.Forms.Panel();
+            this.btnHacerAdmin = new System.Windows.Forms.Button();
+            this.btnQuitarAdmin = new System.Windows.Forms.Button();
             this.btnActivar = new System.Windows.Forms.Button();
             this.btnDesactivar = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
@@ -56,7 +59,7 @@
             this.pControles.Controls.Add(this.pPrincipal);
             this.pControles.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pControles.Location = new System.Drawing.Point(0, 0);
-            this.pControles.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pControles.Margin = new System.Windows.Forms.Padding(4);
             this.pControles.Name = "pControles";
             this.pControles.Size = new System.Drawing.Size(1482, 827);
             this.pControles.TabIndex = 3;
@@ -65,7 +68,7 @@
             // 
             this.btnVolver.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnVolver.Location = new System.Drawing.Point(1317, 722);
-            this.btnVolver.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnVolver.Margin = new System.Windows.Forms.Padding(4);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(136, 28);
             this.btnVolver.TabIndex = 2;
@@ -76,6 +79,8 @@
             // pPrincipal
             // 
             this.pPrincipal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.pPrincipal.Controls.Add(this.btnHacerAdmin);
+            this.pPrincipal.Controls.Add(this.btnQuitarAdmin);
             this.pPrincipal.Controls.Add(this.btnActivar);
             this.pPrincipal.Controls.Add(this.btnDesactivar);
             this.pPrincipal.Controls.Add(this.btnBuscar);
@@ -89,13 +94,37 @@
             this.pPrincipal.Size = new System.Drawing.Size(1253, 633);
             this.pPrincipal.TabIndex = 1;
             // 
+            // btnHacerAdmin
+            // 
+            this.btnHacerAdmin.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.btnHacerAdmin.Location = new System.Drawing.Point(819, 92);
+            this.btnHacerAdmin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnHacerAdmin.Name = "btnHacerAdmin";
+            this.btnHacerAdmin.Size = new System.Drawing.Size(160, 37);
+            this.btnHacerAdmin.TabIndex = 8;
+            this.btnHacerAdmin.Text = "Hacer Administrador";
+            this.btnHacerAdmin.UseVisualStyleBackColor = false;
+            this.btnHacerAdmin.Click += new System.EventHandler(this.btnHacerAdmin_Click);
+            // 
+            // btnQuitarAdmin
+            // 
+            this.btnQuitarAdmin.BackColor = System.Drawing.Color.IndianRed;
+            this.btnQuitarAdmin.Location = new System.Drawing.Point(1004, 92);
+            this.btnQuitarAdmin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnQuitarAdmin.Name = "btnQuitarAdmin";
+            this.btnQuitarAdmin.Size = new System.Drawing.Size(213, 37);
+            this.btnQuitarAdmin.TabIndex = 7;
+            this.btnQuitarAdmin.Text = "Quitar Permiso Administrador";
+            this.btnQuitarAdmin.UseVisualStyleBackColor = false;
+            this.btnQuitarAdmin.Click += new System.EventHandler(this.btnQuitarAdmin_Click);
+            // 
             // btnActivar
             // 
             this.btnActivar.BackColor = System.Drawing.Color.DarkOliveGreen;
-            this.btnActivar.Location = new System.Drawing.Point(396, 94);
+            this.btnActivar.Location = new System.Drawing.Point(432, 92);
             this.btnActivar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnActivar.Name = "btnActivar";
-            this.btnActivar.Size = new System.Drawing.Size(207, 33);
+            this.btnActivar.Size = new System.Drawing.Size(154, 37);
             this.btnActivar.TabIndex = 6;
             this.btnActivar.Text = "Activar Usuario";
             this.btnActivar.UseVisualStyleBackColor = false;
@@ -104,10 +133,10 @@
             // btnDesactivar
             // 
             this.btnDesactivar.BackColor = System.Drawing.Color.IndianRed;
-            this.btnDesactivar.Location = new System.Drawing.Point(620, 94);
+            this.btnDesactivar.Location = new System.Drawing.Point(622, 92);
             this.btnDesactivar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDesactivar.Name = "btnDesactivar";
-            this.btnDesactivar.Size = new System.Drawing.Size(207, 33);
+            this.btnDesactivar.Size = new System.Drawing.Size(172, 37);
             this.btnDesactivar.TabIndex = 5;
             this.btnDesactivar.Text = "Desactivar Usuario";
             this.btnDesactivar.UseVisualStyleBackColor = false;
@@ -115,7 +144,7 @@
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(115, 94);
+            this.btnBuscar.Location = new System.Drawing.Point(151, 92);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(207, 33);
@@ -137,7 +166,7 @@
             // lblNombreU
             // 
             this.lblNombreU.AutoSize = true;
-            this.lblNombreU.Location = new System.Drawing.Point(37, 63);
+            this.lblNombreU.Location = new System.Drawing.Point(37, 61);
             this.lblNombreU.Name = "lblNombreU";
             this.lblNombreU.Size = new System.Drawing.Size(59, 16);
             this.lblNombreU.TabIndex = 2;
@@ -145,7 +174,7 @@
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(115, 60);
+            this.txtBuscar.Location = new System.Drawing.Point(151, 58);
             this.txtBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(207, 22);
@@ -157,6 +186,7 @@
             this.dgvUsuarios.Location = new System.Drawing.Point(40, 142);
             this.dgvUsuarios.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvUsuarios.Name = "dgvUsuarios";
+            this.dgvUsuarios.ReadOnly = true;
             this.dgvUsuarios.RowHeadersWidth = 51;
             this.dgvUsuarios.RowTemplate.Height = 24;
             this.dgvUsuarios.Size = new System.Drawing.Size(1177, 463);
@@ -210,6 +240,7 @@
             this.ClientSize = new System.Drawing.Size(1482, 827);
             this.Controls.Add(this.barraEstadoInf);
             this.Controls.Add(this.pControles);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmUsuarios";
             this.Text = "Panel de administración de usuarios";
@@ -243,5 +274,7 @@
         private System.Windows.Forms.Timer TiempoSistema;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.Button btnActivar;
+        private System.Windows.Forms.Button btnHacerAdmin;
+        private System.Windows.Forms.Button btnQuitarAdmin;
     }
 }

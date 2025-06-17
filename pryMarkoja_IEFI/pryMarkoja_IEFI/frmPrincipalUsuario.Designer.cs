@@ -29,7 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipalUsuario));
             this.pControles = new System.Windows.Forms.Panel();
+            this.pbLogo = new System.Windows.Forms.PictureBox();
             this.BarraDeEstadoUsuario = new System.Windows.Forms.StatusStrip();
             this.lblTiempoTitulo = new System.Windows.Forms.ToolStripStatusLabel();
             this.lblTiempoStatus = new System.Windows.Forms.ToolStripStatusLabel();
@@ -42,12 +44,14 @@
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tSessionTimer = new System.Windows.Forms.Timer(this.components);
             this.pControles.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.BarraDeEstadoUsuario.SuspendLayout();
             this.menuUsuario.SuspendLayout();
             this.SuspendLayout();
             // 
             // pControles
             // 
+            this.pControles.Controls.Add(this.pbLogo);
             this.pControles.Controls.Add(this.BarraDeEstadoUsuario);
             this.pControles.Controls.Add(this.menuUsuario);
             this.pControles.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -56,6 +60,17 @@
             this.pControles.Name = "pControles";
             this.pControles.Size = new System.Drawing.Size(1067, 554);
             this.pControles.TabIndex = 2;
+            // 
+            // pbLogo
+            // 
+            this.pbLogo.Image = global::pryMarkoja_IEFI.Properties.Resources.auditoria;
+            this.pbLogo.Location = new System.Drawing.Point(492, 220);
+            this.pbLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pbLogo.Name = "pbLogo";
+            this.pbLogo.Size = new System.Drawing.Size(85, 69);
+            this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbLogo.TabIndex = 10;
+            this.pbLogo.TabStop = false;
             // 
             // BarraDeEstadoUsuario
             // 
@@ -150,6 +165,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.pControles);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuUsuario;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmPrincipalUsuario";
@@ -158,6 +174,7 @@
             this.Load += new System.EventHandler(this.frmPrincipal_Load);
             this.pControles.ResumeLayout(false);
             this.pControles.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             this.BarraDeEstadoUsuario.ResumeLayout(false);
             this.BarraDeEstadoUsuario.PerformLayout();
             this.menuUsuario.ResumeLayout(false);
@@ -180,5 +197,6 @@
         private System.Windows.Forms.ToolStripMenuItem sesiónToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cerrarSesiónToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
+        private System.Windows.Forms.PictureBox pbLogo;
     }
 }

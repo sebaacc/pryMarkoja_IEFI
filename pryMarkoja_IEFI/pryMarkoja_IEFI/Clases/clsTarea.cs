@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace pryMarkoja_IEFI.Clases
 {
-    internal class clsTarea
+    public class clsTarea
     {
         public int TipoTarea { get; set; }
         public DateTime FechaTarea { get; set; }
