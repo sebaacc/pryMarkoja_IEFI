@@ -26,7 +26,8 @@ namespace pryMarkoja_IEFI
 
             BD.CargarTiposTarea(cmbTarea);
             BD.CargarLugares(cmbLugar);
-            
+            DateTime hoy = DateTime.Today;
+            dtpFecha.MaxDate = hoy;
         }
 
         //graficos de flechas en detalle en paneles:
@@ -34,7 +35,7 @@ namespace pryMarkoja_IEFI
         {
             funciones.dibujarFlechaDerecha(sender, e);
         }
-        
+
         private void pCanvas2_Paint(object sender, PaintEventArgs e)
         {
             funciones.dibujarFlechaDerecha(sender, e);
@@ -78,7 +79,7 @@ namespace pryMarkoja_IEFI
 
             dgvTareas.Rows.Add(cmbTarea.Text, cmbLugar.Text, fecha.ToShortDateString(), detalle, comentario);
         }
-        
+
         public string generarDetalle()
         {
             List<string> detalle = new List<string>();
@@ -94,39 +95,61 @@ namespace pryMarkoja_IEFI
 
         private void btnGrabar_Click(object sender, EventArgs e)
         {
-            try
+            if (listaTareasAñadidas.Count > 0)
             {
-                using (SqlConnection conexion = new SqlConnection(clsConexionBD.CadenaConexion))
+                try
                 {
-                    conexion.Open();
-
-                    foreach (clsTarea tarea in listaTareasAñadidas)
+                    using (SqlConnection conexion = new SqlConnection(clsConexionBD.CadenaConexion))
                     {
-                        string query = @"INSERT INTO Tarea (UsuarioId, FechaTarea, Detalle, Comentario, IdTipoTarea, IdLugar)
+                        conexion.Open();
+
+                        foreach (clsTarea tarea in listaTareasAñadidas)
+                        {
+                            string query = @"INSERT INTO Tarea (UsuarioId, FechaTarea, Detalle, Comentario, IdTipoTarea, IdLugar)
                                  VALUES (@UsuarioId, @FechaTarea, @Detalle, @Comentario, @IdTipoTarea, @IdLugar)";
 
-                        using (SqlCommand comando = new SqlCommand(query, conexion))
-                        {
-                            comando.Parameters.AddWithValue("@UsuarioId", usuarioId);
-                            comando.Parameters.AddWithValue("@FechaTarea", tarea.FechaTarea);
-                            comando.Parameters.AddWithValue("@Detalle", tarea.Detalle ?? "");
-                            comando.Parameters.AddWithValue("@Comentario", tarea.Comentario ?? "");
-                            comando.Parameters.AddWithValue("@IdTipoTarea", tarea.TipoTarea);
-                            comando.Parameters.AddWithValue("@IdLugar", tarea.Lugar);
+                            using (SqlCommand comando = new SqlCommand(query, conexion))
+                            {
+                                comando.Parameters.AddWithValue("@UsuarioId", usuarioId);
+                                comando.Parameters.AddWithValue("@FechaTarea", tarea.FechaTarea);
+                                comando.Parameters.AddWithValue("@Detalle", tarea.Detalle ?? "");
+                                comando.Parameters.AddWithValue("@Comentario", tarea.Comentario ?? "");
+                                comando.Parameters.AddWithValue("@IdTipoTarea", tarea.TipoTarea);
+                                comando.Parameters.AddWithValue("@IdLugar", tarea.Lugar);
 
-                            comando.ExecuteNonQuery();
+                                comando.ExecuteNonQuery();
+                            }
                         }
+
+                        MessageBox.Show("Todas las tareas se grabaron correctamente.");
+
+                        listaTareasAñadidas.Clear();
+                        dgvTareas.Rows.Clear();
                     }
-
-                    MessageBox.Show("Todas las tareas se grabaron correctamente.");
-
-                    listaTareasAñadidas.Clear();
-                    dgvTareas.Rows.Clear();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al grabar tareas: " + ex.Message);
                 }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Error al grabar tareas: " + ex.Message);
+                MessageBox.Show("Agrega por favor alguna tarea para poder grabarla.");
+            }
+
+        }
+
+        private void btnBorrarTareas_Click(object sender, EventArgs e)
+        {
+            DialogResult resultado = MessageBox.Show("¿Estás seguro de eliminar todas las tareas antes de grabarlas en la base de datos?", "Estás por borrar las tareas", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+            if (resultado == DialogResult.OK)
+            {
+                listaTareasAñadidas.Clear();
+
+                dgvTareas.DataSource = null;
+                dgvTareas.Rows.Clear();
+
+                MessageBox.Show("Todas las tareas han sido eliminadas.", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }

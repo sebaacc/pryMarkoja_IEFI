@@ -18,6 +18,9 @@ namespace pryMarkoja_IEFI
         public frmAuditoria()
         {
             InitializeComponent();
+            DateTime hoy = DateTime.Today;
+            dtpDesde.MaxDate = hoy;
+            dtpHasta.MaxDate = hoy;
             formateoInicial();
         }
         private void CargarSoloPorNombre()

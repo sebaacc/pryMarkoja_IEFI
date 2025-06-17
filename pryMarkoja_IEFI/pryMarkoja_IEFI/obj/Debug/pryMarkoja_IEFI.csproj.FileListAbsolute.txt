@@ -47,4 +47,3 @@ D:\Seba\weas\Documentso\Estudios\IES\semestre3\lab3\pryMarkoja_IEFI\pryMarkoja_I
 D:\Seba\weas\Documentso\Estudios\IES\semestre3\lab3\pryMarkoja_IEFI\pryMarkoja_IEFI\pryMarkoja_IEFI\obj\Debug\pryMarkoja_IEFI.csproj.CoreCompileInputs.cache
 D:\Seba\weas\Documentso\Estudios\IES\semestre3\lab3\pryMarkoja_IEFI\pryMarkoja_IEFI\pryMarkoja_IEFI\obj\Debug\pryMarkoja_IEFI.exe
 D:\Seba\weas\Documentso\Estudios\IES\semestre3\lab3\pryMarkoja_IEFI\pryMarkoja_IEFI\pryMarkoja_IEFI\obj\Debug\pryMarkoja_IEFI.pdb
-D:\Seba\weas\Documentso\Estudios\IES\semestre3\lab3\pryMarkoja_IEFI\pryMarkoja_IEFI\pryMarkoja_IEFI\obj\Debug\pryMarkoja_IEFI.exe.config

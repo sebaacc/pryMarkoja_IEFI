@@ -13,6 +13,8 @@ namespace pryMarkoja_IEFI.Clases
     public class clsTareasService
     {
         string CadenaConexion = clsConexionBD.CadenaConexion;
+        private DataTable historialTareasDataTable;
+
         public void CargarHistorialTareasUsuario(DataGridView dgvHistorial)
         {
             string query = clsUsuarioLogueado.EsAdministrador == true ?
@@ -47,18 +49,20 @@ namespace pryMarkoja_IEFI.Clases
                 ORDER BY T.FechaTarea DESC"
             );
 
+
+
             using (SqlConnection conn = new SqlConnection(CadenaConexion))
             using (SqlCommand cmd = new SqlCommand(query, conn))
             using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
             {
                 cmd.Parameters.AddWithValue("@UsuarioId", clsUsuarioLogueado.Id);
-                DataTable dt = new DataTable();
+                historialTareasDataTable = new DataTable();
 
                 try
                 {
                     conn.Open();
-                    adapter.Fill(dt);
-                    dgvHistorial.DataSource = dt;
+                    adapter.Fill(historialTareasDataTable);
+                    dgvHistorial.DataSource = historialTareasDataTable;
 
                     dgvHistorial.Columns["Id"].HeaderText = "ID";
                     dgvHistorial.Columns["FechaTarea"].HeaderText = "Fecha";
@@ -130,10 +134,81 @@ namespace pryMarkoja_IEFI.Clases
             }
         }
 
+        public void FiltrarPorNombreUsuario(string nombreUsuario, DataGridView dgvHistorial)
+        {
+            if (historialTareasDataTable == null)
+            {
+                MessageBox.Show("Primero debe cargar los datos.");
+                return;
+            }
 
+            if (string.IsNullOrWhiteSpace(nombreUsuario))
+            {
+                historialTareasDataTable.DefaultView.RowFilter = string.Empty;
+            }
+            else
+            {
+                string filtro = $"[Nombre de Usuario] LIKE '%{nombreUsuario.Replace("'", "''")}%'";
 
+                if (historialTareasDataTable.Columns.Contains("Nombre de Usuario"))
+                {
+                    historialTareasDataTable.DefaultView.RowFilter = filtro;
+                }
+                else
+                {
+                    MessageBox.Show("No se puede filtrar por nombre de usuario porque no se ha cargado esa columna (modo no administrador).");
+                }
+            }
+            dgvHistorial.DataSource = historialTareasDataTable.DefaultView;
+        }
 
+        public void FiltrarPorTipoTarea(string tipoTarea, DataGridView dgvHistorial)
+        {
+            if (historialTareasDataTable == null) return;
+            string filtro = $"TipoTarea LIKE '%{tipoTarea.Replace("'", "''")}%'";
+            if (historialTareasDataTable.Columns.Contains("TipoTarea"))
+            {
+                historialTareasDataTable.DefaultView.RowFilter = filtro;
+            }
+            else
+            {
+                MessageBox.Show("No se puede filtrar por TipoTarea porque no se ha cargado esa columna (modo no administrador).");
+            }
 
+            dgvHistorial.DataSource = historialTareasDataTable.DefaultView;
+        }
+        public void FiltrarPorLugar(string lugar, DataGridView dgvHistorial)
+        {
+            if (historialTareasDataTable == null) return;
+            string filtro = $"Lugar LIKE '%{lugar.Replace("'", "''")}%'";
+            if (historialTareasDataTable.Columns.Contains("Lugar"))
+            {
+                historialTareasDataTable.DefaultView.RowFilter = filtro;
+            }
+            else
+            {
+                MessageBox.Show("No se puede filtrar por Lugar porque no se ha cargado esa columna (modo no administrador).");
+            }
+
+            dgvHistorial.DataSource = historialTareasDataTable.DefaultView;
+        }
+        public void FiltrarPorRangoFechas(DateTime fechaDesde, DateTime fechaHasta, DataGridView dgvHistorial)
+        {
+            if (historialTareasDataTable == null) return;
+
+            if (!historialTareasDataTable.Columns.Contains("FechaTarea"))
+            {
+                MessageBox.Show("La columna FechaTarea no existe en los datos cargados.");
+                return;
+            }
+
+            string fechaInicio = $"#{fechaDesde.Month}/{fechaDesde.Day}/{fechaDesde.Year}#";
+            string fechaFin = $"#{fechaHasta.Month}/{fechaHasta.Day}/{fechaHasta.Year}#";
+
+            string filtro = $"FechaTarea >= {fechaInicio} AND FechaTarea <= {fechaFin}";
+            historialTareasDataTable.DefaultView.RowFilter = filtro;
+            dgvHistorial.DataSource = historialTareasDataTable.DefaultView;
+        }
 
     }
 }
