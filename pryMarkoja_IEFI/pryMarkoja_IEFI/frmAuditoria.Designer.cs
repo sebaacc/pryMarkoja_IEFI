@@ -67,11 +67,11 @@
             this.lblUsuarioAdmin,
             this.toolStripStatusLabel1,
             this.lblFechaHoraSistema});
-            this.barraEstadoInf.Location = new System.Drawing.Point(0, 861);
+            this.barraEstadoInf.Location = new System.Drawing.Point(0, 587);
             this.barraEstadoInf.Name = "barraEstadoInf";
-            this.barraEstadoInf.Padding = new System.Windows.Forms.Padding(1, 0, 13, 0);
+            this.barraEstadoInf.Padding = new System.Windows.Forms.Padding(1, 0, 10, 0);
             this.barraEstadoInf.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.barraEstadoInf.Size = new System.Drawing.Size(1445, 26);
+            this.barraEstadoInf.Size = new System.Drawing.Size(1028, 22);
             this.barraEstadoInf.TabIndex = 6;
             this.barraEstadoInf.Text = "Barra de estado";
             // 
@@ -79,20 +79,20 @@
             // 
             this.lblUsuarioAdmin.Margin = new System.Windows.Forms.Padding(10, 4, 0, 2);
             this.lblUsuarioAdmin.Name = "lblUsuarioAdmin";
-            this.lblUsuarioAdmin.Size = new System.Drawing.Size(104, 20);
+            this.lblUsuarioAdmin.Size = new System.Drawing.Size(83, 16);
             this.lblUsuarioAdmin.Text = "Administrador";
             // 
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(1270, 20);
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(885, 17);
             this.toolStripStatusLabel1.Spring = true;
             // 
             // lblFechaHoraSistema
             // 
             this.lblFechaHoraSistema.Margin = new System.Windows.Forms.Padding(0, 4, 2, 2);
             this.lblFechaHoraSistema.Name = "lblFechaHoraSistema";
-            this.lblFechaHoraSistema.Size = new System.Drawing.Size(45, 20);
+            this.lblFechaHoraSistema.Size = new System.Drawing.Size(37, 16);
             this.lblFechaHoraSistema.Text = "______";
             // 
             // pControles
@@ -101,18 +101,16 @@
             this.pControles.Controls.Add(this.pPrincipal);
             this.pControles.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pControles.Location = new System.Drawing.Point(0, 0);
-            this.pControles.Margin = new System.Windows.Forms.Padding(4);
             this.pControles.Name = "pControles";
-            this.pControles.Size = new System.Drawing.Size(1445, 887);
+            this.pControles.Size = new System.Drawing.Size(1028, 609);
             this.pControles.TabIndex = 5;
             // 
             // btnVolver
             // 
             this.btnVolver.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnVolver.Location = new System.Drawing.Point(1281, 783);
-            this.btnVolver.Margin = new System.Windows.Forms.Padding(4);
+            this.btnVolver.Location = new System.Drawing.Point(905, 524);
             this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(136, 28);
+            this.btnVolver.Size = new System.Drawing.Size(102, 23);
             this.btnVolver.TabIndex = 2;
             this.btnVolver.Text = "← Volver";
             this.btnVolver.UseVisualStyleBackColor = true;
@@ -126,18 +124,17 @@
             this.pPrincipal.Controls.Add(this.gbFiltroNombre);
             this.pPrincipal.Controls.Add(this.lblTitulo);
             this.pPrincipal.Controls.Add(this.dgvAuditoria);
-            this.pPrincipal.Location = new System.Drawing.Point(40, 46);
-            this.pPrincipal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pPrincipal.Location = new System.Drawing.Point(2, 37);
+            this.pPrincipal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pPrincipal.Name = "pPrincipal";
-            this.pPrincipal.Size = new System.Drawing.Size(1253, 693);
+            this.pPrincipal.Size = new System.Drawing.Size(940, 451);
             this.pPrincipal.TabIndex = 1;
             // 
             // btnMostrarTodos
             // 
-            this.btnMostrarTodos.Location = new System.Drawing.Point(1081, 624);
-            this.btnMostrarTodos.Margin = new System.Windows.Forms.Padding(4);
+            this.btnMostrarTodos.Location = new System.Drawing.Point(811, 507);
             this.btnMostrarTodos.Name = "btnMostrarTodos";
-            this.btnMostrarTodos.Size = new System.Drawing.Size(136, 28);
+            this.btnMostrarTodos.Size = new System.Drawing.Size(102, 23);
             this.btnMostrarTodos.TabIndex = 3;
             this.btnMostrarTodos.Text = "Mostrar Todos";
             this.btnMostrarTodos.UseVisualStyleBackColor = true;
@@ -151,21 +148,21 @@
             this.gbFiltroFecha.Controls.Add(this.lblInicio);
             this.gbFiltroFecha.Controls.Add(this.btnFiltrarFecha);
             this.gbFiltroFecha.Controls.Add(this.dtpDesde);
-            this.gbFiltroFecha.Location = new System.Drawing.Point(437, 49);
-            this.gbFiltroFecha.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gbFiltroFecha.Location = new System.Drawing.Point(328, 40);
+            this.gbFiltroFecha.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.gbFiltroFecha.Name = "gbFiltroFecha";
-            this.gbFiltroFecha.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gbFiltroFecha.Size = new System.Drawing.Size(779, 112);
+            this.gbFiltroFecha.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbFiltroFecha.Size = new System.Drawing.Size(584, 91);
             this.gbFiltroFecha.TabIndex = 7;
             this.gbFiltroFecha.TabStop = false;
             this.gbFiltroFecha.Text = "Filtro por fecha";
             // 
             // btnFiltrarFechaYNombre
             // 
-            this.btnFiltrarFechaYNombre.Location = new System.Drawing.Point(516, 65);
-            this.btnFiltrarFechaYNombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnFiltrarFechaYNombre.Location = new System.Drawing.Point(387, 53);
+            this.btnFiltrarFechaYNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnFiltrarFechaYNombre.Name = "btnFiltrarFechaYNombre";
-            this.btnFiltrarFechaYNombre.Size = new System.Drawing.Size(207, 33);
+            this.btnFiltrarFechaYNombre.Size = new System.Drawing.Size(155, 27);
             this.btnFiltrarFechaYNombre.TabIndex = 8;
             this.btnFiltrarFechaYNombre.Text = "Filtrar por fecha y nombre";
             this.btnFiltrarFechaYNombre.UseVisualStyleBackColor = true;
@@ -174,35 +171,38 @@
             // lblFinal
             // 
             this.lblFinal.AutoSize = true;
-            this.lblFinal.Location = new System.Drawing.Point(451, 26);
+            this.lblFinal.Location = new System.Drawing.Point(338, 21);
+            this.lblFinal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFinal.Name = "lblFinal";
-            this.lblFinal.Size = new System.Drawing.Size(46, 16);
+            this.lblFinal.Size = new System.Drawing.Size(38, 13);
             this.lblFinal.TabIndex = 6;
             this.lblFinal.Text = "Hasta:";
             // 
             // dtpHasta
             // 
-            this.dtpHasta.Location = new System.Drawing.Point(516, 23);
-            this.dtpHasta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtpHasta.Location = new System.Drawing.Point(387, 19);
+            this.dtpHasta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtpHasta.Name = "dtpHasta";
-            this.dtpHasta.Size = new System.Drawing.Size(200, 22);
+            this.dtpHasta.Size = new System.Drawing.Size(151, 20);
             this.dtpHasta.TabIndex = 7;
+            this.dtpHasta.ValueChanged += new System.EventHandler(this.dtpHasta_ValueChanged);
             // 
             // lblInicio
             // 
             this.lblInicio.AutoSize = true;
-            this.lblInicio.Location = new System.Drawing.Point(64, 26);
+            this.lblInicio.Location = new System.Drawing.Point(48, 21);
+            this.lblInicio.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblInicio.Name = "lblInicio";
-            this.lblInicio.Size = new System.Drawing.Size(51, 16);
+            this.lblInicio.Size = new System.Drawing.Size(41, 13);
             this.lblInicio.TabIndex = 2;
             this.lblInicio.Text = "Desde:";
             // 
             // btnFiltrarFecha
             // 
-            this.btnFiltrarFecha.Location = new System.Drawing.Point(133, 65);
-            this.btnFiltrarFecha.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnFiltrarFecha.Location = new System.Drawing.Point(100, 53);
+            this.btnFiltrarFecha.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnFiltrarFecha.Name = "btnFiltrarFecha";
-            this.btnFiltrarFecha.Size = new System.Drawing.Size(207, 33);
+            this.btnFiltrarFecha.Size = new System.Drawing.Size(155, 27);
             this.btnFiltrarFecha.TabIndex = 4;
             this.btnFiltrarFecha.Text = "Filtrar por fecha";
             this.btnFiltrarFecha.UseVisualStyleBackColor = true;
@@ -210,49 +210,51 @@
             // 
             // dtpDesde
             // 
-            this.dtpDesde.Location = new System.Drawing.Point(133, 23);
-            this.dtpDesde.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtpDesde.Location = new System.Drawing.Point(100, 19);
+            this.dtpDesde.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtpDesde.Name = "dtpDesde";
-            this.dtpDesde.Size = new System.Drawing.Size(200, 22);
+            this.dtpDesde.Size = new System.Drawing.Size(151, 20);
             this.dtpDesde.TabIndex = 5;
+            this.dtpDesde.ValueChanged += new System.EventHandler(this.dtpDesde_ValueChanged);
             // 
             // gbFiltroNombre
             // 
             this.gbFiltroNombre.Controls.Add(this.txtBuscar);
             this.gbFiltroNombre.Controls.Add(this.lblNombreU);
             this.gbFiltroNombre.Controls.Add(this.btnFiltrar);
-            this.gbFiltroNombre.Location = new System.Drawing.Point(40, 49);
-            this.gbFiltroNombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gbFiltroNombre.Location = new System.Drawing.Point(30, 40);
+            this.gbFiltroNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.gbFiltroNombre.Name = "gbFiltroNombre";
-            this.gbFiltroNombre.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gbFiltroNombre.Size = new System.Drawing.Size(312, 112);
+            this.gbFiltroNombre.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbFiltroNombre.Size = new System.Drawing.Size(234, 91);
             this.gbFiltroNombre.TabIndex = 6;
             this.gbFiltroNombre.TabStop = false;
             this.gbFiltroNombre.Text = "Filtro por nombre";
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(99, 23);
-            this.txtBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtBuscar.Location = new System.Drawing.Point(74, 19);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(207, 22);
+            this.txtBuscar.Size = new System.Drawing.Size(156, 20);
             this.txtBuscar.TabIndex = 1;
             // 
             // lblNombreU
             // 
             this.lblNombreU.AutoSize = true;
-            this.lblNombreU.Location = new System.Drawing.Point(21, 26);
+            this.lblNombreU.Location = new System.Drawing.Point(16, 21);
+            this.lblNombreU.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombreU.Name = "lblNombreU";
-            this.lblNombreU.Size = new System.Drawing.Size(59, 16);
+            this.lblNombreU.Size = new System.Drawing.Size(47, 13);
             this.lblNombreU.TabIndex = 2;
             this.lblNombreU.Text = "Nombre:";
             // 
             // btnFiltrar
             // 
-            this.btnFiltrar.Location = new System.Drawing.Point(99, 65);
-            this.btnFiltrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnFiltrar.Location = new System.Drawing.Point(74, 53);
+            this.btnFiltrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnFiltrar.Name = "btnFiltrar";
-            this.btnFiltrar.Size = new System.Drawing.Size(207, 33);
+            this.btnFiltrar.Size = new System.Drawing.Size(155, 27);
             this.btnFiltrar.TabIndex = 4;
             this.btnFiltrar.Text = "Filtrar nombre";
             this.btnFiltrar.UseVisualStyleBackColor = true;
@@ -262,21 +264,22 @@
             // 
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(29, 15);
+            this.lblTitulo.Location = new System.Drawing.Point(22, 12);
+            this.lblTitulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(311, 25);
+            this.lblTitulo.Size = new System.Drawing.Size(260, 20);
             this.lblTitulo.TabIndex = 3;
             this.lblTitulo.Text = "Auditoría de tiempos de trabajo";
             // 
             // dgvAuditoria
             // 
             this.dgvAuditoria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAuditoria.Location = new System.Drawing.Point(40, 175);
-            this.dgvAuditoria.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvAuditoria.Location = new System.Drawing.Point(30, 142);
+            this.dgvAuditoria.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvAuditoria.Name = "dgvAuditoria";
             this.dgvAuditoria.RowHeadersWidth = 51;
             this.dgvAuditoria.RowTemplate.Height = 24;
-            this.dgvAuditoria.Size = new System.Drawing.Size(1177, 430);
+            this.dgvAuditoria.Size = new System.Drawing.Size(883, 349);
             this.dgvAuditoria.TabIndex = 0;
             // 
             // TiempoSistema
@@ -287,13 +290,12 @@
             // 
             // frmAuditoria
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1445, 887);
+            this.ClientSize = new System.Drawing.Size(1028, 609);
             this.Controls.Add(this.barraEstadoInf);
             this.Controls.Add(this.pControles);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmAuditoria";
             this.Text = "Auditoria";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

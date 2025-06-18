@@ -30,15 +30,15 @@ namespace pryMarkoja_IEFI
                 string nombreBuscado = txtBuscar.Text.Trim();
                 var tabla = servicioAuditoria.ObtenerTiemposPorNombre(nombreBuscado);
                 
-                    dgvAuditoria.DataSource = tabla;
                 if (tabla != null && tabla.Rows.Count > 0)
                 {
-                    dgvAuditoria.Columns["TotalSegundosTrabajados"].Visible = false;
-
+                    dgvAuditoria.DataSource = tabla;
                 }
                 else
                 {
                     MessageBox.Show("Usuario no encontrado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    DataTable tablaLimpia = new DataTable();
+                    dgvAuditoria.DataSource = tablaLimpia;
                 }
             }
             catch (Exception ex)
@@ -53,8 +53,17 @@ namespace pryMarkoja_IEFI
             DateTime desde = dtpDesde.Value.Date;
             DateTime hasta = dtpHasta.Value.Date.AddDays(1).AddSeconds(-1);
             var tabla = servicioAuditoria.ObtenerTiemposPorFechas(desde, hasta);
-            dgvAuditoria.DataSource = tabla;
-            dgvAuditoria.Columns["TotalSegundosTrabajados"].Visible = false;
+            if (tabla != null && tabla.Rows.Count > 0)
+            {
+                dgvAuditoria.DataSource = tabla;
+            }
+            else
+            {
+                MessageBox.Show("No hay nada en estas fechas", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                DataTable tablaLimpia = new DataTable();
+                dgvAuditoria.DataSource = tablaLimpia;
+            }
+
         }
 
         private void CargarPorNombreYFechas()
@@ -63,8 +72,17 @@ namespace pryMarkoja_IEFI
             DateTime desde = dtpDesde.Value.Date;
             DateTime hasta = dtpHasta.Value.Date.AddDays(1).AddSeconds(-1);
             var tabla = servicioAuditoria.ObtenerTiemposPorNombreYFechas(nombreBuscado, desde, hasta);
-            dgvAuditoria.DataSource = tabla;
-            dgvAuditoria.Columns["TotalSegundosTrabajados"].Visible = false;
+            
+            if (tabla != null && tabla.Rows.Count > 0)
+            {
+                dgvAuditoria.DataSource = tabla;
+            }
+            else
+            {
+                MessageBox.Show("No hay nada relacionado con este nombre y en estas fechas", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                DataTable tablaLimpia = new DataTable();
+                dgvAuditoria.DataSource = tablaLimpia;
+            }
         }
         
         private void btnVolver_Click(object sender, EventArgs e)
@@ -108,6 +126,22 @@ namespace pryMarkoja_IEFI
         private void btnFiltrarFechaYNombre_Click(object sender, EventArgs e)
         {
             CargarPorNombreYFechas();
+        }
+
+        private void dtpDesde_ValueChanged(object sender, EventArgs e)
+        {
+            if (dtpHasta.Value < dtpDesde.Value)
+            {
+                dtpHasta.Value = dtpDesde.Value;
+            }
+        }
+
+        private void dtpHasta_ValueChanged(object sender, EventArgs e)
+        {
+            if (dtpDesde.Value > dtpHasta.Value)
+            {
+                dtpDesde.Value = dtpHasta.Value;
+            }
         }
     }
 }
