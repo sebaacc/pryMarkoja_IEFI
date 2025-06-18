@@ -67,5 +67,21 @@ namespace pryMarkoja_IEFI
             string lugar = cmbLugar.Text;
             BD.FiltrarPorLugar(lugar, dgvHistorial);
         }
+
+        private void dtpDesde_ValueChanged(object sender, EventArgs e)
+        {
+            if (dtpHasta.Value < dtpDesde.Value)
+            {
+                dtpHasta.Value = dtpDesde.Value;
+            }
+        }
+
+        private void dtpHasta_ValueChanged(object sender, EventArgs e)
+        {
+            if (dtpDesde.Value > dtpHasta.Value)
+            {
+                dtpDesde.Value = dtpHasta.Value;
+            }
+        }
     }
 }

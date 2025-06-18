@@ -56,18 +56,18 @@
             this.pControles.Controls.Add(this.menuUsuario);
             this.pControles.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pControles.Location = new System.Drawing.Point(0, 0);
-            this.pControles.Margin = new System.Windows.Forms.Padding(4);
             this.pControles.Name = "pControles";
-            this.pControles.Size = new System.Drawing.Size(1067, 554);
+            this.pControles.Size = new System.Drawing.Size(800, 450);
             this.pControles.TabIndex = 2;
             // 
             // pbLogo
             // 
+            this.pbLogo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pbLogo.Image = global::pryMarkoja_IEFI.Properties.Resources.auditoria;
-            this.pbLogo.Location = new System.Drawing.Point(492, 220);
-            this.pbLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pbLogo.Location = new System.Drawing.Point(0, 24);
+            this.pbLogo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pbLogo.Name = "pbLogo";
-            this.pbLogo.Size = new System.Drawing.Size(85, 69);
+            this.pbLogo.Size = new System.Drawing.Size(800, 404);
             this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbLogo.TabIndex = 10;
             this.pbLogo.TabStop = false;
@@ -78,22 +78,23 @@
             this.BarraDeEstadoUsuario.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.lblTiempoTitulo,
             this.lblTiempoStatus});
-            this.BarraDeEstadoUsuario.Location = new System.Drawing.Point(0, 528);
+            this.BarraDeEstadoUsuario.Location = new System.Drawing.Point(0, 428);
             this.BarraDeEstadoUsuario.Name = "BarraDeEstadoUsuario";
-            this.BarraDeEstadoUsuario.Size = new System.Drawing.Size(1067, 26);
+            this.BarraDeEstadoUsuario.Padding = new System.Windows.Forms.Padding(1, 0, 10, 0);
+            this.BarraDeEstadoUsuario.Size = new System.Drawing.Size(800, 22);
             this.BarraDeEstadoUsuario.TabIndex = 5;
             this.BarraDeEstadoUsuario.Text = "barra de estado";
             // 
             // lblTiempoTitulo
             // 
             this.lblTiempoTitulo.Name = "lblTiempoTitulo";
-            this.lblTiempoTitulo.Size = new System.Drawing.Size(146, 20);
+            this.lblTiempoTitulo.Size = new System.Drawing.Size(117, 17);
             this.lblTiempoTitulo.Text = "Tiempo transcurrido:";
             // 
             // lblTiempoStatus
             // 
             this.lblTiempoStatus.Name = "lblTiempoStatus";
-            this.lblTiempoStatus.Size = new System.Drawing.Size(15, 20);
+            this.lblTiempoStatus.Size = new System.Drawing.Size(12, 17);
             this.lblTiempoStatus.Text = "-";
             // 
             // menuUsuario
@@ -104,7 +105,8 @@
             this.sesiónToolStripMenuItem});
             this.menuUsuario.Location = new System.Drawing.Point(0, 0);
             this.menuUsuario.Name = "menuUsuario";
-            this.menuUsuario.Size = new System.Drawing.Size(1067, 28);
+            this.menuUsuario.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuUsuario.Size = new System.Drawing.Size(800, 24);
             this.menuUsuario.TabIndex = 6;
             this.menuUsuario.Text = "menuStrip1";
             // 
@@ -114,20 +116,20 @@
             this.crearTareaToolStripMenuItem,
             this.verHistorialDeTareasToolStripMenuItem});
             this.tareasToolStripMenuItem.Name = "tareasToolStripMenuItem";
-            this.tareasToolStripMenuItem.Size = new System.Drawing.Size(64, 24);
+            this.tareasToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
             this.tareasToolStripMenuItem.Text = "Tareas";
             // 
             // crearTareaToolStripMenuItem
             // 
             this.crearTareaToolStripMenuItem.Name = "crearTareaToolStripMenuItem";
-            this.crearTareaToolStripMenuItem.Size = new System.Drawing.Size(244, 26);
+            this.crearTareaToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
             this.crearTareaToolStripMenuItem.Text = "Crear tarea...";
             this.crearTareaToolStripMenuItem.Click += new System.EventHandler(this.crearTareaToolStripMenuItem_Click);
             // 
             // verHistorialDeTareasToolStripMenuItem
             // 
             this.verHistorialDeTareasToolStripMenuItem.Name = "verHistorialDeTareasToolStripMenuItem";
-            this.verHistorialDeTareasToolStripMenuItem.Size = new System.Drawing.Size(244, 26);
+            this.verHistorialDeTareasToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
             this.verHistorialDeTareasToolStripMenuItem.Text = "Ver historial de tareas...";
             this.verHistorialDeTareasToolStripMenuItem.Click += new System.EventHandler(this.verHistorialDeTareasToolStripMenuItem_Click);
             // 
@@ -137,20 +139,20 @@
             this.cerrarSesiónToolStripMenuItem,
             this.salirToolStripMenuItem});
             this.sesiónToolStripMenuItem.Name = "sesiónToolStripMenuItem";
-            this.sesiónToolStripMenuItem.Size = new System.Drawing.Size(66, 24);
+            this.sesiónToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
             this.sesiónToolStripMenuItem.Text = "Sesión";
             // 
             // cerrarSesiónToolStripMenuItem
             // 
             this.cerrarSesiónToolStripMenuItem.Name = "cerrarSesiónToolStripMenuItem";
-            this.cerrarSesiónToolStripMenuItem.Size = new System.Drawing.Size(186, 26);
+            this.cerrarSesiónToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.cerrarSesiónToolStripMenuItem.Text = "Cerrar sesión...";
             this.cerrarSesiónToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesiónToolStripMenuItem_Click);
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(186, 26);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
@@ -161,13 +163,12 @@
             // 
             // frmPrincipalUsuario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.pControles);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuUsuario;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmPrincipalUsuario";
             this.Text = "Menú principal";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
