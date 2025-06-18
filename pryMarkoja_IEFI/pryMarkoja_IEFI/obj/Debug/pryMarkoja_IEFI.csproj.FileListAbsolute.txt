@@ -19,7 +19,6 @@ E:\Escritorio\pryMarkoja_IEFI\pryMarkoja_IEFI\pryMarkoja_IEFI\obj\Debug\pryMarko
 E:\Escritorio\pryMarkoja_IEFI\pryMarkoja_IEFI\pryMarkoja_IEFI\obj\Debug\pryMarkoja_IEFI.frmUsuarios.resources
 E:\Escritorio\pryMarkoja_IEFI\pryMarkoja_IEFI\pryMarkoja_IEFI\obj\Debug\pryMarkoja_IEFI.frmLogin.resources
 E:\Escritorio\pryMarkoja_IEFI\pryMarkoja_IEFI\pryMarkoja_IEFI\obj\Debug\pryMarkoja_IEFI.frmAuditoria.resources
-E:\Escritorio\pryMarkoja_IEFI\pryMarkoja_IEFI\pryMarkoja_IEFI\obj\Debug\pryMarkoja_IEFI.frmPrincipal.resources
 E:\Escritorio\pryMarkoja_IEFI\pryMarkoja_IEFI\pryMarkoja_IEFI\obj\Debug\pryMarkoja_IEFI.frmPrincipalAdmin.resources
 E:\Escritorio\pryMarkoja_IEFI\pryMarkoja_IEFI\pryMarkoja_IEFI\obj\Debug\pryMarkoja_IEFI.frmRegistro.resources
 E:\Escritorio\pryMarkoja_IEFI\pryMarkoja_IEFI\pryMarkoja_IEFI\obj\Debug\pryMarkoja_IEFI.Properties.Resources.resources
@@ -47,3 +46,8 @@ D:\Seba\weas\Documentso\Estudios\IES\semestre3\lab3\pryMarkoja_IEFI\pryMarkoja_I
 D:\Seba\weas\Documentso\Estudios\IES\semestre3\lab3\pryMarkoja_IEFI\pryMarkoja_IEFI\pryMarkoja_IEFI\obj\Debug\pryMarkoja_IEFI.csproj.CoreCompileInputs.cache
 D:\Seba\weas\Documentso\Estudios\IES\semestre3\lab3\pryMarkoja_IEFI\pryMarkoja_IEFI\pryMarkoja_IEFI\obj\Debug\pryMarkoja_IEFI.exe
 D:\Seba\weas\Documentso\Estudios\IES\semestre3\lab3\pryMarkoja_IEFI\pryMarkoja_IEFI\pryMarkoja_IEFI\obj\Debug\pryMarkoja_IEFI.pdb
+E:\Escritorio\pryMarkoja_IEFI\pryMarkoja_IEFI\pryMarkoja_IEFI\obj\Debug\pryMarkoja_IEFI.frmAgregarLugar.resources
+E:\Escritorio\pryMarkoja_IEFI\pryMarkoja_IEFI\pryMarkoja_IEFI\obj\Debug\pryMarkoja_IEFI.frmAgregarTipoTarea.resources
+E:\Escritorio\pryMarkoja_IEFI\pryMarkoja_IEFI\pryMarkoja_IEFI\obj\Debug\pryMarkoja_IEFI.frmHistorial.resources
+E:\Escritorio\pryMarkoja_IEFI\pryMarkoja_IEFI\pryMarkoja_IEFI\obj\Debug\pryMarkoja_IEFI.frmTarea.resources
+E:\Escritorio\pryMarkoja_IEFI\pryMarkoja_IEFI\pryMarkoja_IEFI\obj\Debug\pryMarkoja_IEFI.frmPrincipalUsuario.resources

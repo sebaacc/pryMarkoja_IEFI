@@ -25,10 +25,27 @@ namespace pryMarkoja_IEFI
         }
         private void CargarSoloPorNombre()
         {
-            string nombreBuscado = txtBuscar.Text.Trim();
-            var tabla = servicioAuditoria.ObtenerTiemposPorNombre(nombreBuscado);
-            dgvAuditoria.DataSource = tabla;
-            dgvAuditoria.Columns["TotalSegundosTrabajados"].Visible = false;
+            try
+            {
+                string nombreBuscado = txtBuscar.Text.Trim();
+                var tabla = servicioAuditoria.ObtenerTiemposPorNombre(nombreBuscado);
+                
+                    dgvAuditoria.DataSource = tabla;
+                if (tabla != null && tabla.Rows.Count > 0)
+                {
+                    dgvAuditoria.Columns["TotalSegundosTrabajados"].Visible = false;
+
+                }
+                else
+                {
+                    MessageBox.Show("Usuario no encontrado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            
         }
 
         private void CargarSoloPorFechas()
