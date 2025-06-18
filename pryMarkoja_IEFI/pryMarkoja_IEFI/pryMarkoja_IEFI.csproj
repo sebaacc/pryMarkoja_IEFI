@@ -52,6 +52,7 @@
     <Compile Include="Clases\clsAuditoriaService.cs" />
     <Compile Include="Clases\clsConexionBD.cs" />
     <Compile Include="Clases\clsFuncionesUtiles.cs" />
+    <Compile Include="Clases\clsLugaresService.cs" />
     <Compile Include="Clases\clsRegistroService.cs" />
     <Compile Include="Clases\clsTareaService.cs" />
     <Compile Include="Clases\clsTarea.cs" />
